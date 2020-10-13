@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>arcgis.geom module &mdash; arcgis 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="prev" title="arcgis.tools module" href="arcgis.tools.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> arcgis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">arcgis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-gis">arcgis.gis.GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-contentmanager">arcgis.gis.ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-item">arcgis.gis.Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-groupmanager">arcgis.gis.GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-group">arcgis.gis.Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-usermanager">arcgis.gis.UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-user">arcgis.gis.User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastoremanager">arcgis.gis.DatastoreManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastore">arcgis.gis.Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-tools">arcgis.gis.Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-mapservice">arcgis.lyr.MapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminmapservice">arcgis.lyr.AdminMapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featureservice">arcgis.lyr.FeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservice">arcgis.lyr.AdminFeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservicelayer">arcgis.lyr.AdminFeatureServiceLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-replicamanager">arcgis.lyr.ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-attachmentmanager">arcgis.lyr.AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurelayer">arcgis.lyr.FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurecollection">arcgis.lyr.FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-vectortilelayer">arcgis.lyr.VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-imagelayer">arcgis.lyr.ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networkservice">arcgis.lyr.NetworkService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networklayer">arcgis.lyr.NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-routenetworklayer">arcgis.lyr.RouteNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-serviceareanetworklayer">arcgis.lyr.ServiceAreaNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-closestfacilitynetworklayer">arcgis.lyr.ClosestFacilityNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-schematicsservice">arcgis.lyr.SchematicsService</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webmap">arcgis.viz.WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webscene">arcgis.viz.WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-mapview">arcgis.viz.MapView</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.tools.html">arcgis.tools module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureanalysistools">arcgis.tools.FeatureAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-bigdatatools">arcgis.tools.BigDataTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-rasteranalysistools">arcgis.tools.RasterAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geocoder">arcgis.tools.Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geoprocessingtool">arcgis.tools.GeoprocessingTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geometryservice">arcgis.tools.GeometryService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-feature">arcgis.tools.Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureset">arcgis.tools.FeatureSet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">arcgis.geom module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-point">arcgis.geom.Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-multipoint">arcgis.geom.MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-polyline">arcgis.geom.PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-polygon">arcgis.geom.Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-envelope">arcgis.geom.Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-spatialreference">arcgis.geom.SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-geometryfactory">arcgis.geom.GeometryFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-geometry">arcgis.geom.Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-geom-basegeometry">arcgis.geom.BaseGeometry</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">arcgis</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>arcgis.geom module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arcgis.geom.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arcgis-geom-module">
+<h1>arcgis.geom module<a class="headerlink" href="#arcgis-geom-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arcgis-geom-point">
+<h2>arcgis.geom.Point<a class="headerlink" href="#arcgis-geom-point" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.Point">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>A point contains x and y fields along with a spatialReference field. A
+point can also contain m and z fields. A point is empty when its x
+field is present and has the value null or the string &#8220;NaN&#8221;. An empty
+point has no location in space.</p>
+<dl class="attribute">
+<dt id="arcgis.geom.Point.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geom.Point.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-multipoint">
+<h2>arcgis.geom.MultiPoint<a class="headerlink" href="#arcgis-geom-multipoint" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.MultiPoint">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">MultiPoint</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.MultiPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A multipoint contains an array of points, along with a spatialReference
+field. A multipoint can also have boolean-valued hasZ and hasM fields.
+These fields control the interpretation of elements of the points
+array. Omitting an hasZ or hasM field is equivalent to setting it to
+false.
+Each element of the points array is itself an array of two, three, or
+four numbers. It will have two elements for 2D points, two or three
+elements for 2D points with Ms, three elements for 3D points, and three
+or four elements for 3D points with Ms. In all cases, the x coordinate
+is at index 0 of a point&#8217;s array, and the y coordinate is at index 1.
+For 2D points with Ms, the m coordinate, if present, is at index 2. For
+3D points, the Z coordinate is required and is at index 2. For 3D
+points with Ms, the Z coordinate is at index 2, and the M coordinate,
+if present, is at index 3.
+An empty multipoint has a points field with no elements. Empty points
+are ignored.</p>
+<dl class="attribute">
+<dt id="arcgis.geom.MultiPoint.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geom.MultiPoint.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-polyline">
+<h2>arcgis.geom.PolyLine<a class="headerlink" href="#arcgis-geom-polyline" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="arcgis-geom-polygon">
+<h2>arcgis.geom.Polygon<a class="headerlink" href="#arcgis-geom-polygon" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.Polygon">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A polygon contains an array of rings or curveRings and a
+spatialReference. For polygons with curveRings, see the sections on
+JSON curve object and Polygon with curve. Each ring is represented as
+an array of points. The first point of each ring is always the same as
+the last point. Each point in the ring is represented as an array of
+numbers. A polygon can also have boolean-valued hasM and hasZ fields.</p>
+<p>An empty polygon is represented with an empty array for the rings
+field. Nulls and/or NaNs embedded in an otherwise defined coordinate
+stream for polylines/polygons is a syntax error.
+Polygons should be topologically simple. Exterior rings are oriented
+clockwise, while holes are oriented counter-clockwise. Rings can touch
+at a vertex or self-touch at a vertex, but there should be no other
+intersections. Polygons returned by services are topologically simple.
+When drawing a polygon, use the even-odd fill rule. The even-odd fill
+rule will guarantee that the polygon will draw correctly even if the
+ring orientation is not as described above.</p>
+<dl class="attribute">
+<dt id="arcgis.geom.Polygon.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geom.Polygon.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-envelope">
+<h2>arcgis.geom.Envelope<a class="headerlink" href="#arcgis-geom-envelope" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.Envelope">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">Envelope</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.Envelope" title="Permalink to this definition">¶</a></dt>
+<dd><p>An envelope is a rectangle defined by a range of values for each
+coordinate and attribute. It also has a spatialReference field. The
+fields for the z and m ranges are optional. An empty envelope has no
+in space and is defined by the presence of an xmin field a null value
+or a &#8220;NaN&#8221; string.</p>
+<dl class="attribute">
+<dt id="arcgis.geom.Envelope.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geom.Envelope.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-spatialreference">
+<h2>arcgis.geom.SpatialReference<a class="headerlink" href="#arcgis-geom-spatialreference" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.SpatialReference">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">SpatialReference</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.SpatialReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>A spatial reference can be defined using a well-known ID (wkid) or
+well-known text (wkt). The default tolerance and resolution values for
+the associated coordinate system are used. The xy and z tolerance
+values are 1 mm or the equivalent in the unit of the coordinate system.
+If the coordinate system uses feet, the tolerance is 0.00328083333 ft.
+The resolution values are 10x smaller or 1/10 the tolerance values.
+Thus, 0.0001 m or 0.0003280833333 ft. For geographic coordinate systems
+using degrees, the equivalent of a mm at the equator is used.
+The well-known ID (WKID) for a given spatial reference can occasionally
+change. For example, the WGS 1984 Web Mercator (Auxiliary Sphere)
+projection was originally assigned WKID 102100, but was later changed
+to 3857. To ensure backward compatibility with older spatial data
+servers, the JSON wkid property will always be the value that was
+originally assigned to an SR when it was created.
+An additional property, latestWkid, identifies the current WKID value
+(as of a given software release) associated with the same spatial
+reference.
+A spatial reference can optionally include a definition for a vertical
+coordinate system (VCS), which is used to interpret the z-values of a
+geometry. A VCS defines units of measure, the location of z = 0, and
+whether the positive vertical direction is up or down. When a vertical
+coordinate system is specified with a WKID, the same caveat as
+mentioned above applies. There are two VCS WKID properties: vcsWkid and
+latestVcsWkid. A VCS WKT can also be embedded in the string value of
+the wkt property. In other words, the WKT syntax can be used to define
+an SR with both horizontal and vertical components in one string. If
+either part of an SR is custom, the entire SR will be serialized with
+only the wkt property.
+Starting at 10.3, Image Service supports image coordinate systems.</p>
+<dl class="attribute">
+<dt id="arcgis.geom.SpatialReference.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geom.SpatialReference.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-geometryfactory">
+<h2>arcgis.geom.GeometryFactory<a class="headerlink" href="#arcgis-geom-geometryfactory" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.GeometryFactory">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">GeometryFactory</code><a class="headerlink" href="#arcgis.geom.GeometryFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a geometry object from a given set of
+JSON (dictionary or iterable)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-geometry">
+<h2>arcgis.geom.Geometry<a class="headerlink" href="#arcgis-geom-geometry" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.Geometry">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">Geometry</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geom.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="arcgis-geom-basegeometry">
+<h2>arcgis.geom.BaseGeometry<a class="headerlink" href="#arcgis-geom-basegeometry" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geom.BaseGeometry">
+<em class="property">class </em><code class="descclassname">arcgis.geom.</code><code class="descname">BaseGeometry</code><a class="headerlink" href="#arcgis.geom.BaseGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>base geometry class</p>
+<dl class="attribute">
+<dt id="arcgis.geom.BaseGeometry.is_valid">
+<code class="descname">is_valid</code><a class="headerlink" href="#arcgis.geom.BaseGeometry.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>boolean to see if input  is valid</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="arcgis.tools.html" class="btn btn-neutral" title="arcgis.tools module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Esri.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

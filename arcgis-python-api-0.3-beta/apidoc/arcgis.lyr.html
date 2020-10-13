@@ -1,0 +1,2488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>arcgis.lyr module &mdash; arcgis 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.viz module" href="arcgis.viz.html"/>
+        <link rel="prev" title="arcgis.gis module" href="arcgis.gis.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> arcgis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">arcgis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-gis">arcgis.gis.GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-contentmanager">arcgis.gis.ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-item">arcgis.gis.Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-groupmanager">arcgis.gis.GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-group">arcgis.gis.Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-usermanager">arcgis.gis.UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-user">arcgis.gis.User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastoremanager">arcgis.gis.DatastoreManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastore">arcgis.gis.Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-tools">arcgis.gis.Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">arcgis.lyr module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-mapservice">arcgis.lyr.MapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminmapservice">arcgis.lyr.AdminMapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featureservice">arcgis.lyr.FeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminfeatureservice">arcgis.lyr.AdminFeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminfeatureservicelayer">arcgis.lyr.AdminFeatureServiceLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-replicamanager">arcgis.lyr.ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-attachmentmanager">arcgis.lyr.AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featurelayer">arcgis.lyr.FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featurecollection">arcgis.lyr.FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-vectortilelayer">arcgis.lyr.VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-imagelayer">arcgis.lyr.ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-networkservice">arcgis.lyr.NetworkService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-networklayer">arcgis.lyr.NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-routenetworklayer">arcgis.lyr.RouteNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-serviceareanetworklayer">arcgis.lyr.ServiceAreaNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-closestfacilitynetworklayer">arcgis.lyr.ClosestFacilityNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-schematicsservice">arcgis.lyr.SchematicsService</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webmap">arcgis.viz.WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webscene">arcgis.viz.WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-mapview">arcgis.viz.MapView</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.tools.html">arcgis.tools module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureanalysistools">arcgis.tools.FeatureAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-bigdatatools">arcgis.tools.BigDataTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-rasteranalysistools">arcgis.tools.RasterAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geocoder">arcgis.tools.Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geoprocessingtool">arcgis.tools.GeoprocessingTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geometryservice">arcgis.tools.GeometryService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-feature">arcgis.tools.Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureset">arcgis.tools.FeatureSet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geom.html">arcgis.geom module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-point">arcgis.geom.Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-multipoint">arcgis.geom.MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polyline">arcgis.geom.PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polygon">arcgis.geom.Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-envelope">arcgis.geom.Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-spatialreference">arcgis.geom.SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometryfactory">arcgis.geom.GeometryFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometry">arcgis.geom.Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-basegeometry">arcgis.geom.BaseGeometry</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">arcgis</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>arcgis.lyr module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arcgis.lyr.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arcgis-lyr-module">
+<h1>arcgis.lyr module<a class="headerlink" href="#arcgis-lyr-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arcgis-lyr-mapservice">
+<h2>arcgis.lyr.MapService<a class="headerlink" href="#arcgis-lyr-mapservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.MapService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">MapService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService" title="Permalink to this definition">¶</a></dt>
+<dd><p>allows use and administration (if access permits) of a feature service</p>
+<dl class="attribute">
+<dt id="arcgis.lyr.MapService.admin">
+<code class="descname">admin</code><a class="headerlink" href="#arcgis.lyr.MapService.admin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.estimate_export_tiles_size">
+<code class="descname">estimate_export_tiles_size</code><span class="sig-paren">(</span><em>exportBy</em>, <em>levels</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULTEXTENT'</em>, <em>areaOfInterest=None</em>, <em>async=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.estimate_export_tiles_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The estimateExportTilesSize operation is an asynchronous task that
+allows estimation of the size of the tile package or the cache data
+set that you download using the Export Tiles operation. This
+operation can also be used to estimate the tile count in a tile
+package and determine if it will exceced the maxExportTileCount
+limit set by the administrator of the service. The result of this
+operation is Map Service Job. This job response contains reference
+to Map Service Result resource that returns the total size of the
+cache to be exported (in bytes) and the number of tiles that will
+be exported.</p>
+<p>Inputs:</p>
+<dl class="docutils">
+<dt>tilePackage - Allows estimating the size for either a tile package</dt>
+<dd><p class="first">or a cache raster data set. Specify the value true for tile
+packages format and false for Cache Raster data set. The default
+value is False</p>
+<blockquote class="last">
+<div>Values: True | False</div></blockquote>
+</dd>
+<dt>exportExtent - The extent (bounding box) of the tile package or the</dt>
+<dd>cache dataset to be exported. If extent does not include a spatial
+reference, the extent values are assumed to be in the spatial
+reference of the map. The default value is full extent of the
+tiled map service.</dd>
+<dt>Syntax: &lt;xmin&gt;, &lt;ymin&gt;, &lt;xmax&gt;, &lt;ymax&gt;</dt>
+<dd>Example 1: -104,35.6,-94.32,41</dd>
+<dt>exportBy - The criteria that will be used to select the tile</dt>
+<dd>service levels to export. The values can be Level IDs, cache scales
+or the Resolution (in the case of image services).</dd>
+</dl>
+<p>Values: LevelID | Resolution | Scale
+levels - Specify the tiled service levels for which you want to get</p>
+<blockquote>
+<div>the estimates. The values should correspond to Level IDs, cache
+scales or the Resolution as specified in exportBy parameter. The
+values can be comma separated values or a range.</div></blockquote>
+<p>Example 1: 1,2,3,4,5,6,7,8,9
+Example 2: 1-4,7-9
+areaOfInterest - (Optional) The areaOfInterest polygon allows</p>
+<blockquote>
+<div>exporting tiles within the specified polygon areas. This parameter
+supersedes exportExtent parameter. Also excepts geometry.Polygon.</div></blockquote>
+<dl class="docutils">
+<dt>Example: { &#8220;features&#8221;: [{&#8220;geometry&#8221;:{&#8220;rings&#8221;:[[[-100,35],</dt>
+<dd>[-100,45],[-90,45],[-90,35],[-100,35]]],
+&#8220;spatialReference&#8221;:{&#8220;wkid&#8221;:4326}}}]}</dd>
+<dt>async - (optional) the estimate function is run asynchronously</dt>
+<dd><p class="first">requiring the tool status to be checked manually to force it to
+run synchronously the tool will check the status until the
+estimation completes.  The default is True, which means the status
+of the job and results need to be checked manually.  If the value
+is set to False, the function will wait until the task completes.</p>
+<blockquote class="last">
+<div>Values: True | False</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.export_map">
+<code class="descname">export_map</code><span class="sig-paren">(</span><em>bbox</em>, <em>bboxSR=None</em>, <em>size='600</em>, <em>550'</em>, <em>dpi=200</em>, <em>imageSR=None</em>, <em>image_format='png'</em>, <em>layerDefFilter=None</em>, <em>layers=None</em>, <em>transparent=False</em>, <em>timeFilter=None</em>, <em>layerTimeOptions=None</em>, <em>dynamicLayers=None</em>, <em>mapScale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.export_map" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The export operation is performed on a map service resource.
+The result of this operation is a map image resource. This
+resource provides information about the exported map image such
+as its URL, its width and height, extent and scale.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>bbox - (Required) The extent (bounding box) of the exported</dt>
+<dd>image. Unless the bboxSR parameter has been specified, the bbox
+is assumed to be in the spatial reference of the map.
+Example: bbox=&#8221;-104,35.6,-94.32,41&#8221;</dd>
+</dl>
+<p>size - size of image in pixels
+dpi - dots per inch
+imageSR - spatial reference of the output image
+image_format - Description: The format of the exported image.</p>
+<blockquote>
+<div><p>The default format is .png.
+Values: png | png8 | png24 | jpg | pdf | bmp | gif</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">svg | svgz | emf | ps | png32</div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>layerDefFilter - Description: Allows you to filter the</dt>
+<dd>features of individual layers in the exported
+map by specifying definition expressions for
+those layers. Definition expression for a
+layer that is published with the service will
+be always honored.</dd>
+<dt>layers - Determines which layers appear on the exported map.</dt>
+<dd><dl class="first last docutils">
+<dt>There are four ways to specify which layers are shown:</dt>
+<dd><dl class="first last docutils">
+<dt>show: Only the layers specified in this list will</dt>
+<dd>be exported.</dd>
+<dt>hide: All layers except those specified in this</dt>
+<dd>list will be exported.</dd>
+<dt>include: In addition to the layers exported by</dt>
+<dd>default, the layers specified in this list
+will be exported.</dd>
+<dt>exclude: The layers exported by default excluding</dt>
+<dd>those specified in this list will be
+exported.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>transparent - If true, the image will be exported with the</dt>
+<dd>background color of the map set as its
+transparent color. The default is false. Only
+the .png and .gif formats support transparency.
+Internet Explorer 6 does not display transparency
+correctly for png24 image formats.</dd>
+<dt>timeFilter - The time instant or time extent of the exported</dt>
+<dd>map image.</dd>
+<dt>layerTimeOptions - The time options per layer. Users can</dt>
+<dd>indicate whether or not the layer should use
+the time extent specified by the time
+parameter or not, whether to draw the layer
+features cumulatively or not and the time
+offsets for the layer.
+see: <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Export_Map/02r3000000v7000000/</a></dd>
+<dt>dynamicLayers - Use dynamicLayers parameter to modify the layer</dt>
+<dd>drawing order, change layer drawing info, and
+change layer data source version for this request.
+New layers (dataLayer) can also be added to the
+dynamicLayers based on the map service registered
+workspaces.</dd>
+<dt>mapScale - Use this parameter to export a map image at a specific</dt>
+<dd>scale, with the map centered around the center of the
+specified bounding box (bbox).</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>Image of the map.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.export_tiles">
+<code class="descname">export_tiles</code><span class="sig-paren">(</span><em>levels</em>, <em>exportBy='LevelID'</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULT'</em>, <em>optimizeTilesForSize=True</em>, <em>compressionQuality=0</em>, <em>areaOfInterest=None</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.export_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>The exportTiles operation is performed as an asynchronous task and
+allows client applications to download map tiles from a server for
+offline use. This operation is performed on a Map Service that
+allows clients to export cache tiles. The result of this operation
+is Map Service Job. This job response contains a reference to the
+Map Service Result resource, which returns a URL to the resulting
+tile package (.tpk) or a cache raster dataset.
+exportTiles can be enabled in a service by using ArcGIS for Desktop
+or the ArcGIS Server Administrator Directory. In ArcGIS for Desktop
+make an admin or publisher connection to the server, go to service
+properties, and enable Allow Clients to Export Cache Tiles in the
+advanced caching page of the Service Editor. You can also specify
+the maximum tiles clients will be allowed to download. The default
+maximum allowed tile count is 100,000. To enable this capability
+using the Administrator Directory, edit the service, and set the
+properties exportTilesAllowed=true and maxExportTilesCount=100000.</p>
+<p>At 10.2.2 and later versions, exportTiles is supported as an
+operation of the Map Server. The use of the
+<a class="reference external" href="http://Map">http://Map</a> Service/exportTiles/submitJob operation is deprecated.
+You can provide arguments to the exportTiles operation as defined
+in the following parameters table:</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>exportBy - The criteria that will be used to select the tile</dt>
+<dd>service levels to export. The values can be Level IDs, cache
+scales. or the resolution (in the case of image services).</dd>
+</dl>
+</dd>
+</dl>
+<p>Values: LevelID | Resolution | Scale
+levels - Specifies the tiled service levels to export. The values</p>
+<blockquote>
+<div>should correspond to Level IDs, cache scales. or the resolution
+as specified in exportBy parameter. The values can be comma
+separated values or a range. Make sure tiles are present at the
+levels where you attempt to export tiles.</div></blockquote>
+<p>Example 1: 1,2,3,4,5,6,7,8,9
+Example 2: 1-4,7-9
+tilePackage - Allows exporting either a tile package or a cache</p>
+<blockquote>
+<div>raster data set. If the value is true, output will be in tile
+package format, and if the value is false, a cache raster data
+set is returned. The default value is false</div></blockquote>
+<p>Values: true | false
+exportExtent - The extent (bounding box) of the tile package or the</p>
+<blockquote>
+<div><p>cache dataset to be exported. If extent does not include a
+spatial reference, the extent values are assumed to be in the
+spatial reference of the map. The default value is full extent of
+the tiled map service.</p>
+<blockquote>
+<div><p>Syntax: &lt;xmin&gt;, &lt;ymin&gt;, &lt;xmax&gt;, &lt;ymax&gt;
+Example 1: -104,35.6,-94.32,41
+Example 2: {&#8220;xmin&#8221; : -109.55, &#8220;ymin&#8221; : 25.76,</p>
+<blockquote>
+<div>&#8220;xmax&#8221; : -86.39, &#8220;ymax&#8221; : 49.94,
+&#8220;spatialReference&#8221; : {&#8220;wkid&#8221; : 4326}}</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>optimizeTilesForSize - (Optional) Use this parameter to enable</dt>
+<dd>compression of JPEG tiles and reduce the size of the downloaded
+tile package or the cache raster data set. Compressing tiles
+slightly compromises the quality of tiles but helps reduce the
+size of the download. Try sample compressions to determine the
+optimal compression before using this feature.</dd>
+</dl>
+<p>Values: true | false
+compressionQuality - (Optional) When optimizeTilesForSize=true, you</p>
+<blockquote>
+<div>can specify a compression factor. The value must be between 0 and
+100. The value cannot be greater than the default compression
+already set on the original tile. For example, if the default
+value is 75, the value of compressionQuality must be between 0 and
+75. A value greater than 75 in this example will attempt to up
+sample an already compressed tile and will further degrade the
+quality of tiles.</div></blockquote>
+<dl class="docutils">
+<dt>areaOfInterest - (Optional) The areaOfInterest polygon allows</dt>
+<dd>exporting tiles within the specified polygon areas. This parameter
+supersedes the exportExtent parameter. Must be geometry.Polygon
+object.</dd>
+<dt>Example: { &#8220;features&#8221;: [{&#8220;geometry&#8221;:{&#8220;rings&#8221;:[[[-100,35],</dt>
+<dd>[-100,45],[-90,45],[-90,35],[-100,35]]],
+&#8220;spatialReference&#8221;:{&#8220;wkid&#8221;:4326}}}]}</dd>
+<dt>async - default True, this value ensures the returns are returned</dt>
+<dd>to the user instead of the user having the check the job status
+manually.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>searchText</em>, <em>layers</em>, <em>contains=True</em>, <em>searchFields=''</em>, <em>sr=''</em>, <em>layerDefs=''</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=''</em>, <em>geometryPrecision=''</em>, <em>dynamicLayers=''</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.find" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs the map service find operation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.generate_kml">
+<code class="descname">generate_kml</code><span class="sig-paren">(</span><em>save_location</em>, <em>docName</em>, <em>layers</em>, <em>layerOptions='composite'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.generate_kml" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generateKml operation is performed on a map service resource.
+The result of this operation is a KML document wrapped in a KMZ
+file. The document contains a network link to the KML Service
+endpoint with properties and parameters you specify.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>docName - The name of the resulting KML document. This is the</dt>
+<dd>name that appears in the Places panel of Google
+Earth.</dd>
+<dt>layers - the layers to perform the generateKML operation on.</dt>
+<dd>The layers are specified as a comma-separated list
+of layer ids.</dd>
+<dt>layerOptions - The layer drawing options. Based on the option</dt>
+<dd><p class="first">chosen, the layers are drawn as one composite
+image, as separate images, or as vectors. When
+the KML capability is enabled, the ArcGIS
+Server administrator has the option of setting
+the layer operations allowed. If vectors are
+not allowed, then the caller will not be able
+to get vectors. Instead, the caller receives a
+single composite image.
+values: composite | separateImage |</p>
+<blockquote class="last">
+<div>nonComposite</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.identify">
+<code class="descname">identify</code><span class="sig-paren">(</span><em>geometry</em>, <em>mapExtent</em>, <em>imageDisplay</em>, <em>tolerance</em>, <em>geometryType='esriGeometryPoint'</em>, <em>sr=None</em>, <em>layerDefs=None</em>, <em>time_value=None</em>, <em>layerTimeOptions=None</em>, <em>layers='top'</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>dynamicLayers=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.identify" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identify operation is performed on a map service resource
+to discover features at a geographic location. The result of this
+operation is an identify results resource. Each identified result
+includes its name, layer ID, layer name, geometry and geometry type,
+and other attributes of that result as name-value pairs.</p>
+<p>Inputs:
+geometry - The geometry to identify on. The type of the geometry is</p>
+<blockquote>
+<div>specified by the geometryType parameter. The structure of
+the geometries is same as the structure of the JSON geometry
+objects returned by the ArcGIS REST API. In addition to the
+JSON structures, for points and envelopes, you can specify
+the geometries with a simpler comma-separated syntax.
+Syntax:
+JSON structures:
+&lt;geometryType&gt;&amp;geometry={ geometry}
+Point simple syntax:
+esriGeometryPoint&amp;geometry=&lt;x&gt;,&lt;y&gt;
+Envelope simple syntax:
+esriGeometryEnvelope&amp;geometry=&lt;xmin&gt;,&lt;ymin&gt;,&lt;xmax&gt;,&lt;ymax&gt;</div></blockquote>
+<dl class="docutils">
+<dt>geometryType - The type of geometry specified by the geometry parameter.</dt>
+<dd>The geometry type could be a point, line, polygon, or
+an envelope.
+Values:
+esriGeometryPoint | esriGeometryMultipoint |
+esriGeometryPolyline | esriGeometryPolygon |
+esriGeometryEnvelope</dd>
+<dt>sr - The well-known ID of the spatial reference of the input and</dt>
+<dd>output geometries as well as the mapExtent. If sr is not specified,
+the geometry and the mapExtent are assumed to be in the spatial
+reference of the map, and the output geometries are also in the
+spatial reference of the map.</dd>
+<dt>layerDefs - Allows you to filter the features of individual layers in</dt>
+<dd>the exported map by specifying definition expressions for
+those layers. Definition expression for a layer that is
+published with the service will be always honored.</dd>
+</dl>
+<p>time_value - The time instant or the time extent of the features to be
+identified.</p>
+<dl class="docutils">
+<dt>layerTimeOptions - The time options per layer. Users can indicate</dt>
+<dd>whether or not the layer should use the time extent
+specified by the time parameter or not, whether to
+draw the layer features cumulatively or not and the
+time offsets for the layer.</dd>
+<dt>layers - The layers to perform the identify operation on. There are</dt>
+<dd>three ways to specify which layers to identify on:
+top: Only the top-most layer at the specified location.
+visible: All visible layers at the specified location.
+all: All layers at the specified location.</dd>
+<dt>tolerance - The distance in screen pixels from the specified geometry</dt>
+<dd>within which the identify should be performed. The value for
+the tolerance is an integer.</dd>
+<dt>mapExtent - The extent or bounding box of the map currently being viewed.</dt>
+<dd>Unless the sr parameter has been specified, the mapExtent is
+assumed to be in the spatial reference of the map.
+Syntax: &lt;xmin&gt;, &lt;ymin&gt;, &lt;xmax&gt;, &lt;ymax&gt;
+The mapExtent and the imageDisplay parameters are used by the
+server to determine the layers visible in the current extent.
+They are also used to calculate the distance on the map to
+search based on the tolerance in screen pixels.</dd>
+<dt>imageDisplay - The screen image display parameters (width, height, and DPI)</dt>
+<dd>of the map being currently viewed. The mapExtent and the
+imageDisplay parameters are used by the server to determine
+the layers visible in the current extent. They are also used
+to calculate the distance on the map to search based on the
+tolerance in screen pixels.
+Syntax: &lt;width&gt;, &lt;height&gt;, &lt;dpi&gt;</dd>
+<dt>returnGeometry - If true, the resultset will include the geometries</dt>
+<dd>associated with each result. The default is true.</dd>
+<dt>maxAllowableOffset - This option can be used to specify the maximum allowable</dt>
+<dd>offset to be used for generalizing geometries returned by
+the identify operation. The maxAllowableOffset is in the units
+of the sr. If sr is not specified, maxAllowableOffset is
+assumed to be in the unit of the spatial reference of the map.</dd>
+<dt>geometryPrecision - This option can be used to specify the number of decimal places</dt>
+<dd>in the response geometries returned by the identify operation.
+This applies to X and Y values only (not m or z-values).</dd>
+<dt>dynamicLayers - Use dynamicLayers property to reorder layers and change the layer</dt>
+<dd>data source. dynamicLayers can also be used to add new layer that
+was not defined in the map used to create the map service. The new
+layer should have its source pointing to one of the registered
+workspaces that was defined at the time the map service was created.
+The order of dynamicLayers array defines the layer drawing order.
+The first element of the dynamicLayers is stacked on top of all
+other layers. When defining a dynamic layer, source is required.</dd>
+<dt>returnZ - If true, Z values will be included in the results if the features have</dt>
+<dd>Z values. Otherwise, Z values are not returned. The default is false.
+This parameter only applies if returnGeometry=true.</dd>
+<dt>returnM - If true, M values will be included in the results if the features have</dt>
+<dd>M values. Otherwise, M values are not returned. The default is false.
+This parameter only applies if returnGeometry=true.</dd>
+</dl>
+<p>gdbVersion - Switch map layers to point to an alternate geodatabase version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.MapService.itemInfo">
+<code class="descname">itemInfo</code><a class="headerlink" href="#arcgis.lyr.MapService.itemInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the service&#8217;s item&#8217;s infomation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.MapService.kml">
+<code class="descname">kml</code><a class="headerlink" href="#arcgis.lyr.MapService.kml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.MapService.metadata">
+<code class="descname">metadata</code><a class="headerlink" href="#arcgis.lyr.MapService.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the service&#8217;s XML metadata file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.MapService.thumbnail">
+<code class="descname">thumbnail</code><span class="sig-paren">(</span><em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.thumbnail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-adminmapservice">
+<h2>arcgis.lyr.AdminMapService<a class="headerlink" href="#arcgis-lyr-adminmapservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.AdminMapService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">AdminMapService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>ms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService" title="Permalink to this definition">¶</a></dt>
+<dd><p>allows administration (if access permits) of an ArcGIS Online hosted map service 
+A map service offer access to map and layer content.</p>
+<blockquote>
+<div>The REST API administrative map service resource represents a map
+service. This resource provides basic information about the map,
+including the layers that it contains, whether the map is cached or
+not, its spatial reference, initial and full extents, etc...  The
+administrative map service resource maintains a set of operations
+that manage the state and contents of the service.</div></blockquote>
+<dl class="method">
+<dt id="arcgis.lyr.AdminMapService.cancel_job">
+<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.cancel_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cancel job operation supports cancelling a job while update
+tiles is running from a hosted feature service. The result of this
+operation is a response indicating success or failure with error
+code and description.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd>jobId - jobId to cancel</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminMapService.edit_tile_service">
+<code class="descname">edit_tile_service</code><span class="sig-paren">(</span><em>serviceDefinition=None</em>, <em>minScale=None</em>, <em>maxScale=None</em>, <em>sourceItemId=None</em>, <em>exportTilesAllowed=False</em>, <em>maxExportTileCount=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.edit_tile_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation updates a Tile Service&#8217;s properties</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">serviceDefinition - updates a service definition
+minScale - sets the services minimum scale for caching
+maxScale - sets the service&#8217;s maximum scale for caching
+sourceItemId - The Source Item ID is the GeoWarehouse Item ID of the map service
+exportTilesAllowed - sets the value to let users export tiles
+maxExportTileCount - sets the maximum amount of tiles to be exported</p>
+<blockquote class="last">
+<div>from a single call.</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminMapService.job_statistics">
+<code class="descname">job_statistics</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.job_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the job statistics for the given jobId</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminMapService.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>serviceDefinition=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>The refresh operation refreshes a service, which clears the web
+server cache for the service.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-featureservice">
+<h2>arcgis.lyr.FeatureService<a class="headerlink" href="#arcgis-lyr-featureservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.FeatureService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">FeatureService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureService" title="Permalink to this definition">¶</a></dt>
+<dd><p>allows use and administration (if access permits) of a feature service</p>
+<dl class="attribute">
+<dt id="arcgis.lyr.FeatureService.admin">
+<code class="descname">admin</code><a class="headerlink" href="#arcgis.lyr.FeatureService.admin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureService.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>layerDefsFilter=None</em>, <em>geometryFilter=None</em>, <em>timeFilter=None</em>, <em>returnGeometry=True</em>, <em>returnIdsOnly=False</em>, <em>returnCountOnly=False</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>outSR=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureService.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Query operation is performed on a feature service resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureService.query_related_records">
+<code class="descname">query_related_records</code><span class="sig-paren">(</span><em>objectIds</em>, <em>relationshipId</em>, <em>outFields='*'</em>, <em>definitionExpression=None</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>outWKID=None</em>, <em>gdbVersion=None</em>, <em>returnZ=False</em>, <em>returnM=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureService.query_related_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Query operation is performed on a feature service layer
+resource. The result of this operation are feature sets grouped
+by source layer/table object IDs. Each feature set contains
+Feature objects including the values for the fields requested by
+the user. For related layers, if you request geometry
+information, the geometry of each feature is also returned in
+the feature set. For related tables, the feature set does not
+include geometries.
+Inputs:</p>
+<blockquote>
+<div><p>objectIds - the object IDs of the table/layer to be queried
+relationshipId - The ID of the relationship to be queried.
+outFields - the list of fields from the related table/layer</p>
+<blockquote>
+<div>to be included in the returned feature set. This
+list is a comma delimited list of field names. If
+you specify the shape field in the list of return
+fields, it is ignored. To request geometry, set
+returnGeometry to true.
+You can also specify the wildcard &#8220;*&#8221; as the
+value of this parameter. In this case, the result
+s will include all the field values.</div></blockquote>
+<dl class="docutils">
+<dt>definitionExpression - The definition expression to be</dt>
+<dd>applied to the related table/layer.
+From the list of objectIds, only those
+records that conform to this
+expression are queried for related
+records.</dd>
+<dt>returnGeometry - If true, the feature set includes the</dt>
+<dd>geometry associated with each feature. The
+default is true.</dd>
+<dt>maxAllowableOffset - This option can be used to specify the</dt>
+<dd>maxAllowableOffset to be used for
+generalizing geometries returned by the
+query operation. The maxAllowableOffset
+is in the units of the outSR. If outSR
+is not specified, then
+maxAllowableOffset is assumed to be in
+the unit of the spatial reference of the
+map.</dd>
+<dt>geometryPrecision - This option can be used to specify the</dt>
+<dd>number of decimal places in the response
+geometries.</dd>
+</dl>
+<p>outWKID - The spatial reference of the returned geometry.
+gdbVersion - The geodatabase version to query. This parameter</p>
+<blockquote>
+<div>applies only if the isDataVersioned property of
+the layer queried is true.</div></blockquote>
+<dl class="docutils">
+<dt>returnZ - If true, Z values are included in the results if</dt>
+<dd>the features have Z values. Otherwise, Z values are
+not returned. The default is false.</dd>
+<dt>returnM - If true, M values are included in the results if</dt>
+<dd>the features have M values. Otherwise, M values are
+not returned. The default is false.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-adminfeatureservice">
+<h2>arcgis.lyr.AdminFeatureService<a class="headerlink" href="#arcgis-lyr-adminfeatureservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.AdminFeatureService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">AdminFeatureService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>fs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureService" title="Permalink to this definition">¶</a></dt>
+<dd><p>allows administration (if access permits) of a feature service</p>
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureService.add_to_definition">
+<code class="descname">add_to_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureService.add_to_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The addToDefinition operation supports adding a definition
+property to a hosted feature service. The result of this
+operation is a response indicating success or failure with error
+code and description.</p>
+<p>This function will allow users to change add additional values
+to an already published service.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first last docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the properties property.  For
+layer level modifications, run updates on each
+individual feature service layer object.</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON message as dictionary</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureService.delete_from_definition">
+<code class="descname">delete_from_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureService.delete_from_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The deleteFromDefinition operation supports deleting a
+definition property from a hosted feature service. The result of
+this operation is a response indicating success or failure with
+error code and description.
+See: <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Delete_From_Definition_Feature_Service/02r30000021w000000/">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Delete_From_Definition_Feature_Service/02r30000021w000000/</a>
+for additional information on this function.
+Input:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the properties property.  For
+layer level modifications, run updates on each
+individual feature service layer object.  Only
+include the items you want to remove from the
+FeatureService or layer.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>JSON Message as dictionary</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureService.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureService.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>refreshes a service</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureService.update_definition">
+<code class="descname">update_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureService.update_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The updateDefinition operation supports updating a definition
+property in a hosted feature service. The result of this
+operation is a response indicating success or failure with error
+code and description.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first last docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the properties property.  For
+layer level modifications, run updates on each
+individual feature service layer object.</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON Message as dictionary</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-adminfeatureservicelayer">
+<h2>arcgis.lyr.AdminFeatureServiceLayer<a class="headerlink" href="#arcgis-lyr-adminfeatureservicelayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.AdminFeatureServiceLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">AdminFeatureServiceLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureServiceLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layer resource represents a single feature layer or a non
+spatial table in a feature service.  A feature layer is a table or
+view with at least one spatial column.
+For tables, it provides basic information about the table such as
+its id, name, fields, types and templates.
+For feature layers, in addition to the table information above, it
+provides information such as its geometry type, min and max scales,
+and spatial reference.
+Each type includes information about the type such as the type id,
+name, and definition expression.  Sub-types also include a default
+symbol and a list of feature templates.
+Each feature template includes a template name, description and a
+prototypical feature.
+The property supportsRollbackOnFailures will be true to indicate the
+support for transactional edits.
+The property maxRecordCount returns the maximum number of records
+that will be returned at once for a query.
+The property capabilities returns Query, Create, Delete, Update, and
+Editing capabilities. The Editing capability will be included if
+Create, Delete or Update is enabled for a Feature Service.
+Note, query and edit operations are not available on a layer in the
+adminstrative view.</p>
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureServiceLayer.add_to_definition">
+<code class="descname">add_to_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureServiceLayer.add_to_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The addToDefinition operation supports adding a definition
+property to a hosted feature service. The result of this
+operation is a response indicating success or failure with error
+code and description.</p>
+<p>This function will allow users to change add additional values
+to an already published service.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first last docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the asDictionary property.  For
+layer level modifications, run updates on each
+individual feature service layer object.</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON message as dictionary</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureServiceLayer.delete_from_definition">
+<code class="descname">delete_from_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureServiceLayer.delete_from_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The deleteFromDefinition operation supports deleting a
+definition property from a hosted feature service. The result of
+this operation is a response indicating success or failure with
+error code and description.
+See: <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Delete_From_Definition_Feature_Service/02r30000021w000000/">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Delete_From_Definition_Feature_Service/02r30000021w000000/</a>
+for additional information on this function.
+Input:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the asDictionary property.  For
+layer level modifications, run updates on each
+individual feature service layer object.  Only
+include the items you want to remove from the
+FeatureService or layer.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>JSON Message as dictionary</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureServiceLayer.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureServiceLayer.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>refreshes a service</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AdminFeatureServiceLayer.update_definition">
+<code class="descname">update_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminFeatureServiceLayer.update_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The updateDefinition operation supports updating a definition
+property in a hosted feature service. The result of this
+operation is a response indicating success or failure with error
+code and description.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first last docutils">
+<dt>json_dict - part to add to host service.  The part format can</dt>
+<dd>be derived from the asDictionary property.  For
+layer level modifications, run updates on each
+individual feature service layer object.</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON Message as dictionary</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-replicamanager">
+<h2>arcgis.lyr.ReplicaManager<a class="headerlink" href="#arcgis-lyr-replicamanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.ReplicaManager">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ReplicaManager</code><span class="sig-paren">(</span><em>featsvc</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manager class for manipulating replicas for disconnected editing of feature services. This class is not created by users directly.
+An instance of this class, called &#8216;replicas&#8217;, is available as a property of the FeatureService object,
+if the layer is sync enabled / supports disconnected editing.
+Users call methods on this &#8216;replicas&#8217; object to manipulate (create, synchronize, unregister) replicas.</p>
+<dl class="method">
+<dt id="arcgis.lyr.ReplicaManager.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>replicaName</em>, <em>layers</em>, <em>layerQueries=None</em>, <em>geometryFilter=None</em>, <em>replicaSR=None</em>, <em>transportType='esriTransportTypeUrl'</em>, <em>returnAttachments=False</em>, <em>returnAttachmentsDatabyURL=False</em>, <em>async=False</em>, <em>attachmentsSyncDirection='none'</em>, <em>syncModel='none'</em>, <em>dataFormat='json'</em>, <em>replicaOptions=None</em>, <em>wait=False</em>, <em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>The createReplica operation is performed on a feature service
+resource. This operation creates the replica between the feature
+service and a client based on a client-supplied replica definition.
+It requires the Sync capability. See Sync overview for more
+information on sync. The response for createReplica includes
+replicaID, server generation number, and data similar to the
+response from the feature service query operation.
+The createReplica operation returns a response of type
+esriReplicaResponseTypeData, as the response has data for the
+layers in the replica. If the operation is called to register
+existing data by using replicaOptions, the response type will be
+esriReplicaResponseTypeInfo, and the response will not contain data
+for the layers in the replica.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">replicaName - name of the replica
+layers - layers to export
+layerQueries - In addition to the layers and geometry parameters, the layerQueries</p>
+<blockquote>
+<div><p>parameter can be used to further define what is replicated. This
+parameter allows you to set properties on a per layer or per table
+basis. Only the properties for the layers and tables that you want
+changed from the default are required.
+Example:</p>
+<blockquote>
+<div>layerQueries = {&#8220;0&#8221;:{&#8220;queryOption&#8221;: &#8220;useFilter&#8221;, &#8220;useGeometry&#8221;: true,
+&#8220;where&#8221;: &#8220;requires_inspection = Yes&#8221;}}</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>geometryFilter - Geospatial filter applied to the replica to</dt>
+<dd>parse down data output.</dd>
+<dt>returnAttachments - If true, attachments are added to the replica and returned in the</dt>
+<dd>response. Otherwise, attachments are not included.</dd>
+<dt>returnAttachmentDatabyURL -  If true, a reference to a URL will be provided for each</dt>
+<dd>attachment returned from createReplica. Otherwise,
+attachments are embedded in the response.</dd>
+</dl>
+<p>replicaSR - the spatial reference of the replica geometry.
+transportType -  The transportType represents the response format. If the</p>
+<blockquote>
+<div>transportType is esriTransportTypeUrl, the JSON response is contained in a file,
+and the URL link to the file is returned. Otherwise, the JSON object is returned
+directly. The default is esriTransportTypeUrl.
+If async is true, the results will always be returned as if transportType is
+esriTransportTypeUrl. If dataFormat is sqlite, the transportFormat will always be
+esriTransportTypeUrl regardless of how the parameter is set.
+Values: esriTransportTypeUrl | esriTransportTypeEmbedded</div></blockquote>
+<dl class="docutils">
+<dt>returnAttachments - If true, attachments are added to the replica and returned in</dt>
+<dd>the response. Otherwise, attachments are not included. The default is false. This
+parameter is only applicable if the feature service has attachments.</dd>
+<dt>returnAttachmentsDatabyURL -  If true, a reference to a URL will be provided for</dt>
+<dd>each attachment returned from createReplica. Otherwise, attachments are embedded
+in the response. The default is true. This parameter is only applicable if the
+feature service has attachments and if returnAttachments is true.</dd>
+<dt>attachmentsSyncDirection - Client can specify the attachmentsSyncDirection when</dt>
+<dd>creating a replica. AttachmentsSyncDirection is currently a createReplica property
+and cannot be overridden during sync.
+Values: none, upload, bidirectional</dd>
+<dt>async - If true, the request is processed as an asynchronous job, and a URL is</dt>
+<dd>returned that a client can visit to check the status of the job. See the topic on
+asynchronous usage for more information. The default is false.</dd>
+<dt>syncModel - Client can specify the attachmentsSyncDirection when creating a replica.</dt>
+<dd>AttachmentsSyncDirection is currently a createReplica property and cannot be
+overridden during sync.</dd>
+<dt>dataFormat - The format of the replica geodatabase returned in the response. The</dt>
+<dd>default is json.
+Values: filegdb, json, sqlite, shapefile</dd>
+<dt>replicaOptions - This parameter instructs the createReplica operation to create a</dt>
+<dd>new replica based on an existing replica definition (refReplicaId). It can be used
+to specify parameters for registration of existing data for sync. The operation
+will create a replica but will not return data. The responseType returned in the
+createReplica response will be esriReplicaResponseTypeInfo.</dd>
+</dl>
+<p class="last">wait - if async, wait to pause the process until the async operation is completed.
+out_path - folder path to save the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ReplicaManager.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>replica_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns replica metadata for a specific replica.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>replica_id - The replicaID returned by the feature service</dt>
+<dd>when the replica was created.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ReplicaManager.get_list">
+<code class="descname">get_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager.get_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns all the replicas for the feature service</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ReplicaManager.synchronize">
+<code class="descname">synchronize</code><span class="sig-paren">(</span><em>replicaID</em>, <em>transportType='esriTransportTypeUrl'</em>, <em>replicaServerGen=None</em>, <em>returnIdsForAdds=False</em>, <em>edits=None</em>, <em>returnAttachmentDatabyURL=False</em>, <em>async=False</em>, <em>syncDirection='snapshot'</em>, <em>syncLayers='perReplica'</em>, <em>editsUploadID=None</em>, <em>editsUploadFormat=None</em>, <em>dataFormat='json'</em>, <em>rollbackOnFailure=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager.synchronize" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO: implement synchronize replica
+<a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000vv000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000vv000000</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ReplicaManager.unregister">
+<code class="descname">unregister</code><span class="sig-paren">(</span><em>replica_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ReplicaManager.unregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes a replica from a feature service
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>replica_id - The replicaID returned by the feature service</dt>
+<dd>when the replica was created.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-attachmentmanager">
+<h2>arcgis.lyr.AttachmentManager<a class="headerlink" href="#arcgis-lyr-attachmentmanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.AttachmentManager">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">AttachmentManager</code><span class="sig-paren">(</span><em>layer</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manager class for manipulating feature layer attachments. This class is not created by users directly.
+An instance of this class, called &#8216;attachments&#8217;, is available as a property of the FeatureLayer object,
+if the layer supports attachments.
+Users call methods on this &#8216;attachments&#8217; object to manipulate (create, get, list, delete) attachments.</p>
+<dl class="method">
+<dt id="arcgis.lyr.AttachmentManager.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>oid</em>, <em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an attachment to a feature service
+Input:</p>
+<blockquote>
+<div>oid - string - OBJECTID value to add attachment to
+file_path - string - path to file</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>JSON Repsonse</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AttachmentManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>oid</em>, <em>attachment_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes an attachment from a feature
+Input:</p>
+<blockquote>
+<div>oid - integer or string - id of feature
+attachment_id - integer - id of attachment to erase</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>JSON response</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AttachmentManager.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>oid</em>, <em>attachment_id</em>, <em>save_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>downloads attachment and returns it&#8217;s path on disk</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AttachmentManager.get_list">
+<code class="descname">get_list</code><span class="sig-paren">(</span><em>oid</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager.get_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the list of attachements for a given OBJECT ID</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.AttachmentManager.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>oid</em>, <em>attachment_id</em>, <em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AttachmentManager.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>updates an existing attachment with a new file
+Inputs:</p>
+<blockquote>
+<div>oid - string/integer - Unique record ID
+attachment_id - integer - Unique attachment identifier
+file_path - string - path to new attachment</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>JSON response</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-featurelayer">
+<h2>arcgis.lyr.FeatureLayer<a class="headerlink" href="#arcgis-lyr-featurelayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.FeatureLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">FeatureLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="arcgis.lyr.FeatureLayer.admin">
+<code class="descname">admin</code><a class="headerlink" href="#arcgis.lyr.FeatureLayer.admin" title="Permalink to this definition">¶</a></dt>
+<dd><p>accesses the administration service</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureLayer.calculate">
+<code class="descname">calculate</code><span class="sig-paren">(</span><em>where</em>, <em>calc_expression</em>, <em>sql_format='standard'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer.calculate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The calculate operation is performed on a feature service layer
+resource. It updates the values of one or more fields in an
+existing feature service layer based on SQL expressions or scalar
+values. The calculate operation can only be used if the
+supportsCalculate property of the layer is true.
+Neither the Shape field nor system fields can be updated using
+calculate. System fields include ObjectId and GlobalId.
+See Calculate a field for more information on supported expressions</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>where - A where clause can be used to limit the updated records.</dt>
+<dd>Any legal SQL where clause operating on the fields in
+the layer is allowed.</dd>
+<dt>calcExpression - The array of field/value info objects that</dt>
+<dd><p class="first">contain the field or fields to update and their
+scalar values or SQL expression.  Allowed types
+are dictionary and list.  List must be a list
+of dictionary objects.
+Calculation Format is as follows:</p>
+<blockquote class="last">
+<div>{&#8220;field&#8221; : &#8220;&lt;field name&gt;&#8221;,
+&#8220;value&#8221; : &#8220;&lt;value&gt;&#8221;}</div></blockquote>
+</dd>
+<dt>sqlFormat - The SQL format for the calcExpression. It can be</dt>
+<dd>either standard SQL92 (standard) or native SQL
+(native). The default is standard.
+Values: standard, native</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON as string</dd>
+</dl>
+<p>Usage:
+&gt;&gt;&gt;print(fl.calculate(where=&#8221;OBJECTID &lt; 2&#8221;,</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>calcExpression={&#8220;field&#8221;: &#8220;ZONE&#8221;,</dt>
+<dd>&#8220;value&#8221; : &#8220;R1&#8221;}))</dd>
+</dl>
+</div></blockquote>
+<p>{&#8216;updatedFeatureCount&#8217;: 1, &#8216;success&#8217;: True}</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureLayer.edit_features">
+<code class="descname">edit_features</code><span class="sig-paren">(</span><em>adds=None</em>, <em>updates=None</em>, <em>deletes=None</em>, <em>gdbVersion=None</em>, <em>useGlobalIds=False</em>, <em>rollbackOnFailure=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer.edit_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation adds, updates, and deletes features to the
+associated feature layer or table in a single call.
+Inputs:</p>
+<blockquote>
+<div><p>adds - The array of features to be added. 
+updates - The array of features to be updateded.
+deletes - string of OIDs to remove from service
+gdbVersion - Geodatabase version to apply the edits.
+useGlobalIds - instead of referencing the default Object ID</p>
+<blockquote>
+<div>field, the service will look at a GUID field
+to track changes.  This means the GUIDs will
+be passed instead of OIDs for delete,
+update or add features.</div></blockquote>
+<dl class="docutils">
+<dt>rollbackOnFailure - Optional parameter to specify if the</dt>
+<dd>edits should be applied only if all
+submitted edits succeed. If false, the
+server will apply the edits that succeed
+even if some of the submitted edits fail.
+If true, the server will apply the edits
+only if all edits succeed. The default
+value is true.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>dictionary of messages</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureLayer.get_html_popup">
+<code class="descname">get_html_popup</code><span class="sig-paren">(</span><em>oid</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer.get_html_popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>The htmlPopup resource provides details about the HTML pop-up
+authored by the user using ArcGIS for Desktop.
+Input:</p>
+<blockquote>
+<div>oid - object id of the feature where the HTML pop-up</div></blockquote>
+<p>Output:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureLayer.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>where='1=1'</em>, <em>out_fields='*'</em>, <em>timeFilter=None</em>, <em>geometryFilter=None</em>, <em>returnGeometry=True</em>, <em>returnCountOnly=False</em>, <em>returnIdsOnly=False</em>, <em>returnFeatureClass=False</em>, <em>returnDistinctValues=False</em>, <em>returnExtentOnly=False</em>, <em>groupByFieldsForStatistics=None</em>, <em>statisticFilter=None</em>, <em>resultOffset=None</em>, <em>resultRecordCount=None</em>, <em>out_fc=None</em>, <em>objectIds=None</em>, <em>distance=None</em>, <em>units=None</em>, <em>maxAllowableOffset=None</em>, <em>outSR=None</em>, <em>geometryPrecision=None</em>, <em>gdbVersion=None</em>, <em>orderByFields=None</em>, <em>outStatistics=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>multipatchOption=None</em>, <em>quanitizationParameters=None</em>, <em>returnCentroid=False</em>, <em>as_obj=False</em>, <em>as_dict=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>queries a feature service based on a sql statement
+Inputs:</p>
+<blockquote>
+<div><blockquote>
+<div><p>where - the selection sql statement
+out_fields - the attribute fields to return
+objectIds -  The object IDs of this layer or table to be</p>
+<blockquote>
+<div>queried.</div></blockquote>
+<dl class="docutils">
+<dt>distance - The buffer distance for the input geometries.</dt>
+<dd>The distance unit is specified by units. For
+example, if the distance is 100, the query
+geometry is a point, units is set to meters, and
+all points within 100 meters of the point are
+returned.</dd>
+<dt>units - The unit for calculating the buffer distance. If</dt>
+<dd>unit is not specified, the unit is derived from the
+geometry spatial reference. If the geometry spatial
+reference is not specified, the unit is derived
+from the feature service data spatial reference.
+This parameter only applies if
+supportsQueryWithDistance is true.
+Values: esriSRUnit_Meter | esriSRUnit_StatuteMile |
+esriSRUnit_Foot | esriSRUnit_Kilometer |
+esriSRUnit_NauticalMile | esriSRUnit_USNauticalMile</dd>
+<dt>timeFilter - a TimeFilter object where either the start time</dt>
+<dd>or start and end time are defined to limit the
+search results for a given time.  The values in
+the timeFilter should be as UTC timestampes in
+milliseconds.  No checking occurs to see if they
+are in the right format.</dd>
+<dt>geometryFilter - a GeometryFilter object to parse down a given</dt>
+<dd>query by another spatial dataset.</dd>
+<dt>maxAllowableOffset - This option can be used to specify the</dt>
+<dd>maxAllowableOffset to be used for
+generalizing geometries returned by
+the query operation.
+The maxAllowableOffset is in the units
+of outSR. If outSR is not specified,
+maxAllowableOffset is assumed to be in
+the unit of the spatial reference of
+the map.</dd>
+</dl>
+<p>outSR - The spatial reference of the returned geometry.
+geometryPrecision -  This option can be used to specify the</p>
+<blockquote>
+<div>number of decimal places in the
+response geometries returned by the
+Query operation.</div></blockquote>
+<p>gdbVersion - Geodatabase version to query
+returnDistinctValues -  If true, it returns distinct values</p>
+<blockquote>
+<div>based on the fields specified in
+outFields. This parameter applies
+only if the
+supportsAdvancedQueries property of
+the layer is true.</div></blockquote>
+<dl class="docutils">
+<dt>returnIdsOnly -  If true, the response only includes an</dt>
+<dd>array of object IDs. Otherwise, the
+response is a feature set. The default is
+false.</dd>
+<dt>returnCountOnly -  If true, the response only includes the</dt>
+<dd>count (number of features/records) that
+would be returned by a query. Otherwise,
+the response is a feature set. The
+default is false. This option supersedes
+the returnIdsOnly parameter. If
+returnCountOnly = true, the response will
+return both the count and the extent.</dd>
+<dt>returnExtentOnly -  If true, the response only includes the</dt>
+<dd>extent of the features that would be
+returned by the query. If
+returnCountOnly=true, the response will
+return both the count and the extent.
+The default is false. This parameter
+applies only if the
+supportsReturningQueryExtent property
+of the layer is true.</dd>
+<dt>orderByFields - One or more field names on which the</dt>
+<dd>features/records need to be ordered. Use
+ASC or DESC for ascending or descending,
+respectively, following every field to
+control the ordering.</dd>
+<dt>groupByFieldsForStatistics - One or more field names on</dt>
+<dd>which the values need to be
+grouped for calculating the
+statistics.</dd>
+<dt>outStatistics - The definitions for one or more field-based</dt>
+<dd>statistics to be calculated.</dd>
+<dt>returnZ -  If true, Z values are included in the results if</dt>
+<dd>the features have Z values. Otherwise, Z values
+are not returned. The default is false.</dd>
+<dt>returnM - If true, M values are included in the results if</dt>
+<dd>the features have M values. Otherwise, M values
+are not returned. The default is false.</dd>
+<dt>multipatchOption - This option dictates how the geometry of</dt>
+<dd>a multipatch feature will be returned.</dd>
+<dt>resultOffset -  This option can be used for fetching query</dt>
+<dd>results by skipping the specified number of
+records and starting from the next record
+(that is, resultOffset + 1th).</dd>
+<dt>resultRecordCount - This option can be used for fetching</dt>
+<dd>query results up to the
+resultRecordCount specified. When
+resultOffset is specified but this
+parameter is not, the map service
+defaults it to maxRecordCount. The
+maximum value for this parameter is the
+value of the layer&#8217;s maxRecordCount
+property.</dd>
+<dt>quanitizationParameters - Used to project the geometry onto</dt>
+<dd>a virtual grid, likely
+representing pixels on the screen.</dd>
+<dt>returnCentroid - Used to return the geometry centroid</dt>
+<dd>associated with each feature returned. If
+true, the result includes the geometry
+centroid. The default is false.</dd>
+<dt>as_obj - If true, the query will return the results as a </dt>
+<dd><p class="first">collections.mapping object that provides attribute-style access.
+This object can be converted to a dict using dict(obj)</p>
+<blockquote class="last">
+<div>The default is False.</div></blockquote>
+</dd>
+<dt>as_dict - If true, the query will return the results as a dict. </dt>
+<dd>The default is False</dd>
+<dt>returnFeatureClass - If true and arcpy is installed, the</dt>
+<dd>script will attempt to save the result
+of the query to a feature class.</dd>
+<dt>out_fc - only valid if returnFeatureClass is set to True.</dt>
+<dd>Output location of query. If out_fc is set to None,
+then the feature class will be saved to the scratch
+File Geodatabase with a random name.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>kwargs - optional parameters that can be passed to the Query</dt>
+<dd>function.  This will allow users to pass additional
+parameters not explicitly implemented on the function. A
+complete list of functions available is documented on the
+Query REST API.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>A list of Feature Objects (default) or a path to the output featureclass if
+returnFeatureClass is set to True.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.FeatureLayer.query_related_records">
+<code class="descname">query_related_records</code><span class="sig-paren">(</span><em>objectIds</em>, <em>relationshipId</em>, <em>outFields='*'</em>, <em>definitionExpression=None</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>outWKID=None</em>, <em>gdbVersion=None</em>, <em>returnZ=False</em>, <em>returnM=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureLayer.query_related_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Query operation is performed on a feature service layer
+resource. The result of this operation are feature sets grouped
+by source layer/table object IDs. Each feature set contains
+Feature objects including the values for the fields requested by
+the user. For related layers, if you request geometry
+information, the geometry of each feature is also returned in
+the feature set. For related tables, the feature set does not
+include geometries.
+Inputs:</p>
+<blockquote>
+<div><p>objectIds - the object IDs of the table/layer to be queried
+relationshipId - The ID of the relationship to be queried.
+outFields - the list of fields from the related table/layer</p>
+<blockquote>
+<div>to be included in the returned feature set. This
+list is a comma delimited list of field names. If
+you specify the shape field in the list of return
+fields, it is ignored. To request geometry, set
+returnGeometry to true.
+You can also specify the wildcard &#8220;*&#8221; as the
+value of this parameter. In this case, the result
+s will include all the field values.</div></blockquote>
+<dl class="docutils">
+<dt>definitionExpression - The definition expression to be</dt>
+<dd>applied to the related table/layer.
+From the list of objectIds, only those
+records that conform to this
+expression are queried for related
+records.</dd>
+<dt>returnGeometry - If true, the feature set includes the</dt>
+<dd>geometry associated with each feature. The
+default is true.</dd>
+<dt>maxAllowableOffset - This option can be used to specify the</dt>
+<dd>maxAllowableOffset to be used for
+generalizing geometries returned by the
+query operation. The maxAllowableOffset
+is in the units of the outSR. If outSR
+is not specified, then
+maxAllowableOffset is assumed to be in
+the unit of the spatial reference of the
+map.</dd>
+<dt>geometryPrecision - This option can be used to specify the</dt>
+<dd>number of decimal places in the response
+geometries.</dd>
+</dl>
+<p>outWKID - The spatial reference of the returned geometry.
+gdbVersion - The geodatabase version to query. This parameter</p>
+<blockquote>
+<div>applies only if the isDataVersioned property of
+the layer queried is true.</div></blockquote>
+<dl class="docutils">
+<dt>returnZ - If true, Z values are included in the results if</dt>
+<dd>the features have Z values. Otherwise, Z values are
+not returned. The default is false.</dd>
+<dt>returnM - If true, M values are included in the results if</dt>
+<dd>the features have M values. Otherwise, M values are
+not returned. The default is false.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-featurecollection">
+<h2>arcgis.lyr.FeatureCollection<a class="headerlink" href="#arcgis-lyr-featurecollection" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.FeatureCollection">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">FeatureCollection</code><span class="sig-paren">(</span><em>dictdata</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureCollection" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="arcgis.lyr.FeatureCollection.query">
+<code class="descname">query</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.FeatureCollection.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data in this feature collection. Filtering by SQL statement is not supported for feature collections.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-vectortilelayer">
+<h2>arcgis.lyr.VectorTileLayer<a class="headerlink" href="#arcgis-lyr-vectortilelayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.VectorTileLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">VectorTileLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="arcgis.lyr.VectorTileLayer.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.VectorTileLayer.info">
+<code class="descname">info</code><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns relative paths to a list of resource files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.VectorTileLayer.styles">
+<code class="descname">styles</code><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.styles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.VectorTileLayer.tile_fonts">
+<code class="descname">tile_fonts</code><span class="sig-paren">(</span><em>fontstack</em>, <em>stack_range</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.tile_fonts" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource returns glyphs in PBF format. The template url for
+this fonts resource is represented in Vector Tile Style resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.VectorTileLayer.tile_sprite">
+<code class="descname">tile_sprite</code><span class="sig-paren">(</span><em>out_format='sprite.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.tile_sprite" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource returns sprite image and metadata</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.VectorTileLayer.vector_tile">
+<code class="descname">vector_tile</code><span class="sig-paren">(</span><em>level</em>, <em>row</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.vector_tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource represents a single vector tile for the map. The
+bytes for the tile at the specified level, row and column are
+returned in PBF format. If a tile is not found, an error is returned.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-imagelayer">
+<h2>arcgis.lyr.ImageLayer<a class="headerlink" href="#arcgis-lyr-imagelayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.ImageLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ImageLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="arcgis.lyr.ImageLayer.add_rasters">
+<code class="descname">add_rasters</code><span class="sig-paren">(</span><em>rasterType</em>, <em>itemIds=None</em>, <em>serviceUrl=None</em>, <em>computeStatistics=False</em>, <em>buildPyramids=False</em>, <em>buildThumbnail=False</em>, <em>minimumCellSizeFactor=None</em>, <em>maximumCellSizeFactor=None</em>, <em>attributes=None</em>, <em>geodataTransforms=None</em>, <em>geodataTransformApplyMethod='esriGeodataTransformApplyAppend'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.add_rasters" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation is supported at 10.1 and later.
+The Add Rasters operation is performed on an image service resource.
+The Add Rasters operation adds new rasters to an image service
+(POST only).
+The added rasters can either be uploaded items, using the itemIds
+parameter, or published services, using the serviceUrl parameter.
+If itemIds is specified, uploaded rasters are copied to the image
+service&#8217;s dynamic image workspace location; if the serviceUrl is
+specified, the image service adds the URL to the mosaic dataset no
+raster files are copied. The serviceUrl is required input for the
+following raster types: Image Service, Map Service, WCS, and WMS.</p>
+<p>Inputs:</p>
+<dl class="docutils">
+<dt>itemIds - The upload items (raster files) to be added. Either</dt>
+<dd><dl class="first last docutils">
+<dt>itemIds or serviceUrl is needed to perform this operation.</dt>
+<dd><p class="first">Syntax: itemIds=&lt;itemId1&gt;,&lt;itemId2&gt;
+Example: itemIds=ib740c7bb-e5d0-4156-9cea-12fa7d3a472c,</p>
+<blockquote class="last">
+<div>ib740c7bb-e2d0-4106-9fea-12fa7d3a482c</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>serviceUrl - The URL of the service to be added. The image service</dt>
+<dd><p class="first">will add this URL to the mosaic dataset. Either itemIds or
+serviceUrl is needed to perform this operation. The service URL is
+required for the following raster types: Image Service, Map
+Service, WCS, and WMS.</p>
+<blockquote class="last">
+<div>Example: serviceUrl=http://myserver/arcgis/services/Portland/ImageServer</div></blockquote>
+</dd>
+<dt>rasterType - The type of raster files being added. Raster types</dt>
+<dd><p class="first">define the metadata and processing template for raster files to be
+added. Allowed values are listed in image service resource.</p>
+<blockquote class="last">
+<div>Example: Raster Dataset | CADRG/ECRG | CIB | DTED | Image Service | Map Service | NITF | WCS | WMS</div></blockquote>
+</dd>
+<dt>computeStatistics - If true, statistics for the rasters will be</dt>
+<dd><dl class="first last docutils">
+<dt>computed. The default is false.</dt>
+<dd>Values: false | true</dd>
+</dl>
+</dd>
+<dt>buildPyramids - If true, builds pyramids for the rasters. The</dt>
+<dd><dl class="first last docutils">
+<dt>default is false.</dt>
+<dd>Values: false | true</dd>
+</dl>
+</dd>
+<dt>buildThumbnail   - If true, generates a thumbnail for the rasters.</dt>
+<dd><dl class="first last docutils">
+<dt>The default is false.</dt>
+<dd>Values: false | true</dd>
+</dl>
+</dd>
+<dt>minimumCellSizeFactor - The factor (times raster resolution) used</dt>
+<dd><p class="first">to populate the MinPS field (maximum cell size above which the
+raster is visible).</p>
+<blockquote class="last">
+<div>Syntax: minimumCellSizeFactor=&lt;minimumCellSizeFactor&gt;
+Example: minimumCellSizeFactor=0.1</div></blockquote>
+</dd>
+<dt>maximumCellSizeFactor - The factor (times raster resolution) used</dt>
+<dd><p class="first">to populate MaxPS field (maximum cell size below which raster is
+visible).</p>
+<blockquote class="last">
+<div>Syntax: maximumCellSizeFactor=&lt;maximumCellSizeFactor&gt;
+Example: maximumCellSizeFactor=10</div></blockquote>
+</dd>
+<dt>attributes - Any attribute for the added rasters.</dt>
+<dd><p class="first">Syntax:
+{</p>
+<blockquote>
+<div>&#8220;&lt;name1&gt;&#8221; : &lt;value1&gt;,
+&#8220;&lt;name2&gt;&#8221; : &lt;value2&gt;</div></blockquote>
+<p>}
+Example:
+{</p>
+<blockquote>
+<div>&#8220;MinPS&#8221;: 0,
+&#8220;MaxPS&#8221;: 20;
+&#8220;Year&#8221; : 2002,
+&#8220;State&#8221; : &#8220;Florida&#8221;</div></blockquote>
+<p class="last">}</p>
+</dd>
+<dt>geodataTransforms - The geodata transformations applied on the</dt>
+<dd><p class="first">added rasters. A geodata transformation is a mathematical model
+that performs a geometric transformation on a raster; it defines
+how the pixels will be transformed when displayed or accessed.
+Polynomial, projective, identity, and other transformations are
+available. The geodata transformations are applied to the dataset
+that is added.</p>
+<blockquote>
+<div><p>Syntax:
+[
+{</p>
+<blockquote>
+<div>&#8220;geodataTransform&#8221; : &#8220;&lt;geodataTransformName1&gt;&#8221;,
+&#8220;geodataTransformArguments&#8221; : {&lt;geodataTransformArguments1&gt;}
+},
+{
+&#8220;geodataTransform&#8221; : &#8220;&lt;geodataTransformName2&gt;&#8221;,
+&#8220;geodataTransformArguments&#8221; : {&lt;geodataTransformArguments2&gt;}
+}</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p class="last">The syntax of the geodataTransformArguments property varies based
+on the specified geodataTransform name. See Geodata Transformations
+documentation for more details.</p>
+</dd>
+<dt>geodataTransformApplyMethod - This parameter defines how to apply</dt>
+<dd><p class="first">the provided geodataTransform. The default is
+esriGeodataTransformApplyAppend.</p>
+<blockquote class="last">
+<div>Values: esriGeodataTransformApplyAppend |
+esriGeodataTransformApplyReplace |
+esriGeodataTransformApplyOverwrite</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ImageLayer.colormap">
+<code class="descname">colormap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.colormap" title="Permalink to this definition">¶</a></dt>
+<dd><p>The colormap resource returns RGB color representation of pixel
+values. This resource is supported if the hasColormap property of
+the service is true.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ImageLayer.export_image">
+<code class="descname">export_image</code><span class="sig-paren">(</span><em>bbox</em>, <em>imageSR</em>, <em>bboxSR</em>, <em>size=None</em>, <em>time=None</em>, <em>export_format='jpgpng'</em>, <em>pixelType='UNKNOWN'</em>, <em>noData=None</em>, <em>noDataInterpretation='esriNoDataMatchAny'</em>, <em>interpolation=None</em>, <em>compression=None</em>, <em>compressionQuality=75</em>, <em>bandIds=None</em>, <em>moasiacRule=None</em>, <em>renderingRule=''</em>, <em>f='json'</em>, <em>saveFolder=None</em>, <em>saveFile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.export_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>The exportImage operation is performed on an image service resource
+The result of this operation is an image resource. This resource
+provides information about the exported image, such as its URL,
+extent, width, and height.
+In addition to the usual response formats of HTML and JSON, you can
+also request the image format while performing this operation. When
+you perform an export with the image format , the server responds
+by directly streaming the image bytes to the client. With this
+approach, you don&#8217;t get any information associated with the
+exported image other than the image itself.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>bbox - The extent (bounding box) of the exported image. Unless</dt>
+<dd>the bboxSR parameter has been specified, the bbox is
+assumed to be in the spatial reference of the image
+service.</dd>
+</dl>
+<p>imageSR - The spatial reference of the exported image.
+bboxSR - The spatial reference of the bbox.
+size - The size (width * height) of the exported image in</p>
+<blockquote>
+<div>pixels. If size is not specified, an image with a default
+size of 400 * 400 will be exported.</div></blockquote>
+<p>time - The time instant or the time extent of the exported image.
+export_format - The format of the exported image. The default format is</p>
+<blockquote>
+<div><p>jpgpng.
+Values: jpgpng | png | png8 | png24 | jpg | bmp | gif |</p>
+<blockquote>
+<div>tiff | png32</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>pixelType - The pixel type, also known as data type, pertains to</dt>
+<dd>the type of values stored in the raster, such as
+signed integer, unsigned integer, or floating point.
+Integers are whole numbers, whereas floating points
+have decimals.</dd>
+</dl>
+<p>noDate - The pixel value representing no information.
+noDataInterpretation - Interpretation of the noData setting. The</p>
+<blockquote>
+<div>default is esriNoDataMatchAny when noData is
+a number, and esriNoDataMatchAll when noData
+is a comma-delimited string:
+esriNoDataMatchAny | esriNoDataMatchAll.</div></blockquote>
+<dl class="last docutils">
+<dt>interpolation - The resampling process of extrapolating the</dt>
+<dd>pixel values while transforming the raster
+dataset when it undergoes warping or when it
+changes coordinate space.</dd>
+<dt>compression - Controls how to compress the image when exporting</dt>
+<dd>to TIFF format: None, JPEG, LZ77. It does not
+control compression on other formats.</dd>
+<dt>compressionQuality - Controls how much loss the image will be</dt>
+<dd>subjected to by the compression algorithm.
+Valid value ranges of compression quality
+are from 0 to 100.</dd>
+<dt>bandIds - If there are multiple bands, you can specify a single</dt>
+<dd>band to export, or you can change the band combination
+(red, green, blue) by specifying the band number. Band
+number is 0 based.</dd>
+<dt>mosaicRule - Specifies the mosaic rule when defining how</dt>
+<dd>individual images should be mosaicked. When a mosaic
+rule is not specified, the default mosaic rule of
+the image service will be used (as advertised in
+the root resource: defaultMosaicMethod,
+mosaicOperator, sortField, sortValue).</dd>
+<dt>renderingRule - Specifies the rendering rule for how the</dt>
+<dd>requested image should be rendered.</dd>
+<dt>f - The response format.  default is json</dt>
+<dd>Values: json | image | kmz</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.lyr.ImageLayer.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.ImageLayer.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>where='1=1'</em>, <em>out_fields='*'</em>, <em>timeFilter=None</em>, <em>geometryFilter=None</em>, <em>returnGeometry=True</em>, <em>returnIdsOnly=False</em>, <em>returnCountOnly=False</em>, <em>pixelSize=None</em>, <em>orderByFields=None</em>, <em>returnDistinctValues=True</em>, <em>outStatistics=None</em>, <em>groupByFieldsForStatistics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>queries a feature service based on a sql statement
+Inputs:</p>
+<blockquote>
+<div><p>where - the selection sql statement
+out_fields - the attribute fields to return
+timeFilter - a TimeFilter object where either the start time</p>
+<blockquote>
+<div>or start and end time are defined to limit the
+search results for a given time.  The values in
+the timeFilter should be as UTC timestampes in
+milliseconds.  No checking occurs to see if they
+are in the right format.</div></blockquote>
+<dl class="docutils">
+<dt>geometryFilter - a GeometryFilter object to parse down a given</dt>
+<dd>query by another spatial dataset.</dd>
+<dt>returnGeometry - true means a geometry will be returned,</dt>
+<dd>else just the attributes</dd>
+<dt>returnIdsOnly - false is default.  True means only OBJECTIDs</dt>
+<dd>will be returned</dd>
+<dt>returnCountOnly - if True, then an integer is returned only</dt>
+<dd>based on the sql statement</dd>
+<dt>pixelSize-Query visible rasters at a given pixel size. If</dt>
+<dd>pixelSize is not specified, rasters at all
+resolutions can be queried.</dd>
+<dt>orderByFields-Order results by one or more field names. Use</dt>
+<dd>ASC or DESC for ascending or descending order,
+respectively</dd>
+<dt>returnDistinctValues-  If true, returns distinct values</dt>
+<dd>based on the fields specified in
+outFields. This parameter applies only
+if the supportsAdvancedQueries property
+of the image service is true.</dd>
+<dt>outStatistics- the definitions for one or more field-based</dt>
+<dd>statistics to be calculated.</dd>
+<dt>groupByFieldsForStatistics-One or more field names using the</dt>
+<dd>values that need to be grouped for
+calculating the statistics.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>A list of Feature Objects (default) or a path to the output featureclass if
+returnFeatureClass is set to True.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-networkservice">
+<h2>arcgis.lyr.NetworkService<a class="headerlink" href="#arcgis-lyr-networkservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.NetworkService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">NetworkService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkService" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="arcgis.lyr.NetworkService.closest_facility_layers">
+<code class="descname">closest_facility_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.closest_facility_layers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.lyr.NetworkService.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkService.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.NetworkService.route_layers">
+<code class="descname">route_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.route_layers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.NetworkService.service_area_layers">
+<code class="descname">service_area_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.service_area_layers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-networklayer">
+<h2>arcgis.lyr.NetworkLayer<a class="headerlink" href="#arcgis-lyr-networklayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.NetworkLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">NetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network layer resource represents a single network layer in
+a network analysis service published by ArcGIS Server. It provides basic
+information about the network layer such as its name, type, and network
+classes. Additionally, depending on the layer type, it provides different
+pieces of information.</p>
+<p>It is a base class for RouteNetworkLayer, ServiceAreaNetworkLayer, and
+ClosestFacilityNetworkLayer.</p>
+<dl class="method">
+<dt id="arcgis.lyr.NetworkLayer.retrieve_travel_modes">
+<code class="descname">retrieve_travel_modes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkLayer.retrieve_travel_modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>identify all the valid travel modes that have been defined on the
+network dataset or in the portal if the GIS server is federated</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-routenetworklayer">
+<h2>arcgis.lyr.RouteNetworkLayer<a class="headerlink" href="#arcgis-lyr-routenetworklayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.RouteNetworkLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">RouteNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.RouteNetworkLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Route Network Layer which has common properties of Network Layer
+as well as some attributes unique to Route Network Layer only.</p>
+<dl class="method">
+<dt id="arcgis.lyr.RouteNetworkLayer.solve">
+<code class="descname">solve</code><span class="sig-paren">(</span><em>stops</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>returnDirections=None</em>, <em>returnRoutes=True</em>, <em>returnStops=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=True</em>, <em>returnPolygonBarriers=True</em>, <em>outSR=None</em>, <em>ignoreInvalidLocations=True</em>, <em>outputLines=None</em>, <em>findBestSequence=False</em>, <em>preserveFirstStop=True</em>, <em>preserveLastStop=True</em>, <em>useTimeWindows=False</em>, <em>startTime=None</em>, <em>startTimeIsUTC=False</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>useHierarchy=True</em>, <em>directionsLanguage=None</em>, <em>directionsOutputType=None</em>, <em>directionsStyleName=None</em>, <em>directionsLengthUnits=None</em>, <em>directionsTimeAttributeName=None</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.RouteNetworkLayer.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>The solve operation is performed on a network layer resource.
+The solve operation is supported on a network layer whose layerType
+is esriNAServerRouteLayer. You can provide arguments to the solve
+route operation as query parameters.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>stops - The set of stops loaded as network locations during analysis.</dt>
+<dd>Stops can be specified using a simple comma / semi-colon
+based syntax or as a JSON structure. If stops are not
+specified, preloaded stops from the map document are used in
+the analysis.</dd>
+<dt>barriers - The set of barriers loaded as network locations during</dt>
+<dd>analysis. Barriers can be specified using a simple comma
+/ semi-colon based syntax or as a JSON structure. If
+barriers are not specified, preloaded barriers from the
+map document are used in the analysis. If an empty json
+object is passed (&#8216;{}&#8217;) preloaded barriers are ignored.</dd>
+<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
+<dd>locations during analysis. If polyline barriers
+are not specified, preloaded polyline barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;)
+preloaded polyline barriers are ignored.</dd>
+<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
+<dd>locations during analysis. If polygon barriers
+are not specified, preloaded polygon barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;) preloaded
+polygon barriers are ignored.</dd>
+<dt>travelMode - Travel modes provide override values that help you</dt>
+<dd>quickly and consistently model a vehicle or mode of
+transportation. The chosen travel mode must be
+preconfigured on the network dataset that the routing
+service references.</dd>
+<dt>attributeParameterValues - A set of attribute parameter values that</dt>
+<dd>can be parameterized to determine which
+network elements can be used by a vehicle.</dd>
+<dt>returnDirections - If true, directions will be generated and returned</dt>
+<dd>with the analysis results. Default is true.</dd>
+<dt>returnRoutes - If true, routes will be returned with the analysis</dt>
+<dd>results. Default is true.</dd>
+<dt>returnStops -  If true, stops will be returned with the analysis</dt>
+<dd>results. Default is false.</dd>
+<dt>returnBarriers -  If true, barriers will be returned with the analysis</dt>
+<dd>results. Default is false.</dd>
+<dt>returnPolylineBarriers -  If true, polyline barriers will be returned</dt>
+<dd>with the analysis results. Default is false.</dd>
+<dt>returnPolygonBarriers - If true, polygon barriers will be returned with</dt>
+<dd>the analysis results. Default is false.</dd>
+<dt>outSR - The spatial reference of the geometries returned with the</dt>
+<dd>analysis results.</dd>
+<dt>ignoreInvalidLocations - If true, the solver will ignore invalid</dt>
+<dd>locations. Otherwise, it will raise an error.
+The default is as defined in the network layer.</dd>
+<dt>outputLines - The type of output lines to be generated in the result.</dt>
+<dd>The default is as defined in the network layer.</dd>
+<dt>findBestSequence - If true, the solver should re-sequence the route in</dt>
+<dd>the optimal order. The default is as defined in the
+network layer.</dd>
+<dt>preserveFirstStop - If true, the solver should keep the first stop</dt>
+<dd>fixed in the sequence. The default is as defined
+in the network layer.</dd>
+<dt>preserveLastStop - If true, the solver should keep the last stop fixed</dt>
+<dd>in the sequence. The default is as defined in the
+network layer.</dd>
+<dt>useTimeWindows - If true, the solver should consider time windows.</dt>
+<dd>The default is as defined in the network layer.</dd>
+<dt>startTime - The time the route begins. If not specified, the solver</dt>
+<dd>will use the default as defined in the network layer.</dd>
+</dl>
+<p>startTimeIsUTC - The time zone of the startTime parameter.
+accumulateAttributeNames - The list of network attribute names to be</p>
+<blockquote>
+<div>accumulated with the analysis. The default is
+as defined in the network layer. The value
+should be specified as a comma separated list
+of attribute names. You can also specify a
+value of none to indicate that no network
+attributes should be accumulated.</div></blockquote>
+<dl class="docutils">
+<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
+<dd>impedance attribute in analysis. The default is
+as defined in the network layer.</dd>
+<dt>restrictionAttributeNames -The list of network attribute names to be</dt>
+<dd>used as restrictions with the analysis. The
+default is as defined in the network layer.
+The value should be specified as a comma
+separated list of attribute names. You can
+also specify a value of none to indicate that
+no network attributes should be used as
+restrictions.</dd>
+<dt>restrictUTurns -  Specifies how U-Turns should be restricted in the</dt>
+<dd>analysis. The default is as defined in the network
+layer. Values: esriNFSBAllowBacktrack |
+esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
+esriNFSBAtDeadEndsAndIntersections</dd>
+<dt>useHierarchy -  If true, the hierarchy attribute for the network should</dt>
+<dd>be used in analysis. The default is as defined in the
+network layer.</dd>
+<dt>directionsLanguage - The language to be used when computing directions.</dt>
+<dd>The default is as defined in the network layer. The
+list of supported languages can be found in REST
+layer description.</dd>
+<dt>directionsOutputType -  Defines content, verbosity of returned</dt>
+<dd>directions. The default is esriDOTStandard.
+Values: esriDOTComplete | esriDOTCompleteNoEvents
+| esriDOTInstructionsOnly | esriDOTStandard |
+esriDOTSummaryOnly</dd>
+<dt>directionsStyleName - The style to be used when returning the directions.</dt>
+<dd>The default is as defined in the network layer. The
+list of supported styles can be found in REST
+layer description.</dd>
+<dt>directionsLengthUnits - The length units to use when computing directions.</dt>
+<dd>The default is as defined in the network layer.
+Values: esriNAUFeet | esriNAUKilometers |
+esriNAUMeters | esriNAUMiles |
+esriNAUNauticalMiles | esriNAUYards |
+esriNAUUnknown</dd>
+<dt>directionsTimeAttributeName - The name of network attribute to use for</dt>
+<dd>the drive time when computing directions.
+The default is as defined in the network
+layer.</dd>
+<dt>outputGeometryPrecision -  The precision of the output geometry after</dt>
+<dd>generalization. If 0, no generalization of
+output geometry is performed. The default is
+as defined in the network service
+configuration.</dd>
+<dt>outputGeometryPrecisionUnits - The units of the output geometry</dt>
+<dd>precision. The default value is
+esriUnknownUnits. Values: esriUnknownUnits
+| esriCentimeters | esriDecimalDegrees |
+esriDecimeters | esriFeet | esriInches |
+esriKilometers | esriMeters | esriMiles |
+esriMillimeters | esriNauticalMiles |
+esriPoints | esriYards</dd>
+<dt>returnZ - If true, Z values will be included in the returned routes and</dt>
+<dd>compressed geometry if the network dataset is Z-aware.
+The default is false.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-serviceareanetworklayer">
+<h2>arcgis.lyr.ServiceAreaNetworkLayer<a class="headerlink" href="#arcgis-lyr-serviceareanetworklayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.ServiceAreaNetworkLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ServiceAreaNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ServiceAreaNetworkLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Service Area Network Layer which has common properties of Network
+Layer as well as some attributes unique to Service Area Network Layer
+only.</p>
+<dl class="method">
+<dt id="arcgis.lyr.ServiceAreaNetworkLayer.solve_service_area">
+<code class="descname">solve_service_area</code><span class="sig-paren">(</span><em>facilities</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>defaultBreaks=None</em>, <em>excludeSourcesFromPolygons=None</em>, <em>mergeSimilarPolygonRanges=None</em>, <em>outputLines=None</em>, <em>outputPolygons=None</em>, <em>overlapLines=None</em>, <em>overlapPolygons=None</em>, <em>splitLinesAtBreaks=None</em>, <em>splitPolygonsAtBreaks=None</em>, <em>trimOuterPolygon=None</em>, <em>trimPolygonDistance=None</em>, <em>trimPolygonDistanceUnits=None</em>, <em>returnFacilities=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=False</em>, <em>returnPolygonBarriers=False</em>, <em>outSR=None</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits='esriUnknownUnits'</em>, <em>useHierarchy=None</em>, <em>timeOfDay=None</em>, <em>timeOfDayIsUTC=None</em>, <em>travelDirection=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ServiceAreaNetworkLayer.solve_service_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>The solve service area operation is performed on a network layer
+resource of type service area (layerType is esriNAServerServiceArea).
+You can provide arguments to the solve service area operation as
+query parameters.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>facilities - The set of facilities loaded as network locations</dt>
+<dd>during analysis. Facilities can be specified using
+a simple comma / semi-colon based syntax or as a
+JSON structure. If facilities are not specified,
+preloaded facilities from the map document are used
+in the analysis. If an empty json object is passed
+(&#8216;{}&#8217;) preloaded facilities are ignored.</dd>
+<dt>barriers - The set of barriers loaded as network locations during</dt>
+<dd>analysis. Barriers can be specified using a simple
+comma/semicolon-based syntax or as a JSON structure.
+If barriers are not specified, preloaded barriers from
+the map document are used in the analysis. If an empty
+json object is passed (&#8216;{}&#8217;), preloaded barriers are
+ignored.</dd>
+<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
+<dd>locations during analysis. If polyline barriers
+are not specified, preloaded polyline barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;),
+preloaded polyline barriers are ignored.</dd>
+<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
+<dd>locations during analysis. If polygon barriers
+are not specified, preloaded polygon barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;),
+preloaded polygon barriers are ignored.</dd>
+<dt>travelMode - Travel modes provide override values that help you</dt>
+<dd>quickly and consistently model a vehicle or mode of
+transportation. The chosen travel mode must be
+preconfigured on the network dataset that the
+service area service references.</dd>
+<dt>attributeParameterValues - A set of attribute parameter values that</dt>
+<dd>can be parameterized to determine which
+network elements can be used by a vehicle.</dd>
+<dt>defaultBreaks - A comma-separated list of doubles. The default is</dt>
+<dd>defined in the network analysis layer.</dd>
+<dt>excludeSourcesFromPolygons - A comma-separated list of string names.</dt>
+<dd>The default is defined in the network
+analysis layer.</dd>
+<dt>mergeSimilarPolygonRanges - If true, similar ranges will be merged</dt>
+<dd>in the result polygons. The default is
+defined in the network analysis layer.</dd>
+<dt>outputLines - The type of lines(s) generated. The default is as</dt>
+<dd>defined in the network analysis layer.</dd>
+<dt>outputPolygons - The type of polygon(s) generated. The default is</dt>
+<dd>as defined in the network analysis layer.</dd>
+<dt>overlapLines - Indicates if the lines should overlap from multiple</dt>
+<dd>facilities. The default is defined in the network
+analysis layer.</dd>
+<dt>overlapPolygons - Indicates if the polygons for all facilities</dt>
+<dd>should overlap. The default is defined in the
+network analysis layer.</dd>
+<dt>splitLinesAtBreaks - If true, lines will be split at breaks. The</dt>
+<dd>default is defined in the network analysis
+layer.</dd>
+<dt>splitPolygonsAtBreaks - If true, polygons will be split at breaks.</dt>
+<dd>The default is defined in the network
+analysis layer.</dd>
+<dt>trimOuterPolygon -  If true, the outermost polygon (at the maximum</dt>
+<dd>break value) will be trimmed. The default is
+defined in the network analysis layer.</dd>
+<dt>trimPolygonDistance -  If polygons are being trimmed, provides the</dt>
+<dd>distance to trim. The default is defined in
+the network analysis layer.</dd>
+<dt>trimPolygonDistanceUnits - If polygons are being trimmed, specifies</dt>
+<dd>the units of the trimPolygonDistance. The
+default is defined in the network analysis
+layer.</dd>
+<dt>returnFacilities - If true, facilities will be returned with the</dt>
+<dd>analysis results. Default is false.</dd>
+<dt>returnBarriers - If true, barriers will be returned with the analysis</dt>
+<dd>results. Default is false.</dd>
+<dt>returnPolylineBarriers - If true, polyline barriers will be returned</dt>
+<dd>with the analysis results. Default is false.</dd>
+<dt>returnPolygonBarriers - If true, polygon barriers will be returned</dt>
+<dd>with the analysis results. Default is false.</dd>
+<dt>outSR - The well-known ID of the spatial reference for the geometries</dt>
+<dd>returned with the analysis results. If outSR is not specified,
+the geometries are returned in the spatial reference of the map.</dd>
+<dt>accumulateAttributeNames - The list of network attribute names to be</dt>
+<dd>accumulated with the analysis. The default
+is as defined in the network analysis layer.
+The value should be specified as a comma
+separated list of attribute names. You can
+also specify a value of none to indicate that
+no network attributes should be accumulated.</dd>
+<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
+<dd>impedance attribute in analysis. The default
+is as defined in the network analysis layer.</dd>
+<dt>restrictionAttributeNames - The list of network attribute names to be</dt>
+<dd>used as restrictions with the analysis. The
+default is as defined in the network analysis
+layer. The value should be specified as a
+comma separated list of attribute names.
+You can also specify a value of none to
+indicate that no network attributes should
+be used as restrictions.</dd>
+<dt>restrictUTurns - Specifies how U-Turns should be restricted in the</dt>
+<dd>analysis. The default is as defined in the network
+analysis layer. Values: esriNFSBAllowBacktrack |
+esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
+esriNFSBAtDeadEndsAndIntersections</dd>
+<dt>outputGeometryPrecision - The precision of the output geometry after</dt>
+<dd>generalization. If 0, no generalization of
+output geometry is performed. The default is
+as defined in the network service configuration.</dd>
+<dt>outputGeometryPrecisionUnits - The units of the output geometry precision.</dt>
+<dd>The default value is esriUnknownUnits.
+Values: esriUnknownUnits | esriCentimeters |
+esriDecimalDegrees | esriDecimeters |
+esriFeet | esriInches | esriKilometers |
+esriMeters | esriMiles | esriMillimeters |
+esriNauticalMiles | esriPoints | esriYards</dd>
+<dt>useHierarchy - If true, the hierarchy attribute for the network should be</dt>
+<dd>used in analysis. The default is as defined in the network
+layer. This cannot be used in conjunction with outputLines.</dd>
+<dt>timeOfDay - The date and time at the facility. If travelDirection is set</dt>
+<dd>to esriNATravelDirectionToFacility, the timeOfDay value
+specifies the arrival time at the facility. if travelDirection
+is set to esriNATravelDirectionFromFacility, the timeOfDay
+value is the departure time from the facility. The time zone
+for timeOfDay is specified by timeOfDayIsUTC.</dd>
+<dt>timeOfDayIsUTC - The time zone or zones of the timeOfDay parameter. When</dt>
+<dd>set to false, which is the default value, the timeOfDay
+parameter refers to the time zone or zones in which the
+facilities are located. Therefore, the start or end times
+of the service areas are staggered by time zone.</dd>
+<dt>travelDirection - Options for traveling to or from the facility. The</dt>
+<dd>default is defined in the network analysis layer.</dd>
+<dt>returnZ - If true, Z values will be included in saPolygons and saPolylines</dt>
+<dd>geometry if the network dataset is Z-aware.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-closestfacilitynetworklayer">
+<h2>arcgis.lyr.ClosestFacilityNetworkLayer<a class="headerlink" href="#arcgis-lyr-closestfacilitynetworklayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.ClosestFacilityNetworkLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ClosestFacilityNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ClosestFacilityNetworkLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Closest Facility Network Layer which has common properties of Network
+Layer as well as some attributes unique to Closest Facility Network Layer
+only.</p>
+<dl class="method">
+<dt id="arcgis.lyr.ClosestFacilityNetworkLayer.solve_closest_facility">
+<code class="descname">solve_closest_facility</code><span class="sig-paren">(</span><em>incidents</em>, <em>facilities</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>returnDirections=None</em>, <em>directionsLanguage=None</em>, <em>directionsStyleName=None</em>, <em>directionsLengthUnits=None</em>, <em>directionsTimeAttributeName=None</em>, <em>returnCFRoutes=True</em>, <em>returnFacilities=False</em>, <em>returnIncidents=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=False</em>, <em>returnPolygonBarriers=False</em>, <em>outputLines=None</em>, <em>defaultCutoff=None</em>, <em>defaultTargetFacilityCount=None</em>, <em>travelDirection=None</em>, <em>outSR=None</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>useHierarchy=True</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits=None</em>, <em>timeOfDay=None</em>, <em>timeOfDayIsUTC=None</em>, <em>timeOfDayUsage=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ClosestFacilityNetworkLayer.solve_closest_facility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The solve operation is performed on a network layer resource of
+type closest facility (layerType is esriNAServerClosestFacilityLayer).
+You can provide arguments to the solve route operation as query
+parameters.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>facilities  - The set of facilities loaded as network locations</dt>
+<dd>during analysis. Facilities can be specified using
+a simple comma / semi-colon based syntax or as a
+JSON structure. If facilities are not specified,
+preloaded facilities from the map document are used
+in the analysis.</dd>
+<dt>incidents - The set of incidents loaded as network locations</dt>
+<dd>during analysis. Incidents can be specified using
+a simple comma / semi-colon based syntax or as a
+JSON structure. If incidents are not specified,
+preloaded incidents from the map document are used
+in the analysis.</dd>
+<dt>barriers - The set of barriers loaded as network locations during</dt>
+<dd>analysis. Barriers can be specified using a simple comma
+/ semi-colon based syntax or as a JSON structure. If
+barriers are not specified, preloaded barriers from the
+map document are used in the analysis. If an empty json
+object is passed (&#8216;{}&#8217;) preloaded barriers are ignored.</dd>
+<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
+<dd>locations during analysis. If polyline barriers
+are not specified, preloaded polyline barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;)
+preloaded polyline barriers are ignored.</dd>
+<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
+<dd>locations during analysis. If polygon barriers
+are not specified, preloaded polygon barriers
+from the map document are used in the analysis.
+If an empty json object is passed (&#8216;{}&#8217;) preloaded
+polygon barriers are ignored.</dd>
+<dt>travelMode - Travel modes provide override values that help you</dt>
+<dd>quickly and consistently model a vehicle or mode of
+transportation. The chosen travel mode must be
+preconfigured on the network dataset that the routing
+service references.</dd>
+<dt>attributeParameterValues - A set of attribute parameter values that</dt>
+<dd>can be parameterized to determine which
+network elements can be used by a vehicle.</dd>
+<dt>returnDirections - If true, directions will be generated and returned</dt>
+<dd>with the analysis results. Default is true.</dd>
+<dt>directionsLanguage - The language to be used when computing directions.</dt>
+<dd>The default is as defined in the network layer. The
+list of supported languages can be found in REST
+layer description.</dd>
+<dt>directionsOutputType -  Defines content, verbosity of returned</dt>
+<dd>directions. The default is esriDOTStandard.
+Values: esriDOTComplete | esriDOTCompleteNoEvents
+| esriDOTInstructionsOnly | esriDOTStandard |
+esriDOTSummaryOnly</dd>
+<dt>directionsStyleName - The style to be used when returning the directions.</dt>
+<dd>The default is as defined in the network layer. The
+list of supported styles can be found in REST
+layer description.</dd>
+<dt>directionsLengthUnits - The length units to use when computing directions.</dt>
+<dd>The default is as defined in the network layer.
+Values: esriNAUFeet | esriNAUKilometers |
+esriNAUMeters | esriNAUMiles |
+esriNAUNauticalMiles | esriNAUYards |
+esriNAUUnknown</dd>
+<dt>directionsTimeAttributeName - The name of network attribute to use for</dt>
+<dd>the drive time when computing directions.
+The default is as defined in the network
+layer.</dd>
+<dt>returnCFRoutes - If true, closest facilities routes will be returned</dt>
+<dd>with the analysis results. Default is true.</dd>
+<dt>returnFacilities -  If true, facilities  will be returned with the</dt>
+<dd>analysis results. Default is false.</dd>
+<dt>returnIncidents - If true, incidents will be returned with the</dt>
+<dd>analysis results. Default is false.</dd>
+<dt>returnBarriers -  If true, barriers will be returned with the analysis</dt>
+<dd>results. Default is false.</dd>
+<dt>returnPolylineBarriers -  If true, polyline barriers will be returned</dt>
+<dd>with the analysis results. Default is false.</dd>
+<dt>returnPolygonBarriers - If true, polygon barriers will be returned with</dt>
+<dd>the analysis results. Default is false.</dd>
+<dt>outputLines - The type of output lines to be generated in the result.</dt>
+<dd>The default is as defined in the network layer.</dd>
+</dl>
+<p>defaultCutoff - The default cutoff value to stop traversing.
+defaultTargetFacilityCount - The default number of facilities to find.
+travelDirection - Options for traveling to or from the facility.</p>
+<blockquote>
+<div>The default is defined in the network layer.
+Values: esriNATravelDirectionFromFacility |
+esriNATravelDirectionToFacility</div></blockquote>
+<dl class="docutils">
+<dt>outSR - The spatial reference of the geometries returned with the</dt>
+<dd>analysis results.</dd>
+<dt>accumulateAttributeNames - The list of network attribute names to be</dt>
+<dd>accumulated with the analysis. The default is
+as defined in the network layer. The value
+should be specified as a comma separated list
+of attribute names. You can also specify a
+value of none to indicate that no network
+attributes should be accumulated.</dd>
+<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
+<dd>impedance attribute in analysis. The default is
+as defined in the network layer.</dd>
+<dt>restrictionAttributeNames -The list of network attribute names to be</dt>
+<dd>used as restrictions with the analysis. The
+default is as defined in the network layer.
+The value should be specified as a comma
+separated list of attribute names. You can
+also specify a value of none to indicate that
+no network attributes should be used as
+restrictions.</dd>
+<dt>restrictUTurns -  Specifies how U-Turns should be restricted in the</dt>
+<dd>analysis. The default is as defined in the network
+layer. Values: esriNFSBAllowBacktrack |
+esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
+esriNFSBAtDeadEndsAndIntersections</dd>
+<dt>useHierarchy -  If true, the hierarchy attribute for the network should</dt>
+<dd>be used in analysis. The default is as defined in the
+network layer.</dd>
+<dt>outputGeometryPrecision -  The precision of the output geometry after</dt>
+<dd>generalization. If 0, no generalization of
+output geometry is performed. The default is
+as defined in the network service
+configuration.</dd>
+<dt>outputGeometryPrecisionUnits - The units of the output geometry</dt>
+<dd>precision. The default value is
+esriUnknownUnits. Values: esriUnknownUnits
+| esriCentimeters | esriDecimalDegrees |
+esriDecimeters | esriFeet | esriInches |
+esriKilometers | esriMeters | esriMiles |
+esriMillimeters | esriNauticalMiles |
+esriPoints | esriYards</dd>
+<dt>timeOfDay - Arrival or departure date and time. Values: specified by</dt>
+<dd>number of milliseconds since midnight Jan 1st, 1970, UTC.</dd>
+<dt>timeOfDayIsUTC - The time zone of the timeOfDay parameter. By setting</dt>
+<dd>timeOfDayIsUTC to true, the timeOfDay parameter refers
+to Coordinated Universal Time (UTC). Choose this option
+if you want to find what&#8217;s nearest for a specific time,
+such as now, but aren&#8217;t certain in which time zone the
+facilities or incidents will be located.</dd>
+<dt>timeOfDayUsage - Defines the way timeOfDay value is used. The default</dt>
+<dd>is as defined in the network layer.
+Values: esriNATimeOfDayUseAsStartTime |
+esriNATimeOfDayUseAsEndTime</dd>
+<dt>returnZ - If true, Z values will be included in the returned routes and</dt>
+<dd>compressed geometry if the network dataset is Z-aware.
+The default is false.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-lyr-schematicsservice">
+<h2>arcgis.lyr.SchematicsService<a class="headerlink" href="#arcgis-lyr-schematicsservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.SchematicsService">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">SchematicsService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsService" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="arcgis.lyr.SchematicsService.diagrams">
+<code class="descname">diagrams</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Diagrams resource represents all the schematic diagrams
+under a schematic service. It is returned as an array of Schematic
+Diagram resource by the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.SchematicsService.folders">
+<code class="descname">folders</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.folders" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Folders resource represents the set of schematic folders
+in the schematic dataset(s) related to the schematic layers under a
+schematic service. It is returned as an array of &lt;Schematic Folder Object&gt;
+by the REST API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.SchematicsService.schematic_layers">
+<code class="descname">schematic_layers</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.schematic_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Layers resource represents all the schematic layers
+under a schematic service published by ArcGIS Server. It is returned
+as an array of Schematic Layer resources by the REST API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.lyr.SchematicsService.search_diagrams">
+<code class="descname">search_diagrams</code><span class="sig-paren">(</span><em>whereClause=None</em>, <em>relatedObjects=None</em>, <em>relatedSchematicObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsService.search_diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Search Diagrams operation is performed on the schematic
+service resource. The result of this operation is an array of Schematic
+Diagram Information Object.</p>
+<p>It is used to search diagrams in the schematic service by criteria;
+that is, diagrams filtered out via a where clause on any schematic
+diagram class table field, diagrams that contain schematic features
+associated with a specific set of GIS features/objects, or diagrams
+that contain schematic features associated with the same GIS features/
+objects related to another set of schematic features.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>whereClause - A where clause for the query filter. Any legal SQL</dt>
+<dd>where clause operating on the fields in the schematic
+diagram class table is allowed. See the Schematic
+diagram class table fields section below to know the
+exact list of field names that can be used in this
+where clause.</dd>
+<dt>relatedObjects - An array containing the list of the GIS features/</dt>
+<dd>objects IDs per feature class/table name that are in
+relation with schematic features in the resulting
+queried diagrams. Each GIS feature/object ID
+corresponds to a value of the OBJECTID field in the
+GIS feature class/table.</dd>
+<dt>relatedSchematicObjects - An array containing the list of the</dt>
+<dd>schematic feature names per schematic
+feature class ID that have the same
+associated GIS features/objects with
+schematic features in the resulting
+queried diagrams. Each schematic feature
+name corresponds to a value of the
+SCHEMATICTID field in the schematic
+feature class.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.SchematicsService.templates">
+<code class="descname">templates</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Diagram Templates represents all the schematic diagram
+templates related to the published schematic layers under a schematic
+service. It is returned as an array of Schematic Diagram Template
+resources by the REST API.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.viz.html" class="btn btn-neutral float-right" title="arcgis.viz module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.gis.html" class="btn btn-neutral" title="arcgis.gis module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Esri.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,2638 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>arcgis.tools module &mdash; arcgis 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.geom module" href="arcgis.geom.html"/>
+        <link rel="prev" title="arcgis.viz module" href="arcgis.viz.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> arcgis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">arcgis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-gis">arcgis.gis.GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-contentmanager">arcgis.gis.ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-item">arcgis.gis.Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-groupmanager">arcgis.gis.GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-group">arcgis.gis.Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-usermanager">arcgis.gis.UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-user">arcgis.gis.User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastoremanager">arcgis.gis.DatastoreManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastore">arcgis.gis.Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-tools">arcgis.gis.Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-mapservice">arcgis.lyr.MapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminmapservice">arcgis.lyr.AdminMapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featureservice">arcgis.lyr.FeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservice">arcgis.lyr.AdminFeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservicelayer">arcgis.lyr.AdminFeatureServiceLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-replicamanager">arcgis.lyr.ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-attachmentmanager">arcgis.lyr.AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurelayer">arcgis.lyr.FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurecollection">arcgis.lyr.FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-vectortilelayer">arcgis.lyr.VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-imagelayer">arcgis.lyr.ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networkservice">arcgis.lyr.NetworkService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networklayer">arcgis.lyr.NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-routenetworklayer">arcgis.lyr.RouteNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-serviceareanetworklayer">arcgis.lyr.ServiceAreaNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-closestfacilitynetworklayer">arcgis.lyr.ClosestFacilityNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-schematicsservice">arcgis.lyr.SchematicsService</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webmap">arcgis.viz.WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webscene">arcgis.viz.WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-mapview">arcgis.viz.MapView</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">arcgis.tools module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-featureanalysistools">arcgis.tools.FeatureAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-bigdatatools">arcgis.tools.BigDataTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-rasteranalysistools">arcgis.tools.RasterAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-geocoder">arcgis.tools.Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-geoprocessingtool">arcgis.tools.GeoprocessingTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-geometryservice">arcgis.tools.GeometryService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-feature">arcgis.tools.Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-tools-featureset">arcgis.tools.FeatureSet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geom.html">arcgis.geom module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-point">arcgis.geom.Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-multipoint">arcgis.geom.MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polyline">arcgis.geom.PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polygon">arcgis.geom.Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-envelope">arcgis.geom.Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-spatialreference">arcgis.geom.SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometryfactory">arcgis.geom.GeometryFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometry">arcgis.geom.Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-basegeometry">arcgis.geom.BaseGeometry</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">arcgis</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>arcgis.tools module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arcgis.tools.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arcgis-tools-module">
+<h1>arcgis.tools module<a class="headerlink" href="#arcgis-tools-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arcgis-tools-featureanalysistools">
+<h2>arcgis.tools.FeatureAnalysisTools<a class="headerlink" href="#arcgis-tools-featureanalysistools" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.FeatureAnalysisTools">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">FeatureAnalysisTools</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides feature analysis tools from the Spatial Analysis service. The SpatialAnalysis service is used for supporting Spatial analysis capability 
+in Portal for ArcGIS and ArcGIS Online.</p>
+<p>Several <cite>FeatureAnalysisTools</cite> accept feature layers as inputs. The input layer can be passed in using several different formats:
+* a Feature Service Item. The first layer in the Feature Service is used as input
+* a Feature Collection Item. The first layer in the Feature Collection is used as input
+* an <cite>arcgis.lyr.FeatureService</cite> object. The first layer in the Feature Service is used as input
+* an <cite>arcgis.lyr.FeatureCollection</cite> object. The first layer in the Feature Collection is used as input
+* an <cite>arcgis.lyr.Layer</cite> object. The object could be any sub-class of Layer that has features
+* a Feature Collection specified as a python dictionary (with layer definition and a feature set)
+* a string with the url of the feature service</p>
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.aggregate_points">
+<code class="descname">aggregate_points</code><span class="sig-paren">(</span><em>point_layer</em>, <em>polygon_layer</em>, <em>keep_boundaries_with_no_points=True</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_points=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.aggregate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aggregate points task allows you to aggregate or count the total number of points that are distributed within specified areas or boundaries (polygons). You can also summarize Sum, Mean, Min, Max and Standard deviation calculations for attributes of the point layer to understand the general characteristics of aggregated points.</p>
+<dl class="docutils">
+<dt>point_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Point layer to be aggregated</dd>
+<dt>polygon_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Polygon layer to which the points should be aggregated.</dd>
+<dt>keep_boundaries_with_no_points <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>Specify whether the polygons without any points should be returned in the output.</dd>
+<dt>summary_fields <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>A list of field names and summary type. Example [fieldName1 summaryType1,fieldName2 summaryType2].</dd>
+<dt>group_by_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>A field name from PointLayer based on which the points will be grouped.</dd>
+<dt>minority_majority <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If true, the minority (least dominant) or the majority (most dominant) attribute values within each group, within each boundary will be calculated.</dd>
+<dt>percent_points <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If set to true, the percentage count of points for each unique groupByField value is calculated.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;aggregated_layer&#8221; : layer (FeatureCollection)
+&#8220;group_summary&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.calculate_density">
+<code class="descname">calculate_density</code><span class="sig-paren">(</span><em>input_layer</em>, <em>field=None</em>, <em>cell_size=None</em>, <em>cell_size_units='Meters'</em>, <em>radius=None</em>, <em>radius_units=None</em>, <em>bounding_polygon_layer=None</em>, <em>area_units=None</em>, <em>classification_type='EqualInterval'</em>, <em>num_classes=10</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.calculate_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Calculate Density task creates a density map from point or line features by spreading known quantities of some phenomenon (represented as attributes of the points or lines) across the map. The result is a layer of areas classified from least dense to most dense.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The point or line features from which to calculate density.</dd>
+<dt>field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>A numeric field name specifying the number of incidents at each location. If not specified, each location will be assumed to represent a single count.</dd>
+<dt>cell_size <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
+<dd>This value is used to create a mesh of points where density values are calculated. The default is approximately 1/1000th of the smaller of the width and height of the analysis extent as defined in the context parameter.</dd>
+<dt>cell_size_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The units of the cellSize value</dd>
+<dt>radius <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
+<dd>A distance specifying how far to search to find point or line features when calculating density values.</dd>
+<dt>radius_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The units of the radius parameter.</dd>
+<dt>bounding_polygon_layer <span class="classifier-delimiter">:</span> <span class="classifier">Optional layer (see Feature Input in documentation)</span></dt>
+<dd>A layer specifying the polygon(s) where you want densities to be calculated.</dd>
+<dt>area_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The units of the calculated density values.</dd>
+<dt>classification_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Determines how density values will be classified into polygons.</dd>
+<dt>num_classes <span class="classifier-delimiter">:</span> <span class="classifier">Optional int</span></dt>
+<dd>This value is used to divide the range of predicted values into distinct classes. The range of values in each class is determined by the classificationType parameter.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>result_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.connect_origins_to_destinations">
+<code class="descname">connect_origins_to_destinations</code><span class="sig-paren">(</span><em>origins_layer</em>, <em>destinations_layer</em>, <em>measurement_type='DrivingTime'</em>, <em>origins_layer_route_id_field=None</em>, <em>destinations_layer_route_id_field=None</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.connect_origins_to_destinations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates routes between pairs of points.</p>
+<dl class="docutils">
+<dt>origins_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The routes start from points in the origins layer.</dd>
+<dt>destinations_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The routes end at points in the destinations layer.</dd>
+<dt>measurement_type <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>The routes can be determined by measuring travel distance or travel time along street network using different travel modes or by measuring straight line distance.</dd>
+<dt>origins_layer_route_id_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The field in the origins layer containing the IDs that are used to match an origin with a destination.</dd>
+<dt>destinations_layer_route_id_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The field in the destinations layer containing the IDs that are used to match an origin with a destination.</dd>
+<dt>time_of_day <span class="classifier-delimiter">:</span> <span class="classifier">Optional datetime.date</span></dt>
+<dd>When measurementType is DrivingTime, this value specifies the time of day to be used for driving time calculations based on traffic. WalkingTime and TruckingTime measurementType do not support calculations based on traffic.</dd>
+<dt>time_zone_for_time_of_day <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Determines if the value specified for timeOfDay is specified in UTC or in a time zone that is local to the location of the origins.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;routes_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_origins_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_destinations_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.create_buffers">
+<code class="descname">create_buffers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>distances=[]</em>, <em>field=None</em>, <em>units='Meters'</em>, <em>dissolve_type='None'</em>, <em>ring_type='Disks'</em>, <em>side_type='Full'</em>, <em>end_type='Round'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.create_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates buffer polygon(s) around input features.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The input to be buffered.</dd>
+<dt>distances <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of floats</span></dt>
+<dd>The distance(s) that will be buffered.</dd>
+<dt>field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Buffers will be created using field values.</dd>
+<dt>units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The linear unit to be used with the distance value(s).</dd>
+<dt>dissolve_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Specifies the dissolve to be performed to remove buffer overlap.</dd>
+<dt>ring_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The ring type.</dd>
+<dt>side_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The side(s) of the input that will be buffered.</dd>
+<dt>end_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The shape of the buffer at the end of buffered line features.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>buffer_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.create_drive_time_areas">
+<code class="descname">create_drive_time_areas</code><span class="sig-paren">(</span><em>input_layer, break_values=[5, 10, 15], break_units='Minutes', travel_mode='Driving', overlap_policy='Overlap', time_of_day=None, time_zone_for_time_of_day='GeoLocal', output_name=None, context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.create_drive_time_areas" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>break_values : Optional list of floats</p>
+<p>break_units : Optional string</p>
+<p>travel_mode : Optional string</p>
+<p>overlap_policy : Optional string</p>
+<p>time_of_day : Optional datetime.date</p>
+<p>time_zone_for_time_of_day : Optional string</p>
+<dl class="docutils">
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>drive_time_areas_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.create_viewshed">
+<code class="descname">create_viewshed</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dem_resolution='Finest'</em>, <em>maximum_distance=None</em>, <em>max_distance_units='Meters'</em>, <em>observer_height=None</em>, <em>observer_height_units='Meters'</em>, <em>target_height=None</em>, <em>target_height_units='Meters'</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.create_viewshed" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>dem_resolution : Optional string</p>
+<p>maximum_distance : Optional float</p>
+<p>max_distance_units : Optional string</p>
+<p>observer_height : Optional float</p>
+<p>observer_height_units : Optional string</p>
+<p>target_height : Optional float</p>
+<p>target_height_units : Optional string</p>
+<p>generalize : Optional bool</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<p>viewshed_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.create_watersheds">
+<code class="descname">create_watersheds</code><span class="sig-paren">(</span><em>input_layer</em>, <em>search_distance=None</em>, <em>search_units='Meters'</em>, <em>source_database='FINEST'</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.create_watersheds" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>search_distance : Optional float</p>
+<p>search_units : Optional string</p>
+<p>source_database : Optional string</p>
+<p>generalize : Optional bool</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;snap_pour_pts_layer&#8221; : layer (FeatureCollection)
+&#8220;watershed_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.derive_new_locations">
+<code class="descname">derive_new_locations</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>expressions=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.derive_new_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Derive New Locations task derives new features from the input layers that meet a query you specify. A query is made up of one or more expressions. There are two types of expressions: attribute and spatial. An example of an attribute expression is that a parcel must be vacant, which is an attribute of the Parcels layer (where STATUS = &#8216;VACANT&#8217;). An example of a spatial expression is that the parcel must also be within a certain distance of a river (Parcels within a distance of 0.75 Miles from Rivers).The Derive New Locations task is very similar to the Find Existing Locations task, the main difference is that the result of Derive New Locations can contain partial features.In both tasks, the attribute expression  where and the spatial relationships within and contains return the same result. This is because these relationships return entire features.When intersects or withinDistance is used, Derive New Locations creates new features in the result. For example, when intersecting a parcel feature and a flood zone area that partially overlap each other, Find Existing Locations will return the entire parcel whereas Derive New Locations will return just the portion of the parcel that is within the flood zone.</p>
+<dl class="docutils">
+<dt>input_layers <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span></dt>
+<dd>A list of layers that will be used in the expressions parameter.</dd>
+<dt>expressions <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>Specify a list of expressions. Please refer documentation at <a class="reference external" href="http://developers.arcgis.com">http://developers.arcgis.com</a> for more information on expressions.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>result_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.dissolve_boundaries">
+<code class="descname">dissolve_boundaries</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dissolve_fields=[]</em>, <em>summary_fields=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve features based on specified fields.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The layer containing polygon features that will be dissolved.</dd>
+<dt>dissolve_fields <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>One or more fields from the input that control which polygons are merged. If no fields are supplied, all polygons that overlap or shared a common border will be dissolved into one polygon.</dd>
+<dt>summary_fields <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>A list of field names and statistical types that will be used to summarize the output. Supported statistics include: Sum, Mean, Min, Max, and Stddev.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>dissolved_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.enrich_layer">
+<code class="descname">enrich_layer</code><span class="sig-paren">(</span><em>input_layer</em>, <em>data_collections=[]</em>, <em>analysis_variables=[]</em>, <em>country=None</em>, <em>buffer_type=None</em>, <em>distance=None</em>, <em>units=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.enrich_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Enrich Layer task enriches your data by getting facts about the people, places, and businesses that surround your data locations. For example: What kind of people live here? What do people like to do in this area? What are their habits and lifestyles? What kind of businesses are there in this area?The result will be a new layer of input features that includes all demographic and geographic information from given data collections.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Feature layer to enrich with new data</dd>
+<dt>data_collections <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>Data collections you wish to add to your features.</dd>
+<dt>analysis_variables <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>A subset of specific variables instead of dataCollections.</dd>
+<dt>country <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The two character country code that specifies the country of the input features. Eg. US (United States),  FR (France), GB (United Kingdom) etc.</dd>
+<dt>buffer_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Area to be created around the point or line features for enrichment. Default is 1 Mile straight-line buffer radius.</dd>
+<dt>distance <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
+<dd>A double value that defines the straight-line distance or time (when drivingTime is used).</dd>
+<dt>units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The unit (eg. Miles, Minutes) to be used with the distance value(s) specified in the distance parameter to calculate the area.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>enriched_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.extract_data">
+<code class="descname">extract_data</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>extent=None</em>, <em>clip=False</em>, <em>data_format=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.extract_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select and download data for a specified area of interest. Layers that you select will be added to a zip file or layer package.</p>
+<dl class="docutils">
+<dt>input_layers <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span></dt>
+<dd>The layers from which you can extract features.</dd>
+<dt>extent <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The area that defines which features will be included in the output zip file or layer package.</dd>
+<dt>clip <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>Select features that intersect the extent or clip features within the extent.</dd>
+<dt>data_format <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Format of the data that will be extracted and downloaded.  Layer packages will always include file geodatabases.&amp;lt;/p&amp;gt;</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>content_id : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.field_calculator">
+<code class="descname">field_calculator</code><span class="sig-paren">(</span><em>input_layer</em>, <em>expressions</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.field_calculator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates existing fields or creates and calculates new fields.</p>
+<p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>expressions : Required string</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<p>result_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.find_existing_locations">
+<code class="descname">find_existing_locations</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>expressions=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.find_existing_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Find Existing Locations task selects features in the input layer that meet a query you specify. A query is made up of one or more expressions. There are two types of expressions: attribute and spatial. An example of an attribute expression is that a parcel must be vacant, which is an attribute of the Parcels layer (where STATUS = &#8216;VACANT&#8217;). An example of a spatial expression is that the parcel must also be within a certain distance of a river (Parcels within a distance of 0.75 Miles from Rivers).</p>
+<dl class="docutils">
+<dt>input_layers <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span></dt>
+<dd>A list of layers that will be used in the expressions parameter.</dd>
+<dt>expressions <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>Specify a list of expressions. Please refer documentation at <a class="reference external" href="http://developers.arcgis.com">http://developers.arcgis.com</a> for more information on creating expressions.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>result_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.find_hot_spots">
+<code class="descname">find_hot_spots</code><span class="sig-paren">(</span><em>analysis_layer</em>, <em>analysis_field=None</em>, <em>divided_by_field=None</em>, <em>bounding_polygon_layer=None</em>, <em>aggregation_polygon_layer=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.find_hot_spots" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Find Hot Spots task finds statistically significant clusters of incident points, weighted points, or weighted polygons. For incident data, the analysis field (weight) is obtained by aggregation. Output is a hot spot map.</p>
+<dl class="docutils">
+<dt>analysis_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The point or polygon feature layer for which hot spots will be calculated.</dd>
+<dt>analysis_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The numeric field in the AnalysisLayer that will be analyzed.</dd>
+</dl>
+<p>divided_by_field : Optional string</p>
+<dl class="docutils">
+<dt>bounding_polygon_layer <span class="classifier-delimiter">:</span> <span class="classifier">Optional layer (see Feature Input in documentation)</span></dt>
+<dd>When the analysis layer is points and no AnalysisField is specified, you can provide polygons features that define where incidents could have occurred.</dd>
+<dt>aggregation_polygon_layer <span class="classifier-delimiter">:</span> <span class="classifier">Optional layer (see Feature Input in documentation)</span></dt>
+<dd>When the AnalysisLayer contains points and no AnalysisField is specified, you can provide polygon features into which the points will be aggregated and analyzed, such as administrative units.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;hot_spots_result_layer&#8221; : layer (FeatureCollection)
+&#8220;process_info&#8221; : list of messages</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.find_nearest">
+<code class="descname">find_nearest</code><span class="sig-paren">(</span><em>analysis_layer</em>, <em>near_layer</em>, <em>measurement_type='StraightLine'</em>, <em>max_count=100</em>, <em>search_cutoff=2147483647</em>, <em>search_cutoff_units=None</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.find_nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measures the straight-line distance, driving distance, or driving time from features in the analysis layer to features in the near layer, and copies the nearest features in the near layer to a new layer. Returns a layer containing the nearest features and a line layer that links the start locations to their nearest locations.</p>
+<dl class="docutils">
+<dt>analysis_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>For each feature in this layer, the task finds the nearest features from the nearLayer.</dd>
+<dt>near_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The features from which the nearest locations are found.</dd>
+<dt>measurement_type <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>The nearest locations can be determined by measuring straight-line distance, driving distance, or driving time</dd>
+<dt>max_count <span class="classifier-delimiter">:</span> <span class="classifier">Optional int</span></dt>
+<dd>The maximum number of near locations to find for each feature in analysisLayer.</dd>
+<dt>search_cutoff <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
+<dd>Limits the search range to this value</dd>
+<dt>search_cutoff_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The units for the value specified as searchCutoff</dd>
+<dt>time_of_day <span class="classifier-delimiter">:</span> <span class="classifier">Optional datetime.date</span></dt>
+<dd>When measurementType is DrivingTime, this value specifies the time of day to be used for driving time calculations based on traffic.</dd>
+</dl>
+<p>time_zone_for_time_of_day : Optional string</p>
+<dl class="docutils">
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;nearest_layer&#8221; : layer (FeatureCollection)
+&#8220;connecting_lines_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.find_similar_locations">
+<code class="descname">find_similar_locations</code><span class="sig-paren">(</span><em>input_layer</em>, <em>search_layer</em>, <em>analysis_fields=[]</em>, <em>input_query=None</em>, <em>number_of_results=0</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.find_similar_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>search_layer : Required layer (see Feature Input in documentation)</p>
+<p>analysis_fields : Required list of strings</p>
+<p>input_query : Optional string</p>
+<p>number_of_results : Optional int</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;similar_result_layer&#8221; : layer (FeatureCollection)
+&#8220;process_info&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.interpolate_points">
+<code class="descname">interpolate_points</code><span class="sig-paren">(</span><em>input_layer</em>, <em>field</em>, <em>interpolate_option='5'</em>, <em>output_prediction_error=False</em>, <em>classification_type='GeometricInterval'</em>, <em>num_classes=10</em>, <em>class_breaks=[]</em>, <em>bounding_polygon_layer=None</em>, <em>predict_at_point_layer=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.interpolate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Interpolate Points task allows you to predict values at new locations based on measurements from a collection of points. The task takes point data with values at each point and returns areas classified by predicted values.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The point layer whose features will be interpolated.</dd>
+<dt>field <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>Name of the numeric field containing the values you wish to interpolate.</dd>
+<dt>interpolate_option <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Integer value declaring your preference for speed versus accuracy, from 1 (fastest) to 9 (most accurate). More accurate predictions take longer to calculate.</dd>
+<dt>output_prediction_error <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>If True, a polygon layer of standard errors for the interpolation predictions will be returned in the predictionError output parameter.</dd>
+<dt>classification_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Determines how predicted values will be classified into areas.</dd>
+<dt>num_classes <span class="classifier-delimiter">:</span> <span class="classifier">Optional int</span></dt>
+<dd>This value is used to divide the range of interpolated values into distinct classes. The range of values in each class is determined by the classificationType parameter. Each class defines the boundaries of the result polygons.</dd>
+<dt>class_breaks <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of floats</span></dt>
+<dd>If classificationType is Manual, supply desired class break values separated by spaces. These values define the upper limit of each class, so the number of classes will equal the number of entered values. Areas will not be created for any locations with predicted values above the largest entered break value. You must enter at least two values and no more than 32.</dd>
+<dt>bounding_polygon_layer <span class="classifier-delimiter">:</span> <span class="classifier">Optional layer (see Feature Input in documentation)</span></dt>
+<dd>A layer specifying the polygon(s) where you want values to be interpolated.</dd>
+<dt>predict_at_point_layer <span class="classifier-delimiter">:</span> <span class="classifier">Optional layer (see Feature Input in documentation)</span></dt>
+<dd>An optional layer specifying point locations to calculate prediction values. This allows you to make predictions at specific locations of interest.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;result_layer&#8221; : layer (FeatureCollection)
+&#8220;prediction_error&#8221; : layer (FeatureCollection)
+&#8220;predicted_point_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.merge_layers">
+<code class="descname">merge_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>merge_layer</em>, <em>merging_attributes=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.merge_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combines two inputs of the same feature data type into a new output.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The point, line, or polygon  features to merge with the mergeLayer.</dd>
+<dt>merge_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The point, line or polygon features to merge with inputLayer.  mergeLayer must contain the same feature type (point, line, or polygon) as the inputLayer.</dd>
+<dt>merging_attributes <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>An array of values that describe how fields from the mergeLayer are to be modified.  By default all fields from both inputs will be carried across to the output.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>merged_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.overlay_layers">
+<code class="descname">overlay_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>overlay_layer</em>, <em>overlay_type='Intersect'</em>, <em>snap_to_input=False</em>, <em>output_type='Input'</em>, <em>tolerance=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.overlay_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overlays the input layer with the overlay layer. Overlay operations supported are Intersect, Union, and Erase.</p>
+<dl class="docutils">
+<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The input analysis layer.</dd>
+<dt>overlay_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>The layer to be overlaid with the analysis layer.</dd>
+<dt>overlay_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The overlay type (INTERSECT, UNION, or ERASE) defines how the analysis layer and the overlay layer are combined.</dd>
+<dt>snap_to_input <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>When the distance between features is less than the tolerance, the features in the overlay layer will snap to the features in the input layer.</dd>
+<dt>output_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The type of intersection (INPUT, LINE, POINT).</dd>
+<dt>tolerance <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
+<dd>The minimum distance separating all feature coordinates (nodes and vertices) as well as the distance a coordinate can move in X or Y (or both).</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>output_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.plan_routes">
+<code class="descname">plan_routes</code><span class="sig-paren">(</span><em>stops_layer</em>, <em>route_count</em>, <em>max_stops_per_route</em>, <em>route_start_time</em>, <em>start_layer</em>, <em>start_layer_route_id_field=None</em>, <em>return_to_start=True</em>, <em>end_layer=None</em>, <em>end_layer_route_id_field=None</em>, <em>travel_mode='Driving'</em>, <em>stop_service_time=0</em>, <em>max_route_time=525600</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.plan_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>stops_layer : Required layer (see Feature Input in documentation)</p>
+<p>route_count : Required int</p>
+<p>max_stops_per_route : Required int</p>
+<p>route_start_time : Required datetime.date</p>
+<p>start_layer : Required layer (see Feature Input in documentation)</p>
+<p>start_layer_route_id_field : Optional string</p>
+<p>return_to_start : Optional bool</p>
+<p>end_layer : Optional layer (see Feature Input in documentation)</p>
+<p>end_layer_route_id_field : Optional string</p>
+<p>travel_mode : Optional string</p>
+<p>stop_service_time : Optional float</p>
+<p>max_route_time : Optional float</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;routes_layer&#8221; : layer (FeatureCollection)
+&#8220;assigned_stops_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_stops_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.summarize_nearby">
+<code class="descname">summarize_nearby</code><span class="sig-paren">(</span><em>sum_nearby_layer</em>, <em>summary_layer</em>, <em>near_type='StraightLine'</em>, <em>distances=[]</em>, <em>units='Meters'</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>return_boundaries=True</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.summarize_nearby" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SummarizeNearby task finds features that are within a specified distance of features in the input layer. Distance can be measured as a straight-line distance, a drive-time distance (for example, within 10 minutes), or a drive distance (within 5 kilometers). Statistics are then calculated for the nearby features. For example:Calculate the total population within five minutes of driving time of a proposed new store location.Calculate the number of freeway access ramps within a one-mile driving distance of a proposed new store location to use as a measure of store accessibility.</p>
+<dl class="docutils">
+<dt>sum_nearby_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Point, line, or polygon features from which distances will be measured to features in the summarizeLayer.</dd>
+<dt>summary_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Point, line, or polygon features. Features in this layer that are within the specified distance to features in the sumNearbyLayer will be summarized.</dd>
+<dt>near_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Defines what kind of distance measurement you want to use to create areas around the nearbyLayer features.</dd>
+<dt>distances <span class="classifier-delimiter">:</span> <span class="classifier">Required list of floats</span></dt>
+<dd>An array of double values that defines the search distance for creating areas mentioned above</dd>
+<dt>units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>The linear unit for distances parameter above. Eg. Miles, Kilometers, Minutes Seconds etc</dd>
+<dt>time_of_day <span class="classifier-delimiter">:</span> <span class="classifier">Optional datetime.date</span></dt>
+<dd>For timeOfDay, set the time and day according to the number of milliseconds elapsed since the Unix epoc (January 1, 1970 UTC). When specified and if relevant for the nearType parameter, the traffic conditions during the time of the day will be considered.</dd>
+<dt>time_zone_for_time_of_day <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Determines if the value specified for timeOfDay is specified in UTC or in a time zone that is local to the location of the origins.</dd>
+<dt>return_boundaries <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>If true, will return a result layer of areas that contain the requested summary information.  The resulting areas are defined by the specified nearType.  For example, if using a StraightLine of 5 miles, your result will contain areas with a 5 mile radius around the input features and specified summary information.If false, the resulting layer will return the same features as the input analysis layer with requested summary information.</dd>
+<dt>sum_shape <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>A boolean value that instructs the task to calculate count of points, length of lines or areas of polygons of the summaryLayer within each polygon in sumWithinLayer.</dd>
+<dt>shape_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Specify units to summarize the length or areas when sumShape is set to true. Units is not required to summarize points.</dd>
+<dt>summary_fields <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>A list of field names and statistical summary type that you wish to calculate for all features in the summaryLayer that are within each polygon in the sumWithinLayer . Eg: [&#8220;fieldname1 summary&#8221;, &#8220;fieldname2 summary&#8221;]</dd>
+<dt>group_by_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Specify a field from the summaryLayer features to calculate statistics separately for each unique value of the field.</dd>
+<dt>minority_majority <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If true, the minority (least dominant) or the majority (most dominant) attribute values within each group, within each boundary will be calculated.</dd>
+<dt>percent_shape <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If set to true, the percentage of shape (eg. length for lines) for each unique groupByField value is calculated.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;result_layer&#8221; : layer (FeatureCollection)
+&#8220;group_by_summary&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.summarize_within">
+<code class="descname">summarize_within</code><span class="sig-paren">(</span><em>sum_within_layer</em>, <em>summary_layer</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.summarize_within" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SummarizeWithin task helps you to summarize and find statistics on the point, line, or polygon features (or portions of these features) that are within the boundaries of polygons in another layer. For example:Given a layer of watershed boundaries and a layer of land-use boundaries by land-use type, calculate total acreage of land-use type for each watershed.Given a layer of parcels in a county and a layer of city boundaries, summarize the average value of vacant parcels within each city boundary.Given a layer of counties and a layer of roads, summarize the total mileage of roads by road type within each county.</p>
+<dl class="docutils">
+<dt>sum_within_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>A polygon feature layer or featurecollection. Features, or portions of features, in the summaryLayer (below) that fall within the boundaries of these polygons will be summarized.</dd>
+<dt>summary_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
+<dd>Point, line, or polygon features that will be summarized for each polygon in the sumWithinLayer.</dd>
+<dt>sum_shape <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>A boolean value that instructs the task to calculate count of points, length of lines or areas of polygons of the summaryLayer within each polygon in sumWithinLayer.</dd>
+<dt>shape_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Specify units to summarize the length or areas when sumShape is set to true. Units is not required to summarize points.</dd>
+<dt>summary_fields <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
+<dd>A list of field names and statistical summary type that you wish to calculate for all features in the  summaryLayer that are within each polygon in the sumWithinLayer . Eg: [&#8220;fieldname1 summary&#8221;, &#8220;fieldname2 summary&#8221;]</dd>
+<dt>group_by_field <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Specify a field from the summaryLayer features to calculate statistics separately for each unique attribute value.</dd>
+<dt>minority_majority <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If true, the minority (least dominant) or the majority (most dominant) attribute values within each group, within each boundary will be calculated.</dd>
+<dt>percent_shape <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span></dt>
+<dd>This boolean parameter is applicable only when a groupByField is specified. If set to true, the percentage of shape (eg. length for lines) for each unique groupByField value is calculated.</dd>
+<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional properties such as output feature service name.</dd>
+<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;result_layer&#8221; : layer (FeatureCollection)
+&#8220;group_by_summary&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureAnalysisTools.trace_downstream">
+<code class="descname">trace_downstream</code><span class="sig-paren">(</span><em>input_layer</em>, <em>split_distance=None</em>, <em>split_units='Kilometers'</em>, <em>max_distance=None</em>, <em>max_distance_units='Kilometers'</em>, <em>bounding_polygon_layer=None</em>, <em>source_database=None</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools.trace_downstream" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>split_distance : Optional float</p>
+<p>split_units : Optional string</p>
+<p>max_distance : Optional float</p>
+<p>max_distance_units : Optional string</p>
+<p>bounding_polygon_layer : Optional layer (see Feature Input in documentation)</p>
+<p>source_database : Optional string</p>
+<p>generalize : Optional bool</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<p>trace_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-bigdatatools">
+<h2>arcgis.tools.BigDataTools<a class="headerlink" href="#arcgis-tools-bigdatatools" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.BigDataTools">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">BigDataTools</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposes the BigData Tools from the GeoAnalyticsTools service. The GeoAnalyticsTools service is provided for distributed analysis of large datasets.</p>
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.aggregate_points">
+<code class="descname">aggregate_points</code><span class="sig-paren">(</span><em>point_layer</em>, <em>output_name</em>, <em>distance_interval=None</em>, <em>distance_interval_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>polygon_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.aggregate_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>point_layer : Required FeatureSet</p>
+<p>distance_interval : Optional float</p>
+<dl class="docutils">
+<dt>distance_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+<dt>bin_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;SQUARE&#8217;, &#8216;HEXAGON&#8217;]</dd>
+</dl>
+<p>polygon_layer : Optional FeatureSet</p>
+<p>time_interval : Optional int</p>
+<dl class="docutils">
+<dt>time_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_repeat : Optional int</p>
+<dl class="docutils">
+<dt>time_repeat_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_reference : Optional datetime.date</p>
+<p>summary_fields : Optional string</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.calculate_density">
+<code class="descname">calculate_density</code><span class="sig-paren">(</span><em>input_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>radius</em>, <em>radius_unit</em>, <em>output_name</em>, <em>fields=None</em>, <em>weight='UNIFORM'</em>, <em>bin_type='SQUARE'</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>area_units=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.calculate_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>fields : Optional string</p>
+<dl class="docutils">
+<dt>weight <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;UNIFORM&#8217;, &#8216;KERNEL&#8217;]</dd>
+</dl>
+<p>bin_size : Required float</p>
+<dl class="docutils">
+<dt>bin_size_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+<dt>bin_type <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;SQUARE&#8217;, &#8216;HEXAGON&#8217;]</dd>
+</dl>
+<p>time_interval : Optional int</p>
+<dl class="docutils">
+<dt>time_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_repeat : Optional int</p>
+<dl class="docutils">
+<dt>time_repeat_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_reference : Optional datetime.date</p>
+<p>radius : Required float</p>
+<dl class="docutils">
+<dt>radius_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+<dt>area_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;ACRES&#8217;, &#8216;SQUARE_KILOMETERS&#8217;, &#8216;SQUARE_INCHES&#8217;, &#8216;SQUARE_FEET&#8217;, &#8216;SQUARE_YARDS&#8217;, &#8216;SQUARE_MAP_UNITS&#8217;, &#8216;SQUARE_METERS&#8217;, &#8216;SQUARE_MILES&#8217;, &#8216;HECTARES&#8217;]</dd>
+</dl>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional int</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.copy_to_data_store">
+<code class="descname">copy_to_data_store</code><span class="sig-paren">(</span><em>input_layer</em>, <em>output_name</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.copy_to_data_store" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional string</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.create_buffers">
+<code class="descname">create_buffers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>output_name</em>, <em>distance=None</em>, <em>distance_unit=None</em>, <em>field=None</em>, <em>method='PLANAR'</em>, <em>dissolve_option='NONE'</em>, <em>dissolve_fields=None</em>, <em>summary_fields=None</em>, <em>multipart=False</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.create_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>distance : Optional float</p>
+<dl class="docutils">
+<dt>distance_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+</dl>
+<p>field : Optional string</p>
+<dl class="docutils">
+<dt>method <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;GEODESIC&#8217;, &#8216;PLANAR&#8217;]</dd>
+<dt>dissolve_option <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;ALL&#8217;, &#8216;LIST&#8217;, &#8216;NONE&#8217;]</dd>
+</dl>
+<p>dissolve_fields : Optional string</p>
+<p>summary_fields : Optional string</p>
+<p>multipart : Optional bool</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.create_panel_data">
+<code class="descname">create_panel_data</code><span class="sig-paren">(</span><em>in_target_features</em>, <em>in_join_features</em>, <em>time_interval</em>, <em>time_interval_unit</em>, <em>time_repeat</em>, <em>time_repeat_unit</em>, <em>time_reference</em>, <em>out_features_name</em>, <em>in_summary_stats=None</em>, <em>in_spatial_relationship=None</em>, <em>in_spatial_distance=None</em>, <em>in_spatial_distance_unit=None</em>, <em>in_attribute_relationship=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.create_panel_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>in_target_features : Required FeatureSet</p>
+<p>in_join_features : Required FeatureSet</p>
+<p>in_summary_stats : Optional string</p>
+<dl class="docutils">
+<dt>in_spatial_relationship <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Intersect&#8217;, &#8216;Contains&#8217;, &#8216;Within&#8217;, &#8216;Crosses&#8217;, &#8216;Touches&#8217;, &#8216;Overlaps&#8217;, &#8216;Near&#8217;]</dd>
+</dl>
+<p>in_spatial_distance : Optional float</p>
+<dl class="docutils">
+<dt>in_spatial_distance_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+</dl>
+<p>in_attribute_relationship : Optional string</p>
+<p>time_interval : Required int</p>
+<dl class="docutils">
+<dt>time_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_repeat : Required int</p>
+<dl class="docutils">
+<dt>time_repeat_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_reference : Required datetime.date</p>
+<p>out_features_name : Required string</p>
+<p>out_sr : Optional string</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>out_features : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.create_sample">
+<code class="descname">create_sample</code><span class="sig-paren">(</span><em>input_layer</em>, <em>output_layer_name</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.create_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>output_layer_name : Required string</p>
+<p>out_sr : Optional string</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>output_layer : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.create_space_time_cube">
+<code class="descname">create_space_time_cube</code><span class="sig-paren">(</span><em>point_layer</em>, <em>distance_interval</em>, <em>distance_interval_unit</em>, <em>time_interval</em>, <em>time_interval_unit</em>, <em>output_name</em>, <em>time_interval_alignment=None</em>, <em>reference_time=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.create_space_time_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>point_layer : Required FeatureSet</p>
+<p>distance_interval : Required float</p>
+<dl class="docutils">
+<dt>distance_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+</dl>
+<p>time_interval : Required int</p>
+<dl class="docutils">
+<dt>time_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+<dt>time_interval_alignment <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;END_TIME&#8217;, &#8216;START_TIME&#8217;, &#8216;REFERENCE_TIME&#8217;]</dd>
+</dl>
+<p>reference_time : Optional datetime.date</p>
+<p>summary_fields : Optional string</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output_cube : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.describe_dataset">
+<code class="descname">describe_dataset</code><span class="sig-paren">(</span><em>in_dataset</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.describe_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>in_dataset : Required FeatureSet</p>
+<p>out_sr : Optional string</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>output_json : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.find_hot_spots">
+<code class="descname">find_hot_spots</code><span class="sig-paren">(</span><em>point_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>output_name</em>, <em>time_step_interval=None</em>, <em>time_step_interval_unit=None</em>, <em>time_step_alignment=None</em>, <em>referencetime=None</em>, <em>neighborhood_distance=None</em>, <em>neighborhood_distance_unit=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.find_hot_spots" title="Permalink to this definition">¶</a></dt>
+<dd><p>point_layer : Required FeatureSet</p>
+<p>bin_size : Required float</p>
+<dl class="docutils">
+<dt>bin_size_unit <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+</dl>
+<p>time_step_interval : Optional int</p>
+<dl class="docutils">
+<dt>time_step_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+<dt>time_step_alignment <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;END_TIME&#8217;, &#8216;START_TIME&#8217;, &#8216;REFERENCE_TIME&#8217;]</dd>
+</dl>
+<p>referencetime : Optional datetime.date</p>
+<p>neighborhood_distance : Optional float</p>
+<dl class="docutils">
+<dt>neighborhood_distance_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+</dl>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.generate_manifest">
+<code class="descname">generate_manifest</code><span class="sig-paren">(</span><em>data_store_item_id</em>, <em>update_data_item=False</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.generate_manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>data_store_item_id : Required string</p>
+<p>update_data_item : Optional bool</p>
+<p>out_sr : Optional string</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>manifest : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.join_features">
+<code class="descname">join_features</code><span class="sig-paren">(</span><em>target_layer</em>, <em>join_layer</em>, <em>output_name</em>, <em>join_operation='Join one to one'</em>, <em>join_fields=None</em>, <em>summary_fields=None</em>, <em>spatial_relationship=None</em>, <em>spatial_near_distance=None</em>, <em>spatial_near_distance_unit=None</em>, <em>temporal_relationship=None</em>, <em>temporal_near_distance=None</em>, <em>temporal_near_distance_unit=None</em>, <em>attribute_relationship=None</em>, <em>join_condition=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.join_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>target_layer : Required FeatureSet</p>
+<p>join_layer : Required FeatureSet</p>
+<dl class="docutils">
+<dt>join_operation <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;Join one to one&#8217;, &#8216;Join one to many&#8217;]</dd>
+</dl>
+<p>join_fields : Optional string</p>
+<p>summary_fields : Optional string</p>
+<dl class="docutils">
+<dt>spatial_relationship <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Equals&#8217;, &#8216;Intersects&#8217;, &#8216;Contains&#8217;, &#8216;Within&#8217;, &#8216;Crosses&#8217;, &#8216;Touches&#8217;, &#8216;Overlaps&#8217;, &#8216;Near&#8217;]</dd>
+</dl>
+<p>spatial_near_distance : Optional float</p>
+<dl class="docutils">
+<dt>spatial_near_distance_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+<dt>temporal_relationship <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Equals&#8217;, &#8216;Intersects&#8217;, &#8216;During&#8217;, &#8216;Contains&#8217;, &#8216;Finishes&#8217;, &#8216;FinishedBy&#8217;, &#8216;Meets&#8217;, &#8216;MetBy&#8217;, &#8216;Overlaps&#8217;, &#8216;OverlappedBy&#8217;, &#8216;Starts&#8217;, &#8216;StartedBy&#8217;, &#8216;Near&#8217;]</dd>
+</dl>
+<p>temporal_near_distance : Optional int</p>
+<dl class="docutils">
+<dt>temporal_near_distance_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>attribute_relationship : Optional string</p>
+<p>join_condition : Optional string</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.reconstruct_tracks">
+<code class="descname">reconstruct_tracks</code><span class="sig-paren">(</span><em>input_layer</em>, <em>track_fields</em>, <em>output_name</em>, <em>method='PLANAR'</em>, <em>buffer_field=None</em>, <em>summary_fields=None</em>, <em>time_split=None</em>, <em>time_split_unit=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.reconstruct_tracks" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>track_fields : Required string</p>
+<dl class="docutils">
+<dt>method <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span></dt>
+<dd>One of the following: [&#8216;GEODESIC&#8217;, &#8216;PLANAR&#8217;]</dd>
+</dl>
+<p>buffer_field : Optional string</p>
+<p>summary_fields : Optional string</p>
+<p>time_split : Optional int</p>
+<dl class="docutils">
+<dt>time_split_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.summarize_attributes">
+<code class="descname">summarize_attributes</code><span class="sig-paren">(</span><em>input_layer</em>, <em>fields</em>, <em>output_name</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required FeatureSet</p>
+<p>fields : Required string</p>
+<p>summary_fields : Optional string</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.BigDataTools.summarize_within">
+<code class="descname">summarize_within</code><span class="sig-paren">(</span><em>summary_layer</em>, <em>output_name</em>, <em>bin_size=None</em>, <em>bin_size_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>sum_within_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>proportional_weighting=False</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_within" title="Permalink to this definition">¶</a></dt>
+<dd><p>summary_layer : Required FeatureSet</p>
+<p>bin_size : Optional float</p>
+<dl class="docutils">
+<dt>bin_size_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
+<dt>bin_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;SQUARE&#8217;, &#8216;HEXAGON&#8217;]</dd>
+</dl>
+<p>sum_within_layer : Optional FeatureSet</p>
+<p>time_interval : Optional int</p>
+<dl class="docutils">
+<dt>time_interval_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_repeat : Optional int</p>
+<dl class="docutils">
+<dt>time_repeat_unit <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_reference : Optional datetime.date</p>
+<p>summary_fields : Optional string</p>
+<p>proportional_weighting : Optional bool</p>
+<p>output_name : Required string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional string</p>
+<dl class="docutils">
+<dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
+</dl>
+<p>output : layer (Feature Service item)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-rasteranalysistools">
+<h2>arcgis.tools.RasterAnalysisTools<a class="headerlink" href="#arcgis-tools-rasteranalysistools" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.RasterAnalysisTools">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">RasterAnalysisTools</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposes the Raster Analysis Tools. The RasterAnalysisTools service is used by ArcGIS Server to provide distributed raster analysis.</p>
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.classify">
+<code class="descname">classify</code><span class="sig-paren">(</span><em>input_raster</em>, <em>input_classifier_definition</em>, <em>output_raster</em>, <em>additional_input_raster=None</em>, <em>number_of_instances='4'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_raster : Required string</p>
+<p>input_classifier_definition : Required string</p>
+<p>output_raster : Required string</p>
+<p>additional_input_raster : Optional string</p>
+<p>number_of_instances : Required string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.convert_raster_to_feature">
+<code class="descname">convert_raster_to_feature</code><span class="sig-paren">(</span><em>input_raster</em>, <em>output_name</em>, <em>field='Value'</em>, <em>output_type='Point'</em>, <em>simplify_lines_or_polygons=True</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.convert_raster_to_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>This service tool converts imagery data to feature class vector data.</p>
+<p>input_raster : Required string</p>
+<p>output_name : Required string</p>
+<p>field : Optional string</p>
+<dl class="docutils">
+<dt>output_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Point&#8217;, &#8216;Line&#8217;, &#8216;Polygon&#8217;]</dd>
+</dl>
+<p>simplify_lines_or_polygons : Optional bool</p>
+<p>context : Optional string</p>
+<p>output_feature : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.copy_raster">
+<code class="descname">copy_raster</code><span class="sig-paren">(</span><em>input_raster</em>, <em>output_raster</em>, <em>output_cellsize=None</em>, <em>resampling_method='NEAREST'</em>, <em>clipping_geometry=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.copy_raster" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_raster : Required string</p>
+<p>output_raster : Required string</p>
+<p>output_cellsize : Optional string</p>
+<dl class="docutils">
+<dt>resampling_method <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;NEAREST&#8217;, &#8216;BILINEAR&#8217;, &#8216;CUBIC&#8217;, &#8216;MAJORITY&#8217;]</dd>
+</dl>
+<p>clipping_geometry : Optional string</p>
+<p>context : Optional string</p>
+<p>num_instances : Optional string</p>
+<p>out_raster : layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.density">
+<code class="descname">density</code><span class="sig-paren">(</span><em>input_feature_class</em>, <em>output_raster</em>, <em>value_field</em>, <em>raster_info=None</em>, <em>method='Point_Density'</em>, <em>neighborhood=None</em>, <em>area_units='Square_map_units'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.density" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_feature_class : Required string</p>
+<p>output_raster : Required string</p>
+<p>value_field : Required string</p>
+<p>raster_info : Optional string</p>
+<dl class="docutils">
+<dt>method <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Point_Density&#8217;, &#8216;Line_Density&#8217;, &#8216;Kernel_Density_Densities_Planar&#8217;, &#8216;Kernel_Density_Densities_Geodesic&#8217;, &#8216;Kernel_Density_Counts_Planar&#8217;, &#8216;Kernel_Density_Counts_Geodesic&#8217;]</dd>
+</dl>
+<p>neighborhood : Optional string</p>
+<dl class="docutils">
+<dt>area_units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Square_map_units&#8217;, &#8216;Square_miles&#8217;, &#8216;Square_kilometers&#8217;, &#8216;Arces&#8217;, &#8216;Hectares&#8217;, &#8216;Square_yards&#8217;, &#8216;Square_feet&#8217;, &#8216;Square_inches&#8217;, &#8216;Square_meters&#8217;, &#8216;Square_centimeters&#8217;, &#8216;Square_millimeters&#8217;]</dd>
+</dl>
+<p>context : Optional string</p>
+<p>out_raster : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.generate_raster">
+<code class="descname">generate_raster</code><span class="sig-paren">(</span><em>raster_function</em>, <em>function_arguments=None</em>, <em>output_raster=None</em>, <em>output_raster_properties=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.generate_raster" title="Permalink to this definition">¶</a></dt>
+<dd><p>raster_function : Required, see <a class="reference external" href="http://resources.arcgis.com/en/help/rest/apiref/israsterfunctions.html">http://resources.arcgis.com/en/help/rest/apiref/israsterfunctions.html</a></p>
+<p>function_arguments : Optional,  for specifying input Raster alone, portal Item can be passed</p>
+<dl class="docutils">
+<dt>output_raster <span class="classifier-delimiter">:</span> <span class="classifier">Optional. If not provided, an Image Service is created by the method and used as the output raster. </span></dt>
+<dd>You can pass in an existing Image Service Item from your GIS to use that instead.
+Alternatively, you can pass in the name of the output Image Service that should be created by this method to be used as the output for the tool.
+A RuntimeError is raised if a service by that name already exists</dd>
+</dl>
+<p>output_raster_properties : Optional string</p>
+<p>context : Optional</p>
+<p>num_instances : Optional, number of instances to use</p>
+<p>out_raster : Image Service item</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.interpolate">
+<code class="descname">interpolate</code><span class="sig-paren">(</span><em>input_table</em>, <em>output_raster</em>, <em>raster_info</em>, <em>value_field=None</em>, <em>interpolation_method='Nearest'</em>, <em>radius=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_table : Required string</p>
+<p>output_raster : Required string</p>
+<p>raster_info : Required string</p>
+<p>value_field : Optional string</p>
+<dl class="docutils">
+<dt>interpolation_method <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Nearest&#8217;, &#8216;Bilinear&#8217;, &#8216;Linear&#8217;, &#8216;NaturalNeighbor&#8217;]</dd>
+</dl>
+<p>radius : Optional float</p>
+<p>context : Optional string</p>
+<p>num_instances : Optional string</p>
+<p>out_raster : layer (Feature Service item)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.rasterize">
+<code class="descname">rasterize</code><span class="sig-paren">(</span><em>input_table</em>, <em>output_raster</em>, <em>raster_info</em>, <em>value_field=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.rasterize" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_table : Required string</p>
+<p>output_raster : Required string</p>
+<p>raster_info : Required string</p>
+<p>value_field : Optional string</p>
+<p>context : Optional string</p>
+<p>num_instances : Optional string</p>
+<p>out_raster : layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.segment_mean_shift">
+<code class="descname">segment_mean_shift</code><span class="sig-paren">(</span><em>input_raster</em>, <em>output_raster</em>, <em>spectral_detail='15.5'</em>, <em>spatial_detail='15'</em>, <em>minimum_segment_size_in_pixels='20'</em>, <em>band_indexes='1</em>, <em>2</em>, <em>3'</em>, <em>remove_tiiling_artifacts='false'</em>, <em>number_of_instances='4'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.segment_mean_shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_raster : Required string</p>
+<p>output_raster : Required string</p>
+<p>spectral_detail : Required string</p>
+<p>spatial_detail : Required string</p>
+<p>minimum_segment_size_in_pixels : Required string</p>
+<p>band_indexes : Required string</p>
+<p>remove_tiiling_artifacts : Required string</p>
+<p>number_of_instances : Required string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.summarize_raster_within">
+<code class="descname">summarize_raster_within</code><span class="sig-paren">(</span><em>input_zone_layer</em>, <em>zone_field</em>, <em>input_raster_layerto_summarize</em>, <em>output_name</em>, <em>statistic_type='Mean'</em>, <em>ignore_missing_values=True</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.summarize_raster_within" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_zone_layer : Required layer</p>
+<p>zone_field : Required string</p>
+<p>input_raster_layerto_summarize : Required string</p>
+<p>output_name : Required string</p>
+<dl class="docutils">
+<dt>statistic_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
+<dd>One of the following: [&#8216;Mean&#8217;, &#8216;Majority&#8217;, &#8216;Maximum&#8217;, &#8216;Median&#8217;, &#8216;Minimum&#8217;, &#8216;Minority&#8217;, &#8216;Range&#8217;, &#8216;STD&#8217;, &#8216;SUM&#8217;, &#8216;Variety&#8217;]</dd>
+</dl>
+<p>ignore_missing_values : Optional bool</p>
+<p>context : Optional string</p>
+<p>out_raster : layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.RasterAnalysisTools.train_classifier">
+<code class="descname">train_classifier</code><span class="sig-paren">(</span><em>input_raster</em>, <em>input_training_sample_json</em>, <em>segmented_raster</em>, <em>classifier_parameters</em>, <em>segment_attributes='COLOR;MEAN'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools.train_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_raster : Required string</p>
+<p>input_training_sample_json : Required string</p>
+<p>segmented_raster : Required string</p>
+<p>classifier_parameters : Required string</p>
+<p>segment_attributes : Required string</p>
+<p>output_classifier_definition : layer</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-geocoder">
+<h2>arcgis.tools.Geocoder<a class="headerlink" href="#arcgis-tools-geocoder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.Geocoder">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">Geocoder</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>dictdata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geocoder represents a geocode service resource exposed by the GIS.
+It can find point locations of addresses, business names, and so on.
+The output points can be visualized on a map, inserted as stops for a route,
+or loaded as input for spatial analysis. It is also used to generate
+batch results for a set of addresses, as well as for reverse geocoding,
+i.e. determining the address at a particular x/y location.</p>
+<p>An instance of the Geocoder is available through the gis.tools.geocoder
+property, accessible from the GIS object.</p>
+<dl class="method">
+<dt id="arcgis.tools.Geocoder.batch_geocode">
+<code class="descname">batch_geocode</code><span class="sig-paren">(</span><em>addresses</em>, <em>sourceCountry=None</em>, <em>category=None</em>, <em>outSR=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.batch_geocode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The batch_geocode() method geocodes an entire list of addresses. Geocoding many addresses at once is also known as bulk geocoding.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">addresses - A list of addresses to be geocoded.
+For passing in the location name as a single line of text —
+single field batch geocoding — use a string.
+For passing in the location name as multiple lines of text
+multifield batch geocoding — use the address fields described
+in the Geocoder documentation.</p>
+<blockquote>
+<div><p>The maximum number of addresses that can be geocoded in a
+single request is limited to the SuggestedBatchSize property of
+the locator.
+Syntax:</p>
+<blockquote>
+<div><p>addresses = [&#8220;380 New York St, Redlands, CA&#8221;,
+&#8220;1 World Way, Los Angeles, CA&#8221;,
+&#8220;1200 Getty Center Drive, Los Angeles, CA&#8221;,
+&#8220;5905 Wilshire Boulevard, Los Angeles, CA&#8221;,
+&#8220;100 Universal City Plaza, Universal City, CA 91608&#8221;,
+&#8220;4800 Oak Grove Dr, Pasadena, CA 91109&#8221;]</p>
+<p>OR</p>
+<dl class="docutils">
+<dt>addresses= [{</dt>
+<dd>&#8220;Address&#8221;: &#8220;380 New York St.&#8221;,
+&#8220;City&#8221;: &#8220;Redlands&#8221;,
+&#8220;Region&#8221;: &#8220;CA&#8221;,
+&#8220;Postal&#8221;: &#8220;92373&#8221;</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>},{</dt>
+<dd>&#8220;Address&#8221;: &#8220;1 World Way&#8221;,
+&#8220;City&#8221;: &#8220;Los Angeles&#8221;,
+&#8220;Region&#8221;: &#8220;CA&#8221;,
+&#8220;Postal&#8221;: &#8220;90045&#8221;</dd>
+</dl>
+<p>}]</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>sourceCountry - The sourceCountry parameter is only supported by</dt>
+<dd>geocode services published using StreetMap Premium locators.
+Added at 10.3 and only supported by geocode services published
+with ArcGIS 10.3 for Server and later versions.</dd>
+<dt>category - The category parameter is only supported by geocode</dt>
+<dd>services published using StreetMap Premium locators.</dd>
+<dt>outSR - The well-known ID of the spatial reference, or a spatial</dt>
+<dd>reference json object for the returned addresses. For a list of
+valid WKID values, see Projected coordinate systems and
+Geographic coordinate systems.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Geocoder.find_best_match">
+<code class="descname">find_best_match</code><span class="sig-paren">(</span><em>address</em>, <em>searchExtent=None</em>, <em>location=None</em>, <em>distance=None</em>, <em>outSR=None</em>, <em>category=None</em>, <em>outFields='*'</em>, <em>magicKey=None</em>, <em>forStorage=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.find_best_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the (latitude, longitude) or (y, x) coordinates of the best match for specified address</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.tools.Geocoder.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Geocoder.geocode">
+<code class="descname">geocode</code><span class="sig-paren">(</span><em>address</em>, <em>searchExtent=None</em>, <em>location=None</em>, <em>distance=None</em>, <em>outSR=None</em>, <em>category=None</em>, <em>outFields='*'</em>, <em>maxLocations=20</em>, <em>magicKey=None</em>, <em>forStorage=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.geocode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The geocode method geocodes one location per request.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">address - Specifies the location to be geocoded. This can be a string
+containing the street address, place name, postal code, or POI.</p>
+<blockquote>
+<div><p>Alternatively, this can be a dictionary containing the various address fields accepted by the corresponding geocode service. These fields are listed in the addressFields property of the associated geocode service resource. For example, if the addressFields of a geocode service resource includes fields with the following names: Street, City, State and Zone, then the address argument is of the form:
+{</p>
+<blockquote>
+<div>Street: &#8220;1234 W Main St&#8221;,
+City: &#8220;Small Town&#8221;,
+State: &#8220;WA&#8221;,
+Zone: &#8220;99027&#8221;</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>searchExtent - A set of bounding box coordinates that limit the search</dt>
+<dd>area to a specific region. This is especially useful for
+applications in which a user will search for places and
+addresses only within the current map extent.</dd>
+<dt>location - Defines an origin point location that is used with</dt>
+<dd>the distance parameter to sort geocoding candidates based upon
+their proximity to the location. The distance parameter
+specifies the radial distance from the location in meters. The
+priority of candidates within this radius is boosted relative
+to those outside the radius.</dd>
+<dt>distance - Specifies the radius of an area around a point</dt>
+<dd>location which is used to boost the rank of geocoding
+candidates so that candidates closest to the location are
+returned first. The distance value is in meters.</dd>
+<dt>outSR - The spatial reference of the x/y coordinates returned by</dt>
+<dd>a geocode request. This is useful for applications using a map
+with a spatial reference different than that of the geocode
+service.</dd>
+<dt>category - A place or address type which can be used to filter</dt>
+<dd>find results. The parameter supports input of single category
+values or multiple comma-separated values. The category
+parameter can be passed in a request with or without the text
+parameter.</dd>
+</dl>
+<p>outFields - The list of fields to be returned in the response.
+maxLocation - The maximum number of locations to be returned by</p>
+<blockquote>
+<div>a search, up to the maximum number allowed by the service. If
+not specified, then one location will be returned.</div></blockquote>
+<dl class="last docutils">
+<dt>magicKey - The find operation retrieves results quicker when you</dt>
+<dd>pass in valid text and magicKey values than when you don&#8217;t pass
+in magicKey. However, to get these advantages, you need to make
+a prior request to suggest, which provides a magicKey. This may
+or may not be relevant to your workflow.</dd>
+<dt>forStorage - Specifies whether the results of the operation will</dt>
+<dd>be persisted. The default value is false, which indicates the
+results of the operation can&#8217;t be stored, but they can be
+temporarily displayed on a map for instance. If you store the
+results, in a database for example, you need to set this
+parameter to true.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Geocoder.reverse_geocode">
+<code class="descname">reverse_geocode</code><span class="sig-paren">(</span><em>location</em>, <em>distance=None</em>, <em>outSR=None</em>, <em>langCode=None</em>, <em>returnIntersection=False</em>, <em>forStorage=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.reverse_geocode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reverseGeocode operation determines the address at a particular
+x/y location. You pass the coordinates of a point location to the
+geocoding service, and the service returns the address that is
+closest to the location.
+Input:</p>
+<blockquote>
+<div>location - a list defined as [X,Y] or a JSON Point</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Geocoder.suggest">
+<code class="descname">suggest</code><span class="sig-paren">(</span><em>text</em>, <em>location</em>, <em>distance=None</em>, <em>category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Geocoder.suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>The suggest operation is performed on a geocode service resource.
+The result of this operation is a resource representing a list of
+suggested matches for the input text. This resource provides the
+matching text as well as a unique ID value, which links a
+suggestion to a specific place or address.
+A geocode service must meet the following requirements to support
+the suggest operation:</p>
+<blockquote>
+<div>The address locator from which the geocode service was published
+must support suggestions. Only address locators created using
+ArcGIS 10.3 for Desktop and later can support suggestions. See
+the Create Address Locator geoprocessing tool help topic for more
+information.
+The geocode service must have the Suggest capability enabled.
+Only geocode services published using ArcGIS 10.3 for Server or
+later support the Suggest capability.</div></blockquote>
+<p>The suggest operation allows character-by-character auto-complete
+suggestions to be generated for user input in a client application.
+This capability facilitates the interactive search user experience
+by reducing the number of characters that need to be typed before
+a suggested match is obtained. A client application can provide a
+list of suggestions that is updated with each character typed by a
+user until the address they are looking for appears in the list.
+Inputs:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>text - The input text provided by a user that is used by the</dt>
+<dd>suggest operation to generate a list of possible matches. This
+is a required parameter.</dd>
+<dt>location -  Defines an origin point location that is used with</dt>
+<dd>the distance parameter to sort suggested candidates based on
+their proximity to the location. The distance parameter
+specifies the radial distance from the location in meters. The
+priority of candidates within this radius is boosted relative
+to those outside the radius.
+This is useful in mobile applications where a user wants to
+search for places in the vicinity of their current GPS
+location. It is also useful for web mapping applications where
+a user wants to find places within or near the map extent.
+The location parameter can be specified without specifying a
+distance. If distance is not specified, it defaults to 2000
+meters.
+The object can be an common.geometry.Point or X/Y list object</dd>
+<dt>distance - Specifies the radius around the point defined in the</dt>
+<dd>location parameter to create an area, which is used to boost
+the rank of suggested candidates so that candidates closest to
+the location are returned first. The distance value is in
+meters.
+If the distance parameter is specified, the location parameter
+must be specified as well.
+It is important to note that the location and distance
+parameters allow searches to extend beyond the specified search
+radius. They are not used to filter results, but rather to rank
+resulting candidates based on their distance from a location.</dd>
+<dt>category - The category parameter is only supported by geocode</dt>
+<dd>services published using StreetMap Premium locators.</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-geoprocessingtool">
+<h2>arcgis.tools.GeoprocessingTool<a class="headerlink" href="#arcgis-tools-geoprocessingtool" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.GeoprocessingTool">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">GeoprocessingTool</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeoprocessingTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>represents a geoprocessing service</p>
+<dl class="method">
+<dt id="arcgis.tools.GeoprocessingTool.execute">
+<code class="descname">execute</code><span class="sig-paren">(</span><em>task</em>, <em>input</em>, <em>outSR=None</em>, <em>processSR=None</em>, <em>returnZ=False</em>, <em>returnM=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeoprocessingTool.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-geometryservice">
+<h2>arcgis.tools.GeometryService<a class="headerlink" href="#arcgis-tools-geometryservice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.GeometryService">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">GeometryService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService" title="Permalink to this definition">¶</a></dt>
+<dd><p>A geometry service contains utility methods that provide access to
+sophisticated and frequently used geometric operations. An ArcGIS
+Server web site can only expose one geometry service with the static
+name GeometryService.</p>
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.areas_and_lengths">
+<code class="descname">areas_and_lengths</code><span class="sig-paren">(</span><em>polygons</em>, <em>lengthUnit</em>, <em>areaUnit</em>, <em>calculationType</em>, <em>sr=4326</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.areas_and_lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The areasAndLengths operation is performed on a geometry service
+resource. This operation calculates areas and perimeter lengths
+for each polygon specified in the input array.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>polygons - The array of polygons whose areas and lengths are</dt>
+<dd>to be computed.</dd>
+<dt>lengthUnit - The length unit in which the perimeters of</dt>
+<dd>polygons will be calculated. If calculationType
+is planar, then lengthUnit can be any esriUnits
+constant. If lengthUnit is not specified, the
+units are derived from sr. If calculationType is
+not planar, then lengthUnit must be a linear
+esriUnits constant, such as esriSRUnit_Meter or
+esriSRUnit_SurveyMile. If lengthUnit is not
+specified, the units are meters. For a list of
+valid units, see esriSRUnitType Constants and
+esriSRUnit2Type Constant.</dd>
+<dt>areaUnit - The area unit in which areas of polygons will be</dt>
+<dd>calculated. If calculationType is planar, then
+areaUnit can be any esriUnits constant. If
+areaUnit is not specified, the units are derived
+from sr. If calculationType is not planar, then
+areaUnit must be a linear esriUnits constant such
+as esriSRUnit_Meter or esriSRUnit_SurveyMile. If
+areaUnit is not specified, then the units are
+meters. For a list of valid units, see
+esriSRUnitType Constants and esriSRUnit2Type
+constant.
+The list of valid esriAreaUnits constants include,
+esriSquareInches | esriSquareFeet |
+esriSquareYards | esriAcres | esriSquareMiles |
+esriSquareMillimeters | esriSquareCentimeters |
+esriSquareDecimeters | esriSquareMeters | esriAres
+| esriHectares | esriSquareKilometers.</dd>
+<dt>calculationType -  The type defined for the area and length</dt>
+<dd><p class="first">calculation of the input geometries. The
+type can be one of the following values:
+planar - Planar measurements use 2D</p>
+<blockquote>
+<div>Euclidean distance to calculate
+area and length. Th- should
+only be used if the area or
+length needs to be calculated in
+the given spatial reference.
+Otherwise, use preserveShape.</div></blockquote>
+<dl class="last docutils">
+<dt>geodesic - Use this type if you want to</dt>
+<dd>calculate an area or length using
+only the vertices of the polygon
+and define the lines between the
+points as geodesic segments
+independent of the actual shape
+of the polygon. A geodesic
+segment is the shortest path
+between two points on an ellipsoid.</dd>
+<dt>preserveShape - This type calculates the</dt>
+<dd>area or length of the geometry on
+the surface of the Earth
+ellipsoid. The shape of the
+geometry in its coordinate system
+is preserved.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON as dictionary</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.auto_complete">
+<code class="descname">auto_complete</code><span class="sig-paren">(</span><em>polygons=None</em>, <em>polylines=None</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.auto_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autoComplete operation simplifies the process of
+constructing new polygons that are adjacent to other polygons.
+It constructs polygons that fill in the gaps between existing
+polygons and a set of polylines.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd>polygons - array of Polygon objects
+polylines - list of Polyline objects
+sr - spatial reference of the input geometries WKID</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.buffer">
+<code class="descname">buffer</code><span class="sig-paren">(</span><em>geometries</em>, <em>inSR</em>, <em>distances</em>, <em>unit</em>, <em>outSR=None</em>, <em>bufferSR=None</em>, <em>unionResults=True</em>, <em>geodesic=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The buffer operation is performed on a geometry service resource
+The result of this operation is buffered polygons at the
+specified distances for the input geometry array. Options are
+available to union buffers and to use geodesic distance.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The array of geometries to be buffered.
+isSR - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>distances - The distances that each of the input geometries is</dt>
+<dd>buffered.</dd>
+<dt>unit - The units for calculating each buffer distance. If unit</dt>
+<dd>is not specified, the units are derived from bufferSR. If
+bufferSR is not specified, the units are derived from inSR.</dd>
+<dt>outSR - The well-known ID of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>bufferSR - The well-known ID of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>unionResults -  If true, all geometries buffered at a given</dt>
+<dd>distance are unioned into a single (possibly multipart)
+polygon, and the unioned geometry is placed in the output
+array. The default is false</dd>
+<dt>geodesic - Set geodesic to true to buffer the input geometries</dt>
+<dd>using geodesic distance. Geodesic distance is the shortest
+path between two points along the ellipsoid of the earth. If
+geodesic is set to false, the 2D Euclidean distance is used
+to buffer the input geometries. The default value depends on
+the geometry type, unit and bufferSR.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.convex_hull">
+<code class="descname">convex_hull</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.convex_hull" title="Permalink to this definition">¶</a></dt>
+<dd><p>The convexHull operation is performed on a geometry service
+resource. It returns the convex hull of the input geometry. The
+input geometry can be a point, multipoint, polyline, or polygon.
+The convex hull is typically a polygon but can also be a polyline
+or point in degenerate cases.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The geometries whose convex hull is to be created.
+sr - The well-known ID or a spatial reference JSON object for</p>
+<blockquote class="last">
+<div>the output geometry.</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.cut">
+<code class="descname">cut</code><span class="sig-paren">(</span><em>cutter</em>, <em>target</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cut operation is performed on a geometry service resource. This
+operation splits the target polyline or polygon where it&#8217;s crossed
+by the cutter polyline.
+At 10.1 and later, this operation calls simplify on the input
+cutter and target geometries.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>cutter - The polyline that will be used to divide the target</dt>
+<dd>into pieces where it crosses the target.The spatial reference
+of the polylines is specified by sr. The structure of the
+polyline is the same as the structure of the JSON polyline
+objects returned by the ArcGIS REST API.</dd>
+<dt>target - The array of polylines/polygons to be cut. The</dt>
+<dd>structure of the geometry is the same as the structure of the
+JSON geometry objects returned by the ArcGIS REST API. The
+spatial reference of the target geometry array is specified by
+sr.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>the output geometry.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.density">
+<code class="descname">density</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr</em>, <em>maxSegmentLength</em>, <em>lengthUnit</em>, <em>geodesic=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.density" title="Permalink to this definition">¶</a></dt>
+<dd><p>The densify operation is performed on a geometry service resource.
+This operation densifies geometries by plotting points between
+existing vertices.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>geometries - The array of geometries to be densified. The</dt>
+<dd>structure of each geometry in the array is the same as the
+structure of the JSON geometry objects returned by the ArcGIS
+REST API.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>the input polylines. For a list of valid WKID values, see
+Projected coordinate systems and Geographic coordinate systems.</dd>
+<dt>maxSegmentLength - All segments longer than maxSegmentLength are</dt>
+<dd>replaced with sequences of lines no longer than
+maxSegmentLength.</dd>
+<dt>lengthUnit - The length unit of maxSegmentLength. If geodesic is</dt>
+<dd>set to false, then the units are derived from sr, and
+lengthUnit is ignored. If geodesic is set to true, then
+lengthUnit must be a linear unit. In a case where lengthUnit is
+not specified and sr is a PCS, the units are derived from sr.
+In a case where lengthUnit is not specified and sr is a GCS,
+then the units are meters.</dd>
+<dt>geodesic - If geodesic is set to true, then geodesic distance is</dt>
+<dd>used to calculate maxSegmentLength. Geodesic distance is the
+shortest path between two points along the ellipsoid of the
+earth. If geodesic is set to false, then 2D Euclidean distance
+is used to calculate maxSegmentLength. The default is false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.difference">
+<code class="descname">difference</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr</em>, <em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>The difference operation is performed on a geometry service
+resource. This operation constructs the set-theoretic difference
+between each element of an array of geometries and another geometry
+the so-called difference geometry. In other words, let B be the
+difference geometry. For each geometry, A, in the input geometry
+array, it constructs A-B.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>geometries -  An array of points, multipoints, polylines or</dt>
+<dd>polygons. The structure of each geometry in the array is the
+same as the structure of the JSON geometry objects returned by
+the ArcGIS REST API.</dd>
+<dt>geometry - A single geometry of any type and of a dimension equal</dt>
+<dd>to or greater than the elements of geometries. The structure of
+geometry is the same as the structure of the JSON geometry
+objects returned by the ArcGIS REST API. The use of simple
+syntax is not supported.</dd>
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.distance">
+<code class="descname">distance</code><span class="sig-paren">(</span><em>sr</em>, <em>geometry1</em>, <em>geometry2</em>, <em>distanceUnit=''</em>, <em>geodesic=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance operation is performed on a geometry service resource.
+It reports the 2D Euclidean or geodesic distance between the two
+geometries.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>input geometries.</dd>
+<dt>geometry1 - The geometry from which the distance is to be</dt>
+<dd>measured. The structure of the geometry is same as the structure
+of the JSON geometry objects returned by the ArcGIS REST API.</dd>
+<dt>geometry2 - The geometry from which the distance is to be</dt>
+<dd>measured. The structure of the geometry is same as the structure
+of the JSON geometry objects returned by the ArcGIS REST API.</dd>
+<dt>distanceUnit - specifies the units for measuring distance between</dt>
+<dd>the geometry1 and geometry2 geometries.</dd>
+<dt>geodesic - If geodesic is set to true, then the geodesic distance</dt>
+<dd>between the geometry1 and geometry2 geometries is returned.
+Geodesic distance is the shortest path between two points along
+the ellipsoid of the earth. If geodesic is set to false or not
+specified, the planar distance is returned. The default value is
+false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.find_transformation">
+<code class="descname">find_transformation</code><span class="sig-paren">(</span><em>inSR</em>, <em>outSR</em>, <em>extentOfInterest=None</em>, <em>numOfResults=1</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.find_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The findTransformations operation is performed on a geometry
+service resource. This operation returns a list of applicable
+geographic transformations you should use when projecting
+geometries from the input spatial reference to the output spatial
+reference. The transformations are in JSON format and are returned
+in order of most applicable to least applicable. Recall that a
+geographic transformation is not needed when the input and output
+spatial references have the same underlying geographic coordinate
+systems. In this case, findTransformations returns an empty list.
+Every returned geographic transformation is a forward
+transformation meaning that it can be used as-is to project from
+the input spatial reference to the output spatial reference. In the
+case where a predefined transformation needs to be applied in the
+reverse direction, it is returned as a forward composite
+transformation containing one transformation and a transformForward
+element with a value of false.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>inSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries</dd>
+<dt>outSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries</dd>
+<dt>extentOfInterest -  The bounding box of the area of interest</dt>
+<dd>specified as a JSON envelope. If provided, the extent of
+interest is used to return the most applicable geographic
+transformations for the area. If a spatial reference is not
+included in the JSON envelope, the inSR is used for the
+envelope.</dd>
+<dt>numOfResults - The number of geographic transformations to</dt>
+<dd>return. The default value is 1. If numOfResults has a value of
+-1, all applicable transformations are returned.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.from_geo_coordinate_string">
+<code class="descname">from_geo_coordinate_string</code><span class="sig-paren">(</span><em>sr</em>, <em>strings</em>, <em>conversionType</em>, <em>conversionMode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.from_geo_coordinate_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The from_geo_coordinate_string operation is performed on a geometry
+service resource. The operation converts an array of well-known
+strings into xy-coordinates based on the conversion type and
+spatial reference supplied by the user. An optional conversion mode
+parameter is available for some conversion types.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+<dt>strings - An array of strings formatted as specified by</dt>
+<dd><p class="first">conversionType.
+Syntax: [&lt;string1&gt;,...,&lt;stringN&gt;]
+Example: [&#8220;01N AA 66021 00000&#8221;,&#8221;11S NT 00000 62155&#8221;,</p>
+<blockquote class="last">
+<div>&#8220;31U BT 94071 65288&#8221;]</div></blockquote>
+</dd>
+<dt>conversionType - The conversion type of the input strings.</dt>
+<dd><dl class="first last docutils">
+<dt>Valid conversion types are:</dt>
+<dd>MGRS - Military Grid Reference System
+USNG - United States National Grid
+UTM - Universal Transverse Mercator
+GeoRef - World Geographic Reference System
+GARS - Global Area Reference System
+DMS - Degree Minute Second
+DDM - Degree Decimal Minute
+DD - Decimal Degree</dd>
+</dl>
+</dd>
+<dt>conversionMode - Conversion options for MGRS, UTM and GARS</dt>
+<dd><p class="first">conversion types.
+Conversion options for MGRS and UTM conversion types.
+Valid conversion modes for MGRS are:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>mgrsDefault - Default. Uses the spheroid from the given spatial</dt>
+<dd>reference.</dd>
+<dt>mgrsNewStyle - Treats all spheroids as new, like WGS 1984. The</dt>
+<dd>180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsOldStyle - Treats all spheroids as old, like Bessel 1841.</dt>
+<dd>The 180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsNewWith180InZone01 - Same as mgrsNewStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+<dt>mgrsOldWith180InZone01 - Same as mgrsOldStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Valid conversion modes for UTM are:</dt>
+<dd><p class="first">utmDefault - Default. No options.
+utmNorthSouth - Uses north/south latitude indicators instead of</p>
+<blockquote class="last">
+<div>zone numbers. Non-standard. Default is recommended</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.tools.GeometryService.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.generalize">
+<code class="descname">generalize</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em>, <em>maxDeviation</em>, <em>deviationUnit</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.generalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generalize operation is performed on a geometry service
+resource. The generalize operation simplifies the input geometries
+using the Douglas-Peucker algorithm with a specified maximum
+deviation distance. The output geometries will contain a subset of
+the original input vertices.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+</dl>
+<p>geometries - The array of geometries to be generalized.
+maxDeviation - maxDeviation sets the maximum allowable offset,</p>
+<blockquote>
+<div>which will determine the degree of simplification. This value
+limits the distance the output geometry can differ from the input
+geometry.</div></blockquote>
+<dl class="last docutils">
+<dt>deviationUnit - A unit for maximum deviation. If a unit is not</dt>
+<dd>specified, the units are derived from sr.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.intersect">
+<code class="descname">intersect</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em>, <em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>The intersect operation is performed on a geometry service
+resource. This operation constructs the set-theoretic intersection
+between an array of geometries and another geometry. The dimension
+of each resultant geometry is the minimum dimension of the input
+geometry in the geometries array and the other geometry specified
+by the geometry parameter.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+<dt>geometries - An array of points, multipoints, polylines, or</dt>
+<dd>polygons. The structure of each geometry in the array is the same
+as the structure of the JSON geometry objects returned by the
+ArcGIS REST API.</dd>
+<dt>geometry - A single geometry of any type with a dimension equal to</dt>
+<dd>or greater than the elements of geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.label_points">
+<code class="descname">label_points</code><span class="sig-paren">(</span><em>sr</em>, <em>polygons</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.label_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label_points operation is performed on a geometry service
+resource. The labelPoints operation calculates an interior point
+for each polygon specified in the input array. These interior
+points can be used by clients for labeling the polygons.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input polygons.</dd>
+<dt>polygons - The array of polygons whose label points are to be</dt>
+<dd>computed. The spatial reference of the polygons is specified by
+sr.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.lengths">
+<code class="descname">lengths</code><span class="sig-paren">(</span><em>sr</em>, <em>polylines</em>, <em>lengthUnit</em>, <em>calculationType</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lengths operation is performed on a geometry service resource.
+This operation calculates the 2D Euclidean or geodesic lengths of
+each polyline specified in the input array.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input polylines.</dd>
+<dt>polylines - The array of polylines whose lengths are to be</dt>
+<dd>computed.</dd>
+<dt>lengthUnit - The unit in which lengths of polylines will be</dt>
+<dd>calculated. If calculationType is planar, then lengthUnit can be
+any esriUnits constant. If calculationType is planar and
+lengthUnit is not specified, then the units are derived from sr.
+If calculationType is not planar, then lengthUnit must be a
+linear esriUnits constant such as esriSRUnit_Meter or
+esriSRUnit_SurveyMile. If calculationType is not planar and
+lengthUnit is not specified, then the units are meters.</dd>
+<dt>calculationType - calculationType defines the length calculation</dt>
+<dd><dl class="first last docutils">
+<dt>for the geometry. The type can be one of the following values:</dt>
+<dd><dl class="first last docutils">
+<dt>planar - Planar measurements use 2D Euclidean distance to</dt>
+<dd>calculate length. This type should only be used if the length
+needs to be calculated in the given spatial reference.
+Otherwise, use preserveShape.</dd>
+<dt>geodesic - Use this type if you want to calculate a length</dt>
+<dd>using only the vertices of the polygon and define the lines
+between the vertices as geodesic segments independent of the
+actual shape of the polyline. A geodesic segment is the
+shortest path between two points on an earth ellipsoid.</dd>
+<dt>preserveShape - This type calculates the length of the geometry</dt>
+<dd>on the surface of the earth ellipsoid. The shape of the
+geometry in its coordinate system is preserved.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.offset">
+<code class="descname">offset</code><span class="sig-paren">(</span><em>geometries</em>, <em>offsetDistance</em>, <em>offsetUnit</em>, <em>offsetHow='esriGeometryOffsetRounded'</em>, <em>bevelRatio=10</em>, <em>simplifyResult=False</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>The offset operation is performed on a geometry service resource.
+This operation constructs geometries that are offset from the
+given input geometries. If the offset parameter is positive, the
+constructed offset will be on the right side of the geometry. Left
+side offsets are constructed with negative parameters. Tracing the
+geometry from its first vertex to the last will give you a
+direction along the geometry. It is to the right and left
+perspective of this direction that the positive and negative
+parameters will dictate where the offset is constructed. In these
+terms, it is simple to infer where the offset of even horizontal
+geometries will be constructed.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries -  The array of geometries to be offset.
+offsetDistance - Specifies the distance for constructing an offset</p>
+<blockquote>
+<div>based on the input geometries. If the offsetDistance parameter is
+positive, the constructed offset will be on the right side of the
+curve. Left-side offsets are constructed with negative values.</div></blockquote>
+<dl class="last docutils">
+<dt>offsetUnit - A unit for offset distance. If a unit is not</dt>
+<dd>specified, the units are derived from sr.</dd>
+<dt>offsetHow - The offsetHow parameter determines how outer corners</dt>
+<dd><dl class="first last docutils">
+<dt>between segments are handled. The three options are as follows:</dt>
+<dd><dl class="first last docutils">
+<dt>esriGeometryOffsetRounded - Rounds the corner between extended</dt>
+<dd>offsets.</dd>
+<dt>esriGeometryOffsetBevelled - Squares off the corner after a</dt>
+<dd>given ratio distance.</dd>
+<dt>esriGeometryOffsetMitered - Attempts to allow extended offsets</dt>
+<dd>to naturally intersect, but if that intersection occurs too far
+from the corner, the corner is eventually bevelled off at a
+fixed distance.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>bevelRatio - bevelRatio is multiplied by the offset distance, and</dt>
+<dd>the result determines how far a mitered offset intersection can
+be located before it is bevelled. When mitered is specified,
+bevelRatio is ignored and 10 is used internally. When bevelled is
+specified, 1.1 will be used if bevelRatio is not specified.
+bevelRatio is ignored for rounded offset.</dd>
+<dt>simplifyResult - if simplifyResult is set to true, then self</dt>
+<dd>intersecting loops will be removed from the result offset
+geometries. The default is false.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.project">
+<code class="descname">project</code><span class="sig-paren">(</span><em>geometries</em>, <em>inSR</em>, <em>outSR</em>, <em>transformation=''</em>, <em>transformFoward=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project operation is performed on a geometry service resource.
+This operation projects an array of input geometries from the input
+spatial reference to the output spatial reference.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The array of geometries to be projected.
+inSR - The well-known ID (WKID) of the spatial reference or a</p>
+<blockquote>
+<div>spatial reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>outSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>transformation - The WKID or a JSON object specifying the</dt>
+<dd>geographic transformation (also known as datum transformation) to
+be applied to the projected geometries. Note that a
+transformation is needed only if the output spatial reference
+contains a different geographic coordinate system than the input
+spatial reference.</dd>
+<dt>transformForward - A Boolean value indicating whether or not to</dt>
+<dd>transform forward. The forward or reverse direction of
+transformation is implied in the name of the transformation. If
+transformation is specified, a value for the transformForward
+parameter must also be specified. The default value is false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.relation">
+<code class="descname">relation</code><span class="sig-paren">(</span><em>geometries1</em>, <em>geometries2</em>, <em>sr</em>, <em>relation='esriGeometryRelationIntersection'</em>, <em>relationParam=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The relation operation is performed on a geometry service resource.
+This operation determines the pairs of geometries from the input
+geometry arrays that participate in the specified spatial relation.
+Both arrays are assumed to be in the spatial reference specified by
+sr, which is a required parameter. Geometry types cannot be mixed
+within an array. The relations are evaluated in 2D. In other words,
+z coordinates are not used.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>geometries1 - The first array of geometries used to compute the</dt>
+<dd>relations.</dd>
+</dl>
+<p>geometries2 -The second array of geometries used to compute the
+relations.
+sr - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>relation - The spatial relationship to be tested between the two</dt>
+<dd>input geometry arrays.
+Values: esriGeometryRelationCross | esriGeometryRelationDisjoint |
+esriGeometryRelationIn | esriGeometryRelationInteriorIntersection |
+esriGeometryRelationIntersection | esriGeometryRelationLineCoincidence |
+esriGeometryRelationLineTouch | esriGeometryRelationOverlap |
+esriGeometryRelationPointTouch | esriGeometryRelationTouch |
+esriGeometryRelationWithin | esriGeometryRelationRelation</dd>
+<dt>relationParam - The Shape Comparison Language string to be</dt>
+<dd>evaluated.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.reshape">
+<code class="descname">reshape</code><span class="sig-paren">(</span><em>sr</em>, <em>target</em>, <em>reshaper</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.reshape" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reshape operation is performed on a geometry service resource.
+It reshapes a polyline or polygon feature by constructing a
+polyline over the feature. The feature takes the shape of the
+reshaper polyline from the first place the reshaper intersects the
+feature to the last.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input geometries.</dd>
+</dl>
+<p class="last">target -  The polyline or polygon to be reshaped.
+reshaper - The single-part polyline that does the reshaping.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.simplify">
+<code class="descname">simplify</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.simplify" title="Permalink to this definition">¶</a></dt>
+<dd><p>The simplify operation is performed on a geometry service resource.
+Simplify permanently alters the input geometry so that the geometry
+becomes topologically consistent. This resource applies the ArcGIS
+simplify operation to each geometry in the input array.</p>
+<p>Inputs:
+sr - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference JSON object for the input geometries.</div></blockquote>
+<p>geometries - The array of geometries to be simplified.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.to_geo_coordinate_string">
+<code class="descname">to_geo_coordinate_string</code><span class="sig-paren">(</span><em>sr</em>, <em>coordinates</em>, <em>conversionType</em>, <em>conversionMode='mgrsDefault'</em>, <em>numOfDigits=None</em>, <em>rounding=True</em>, <em>addSpaces=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.to_geo_coordinate_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The toGeoCoordinateString operation is performed on a geometry
+service resource. The operation converts an array of
+xy-coordinates into well-known strings based on the conversion type
+and spatial reference supplied by the user. Optional parameters are
+available for some conversion types. Note that if an optional
+parameter is not applicable for a particular conversion type, but a
+value is supplied for that parameter, the value will be ignored.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr -  The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+<dt>coordinates - An array of xy-coordinates in JSON format to be</dt>
+<dd>converted. Syntax: [[x1,y2],...[xN,yN]]</dd>
+<dt>conversionType - The conversion type of the input strings.</dt>
+<dd><dl class="first last docutils">
+<dt>Allowed Values:</dt>
+<dd>MGRS - Military Grid Reference System
+USNG - United States National Grid
+UTM - Universal Transverse Mercator
+GeoRef - World Geographic Reference System
+GARS - Global Area Reference System
+DMS - Degree Minute Second
+DDM - Degree Decimal Minute
+DD - Decimal Degree</dd>
+</dl>
+</dd>
+<dt>conversionMode - Conversion options for MGRS and UTM conversion</dt>
+<dd><p class="first">types.
+Valid conversion modes for MGRS are:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>mgrsDefault - Default. Uses the spheroid from the given spatial</dt>
+<dd>reference.</dd>
+<dt>mgrsNewStyle - Treats all spheroids as new, like WGS 1984. The</dt>
+<dd>180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsOldStyle - Treats all spheroids as old, like Bessel 1841.</dt>
+<dd>The 180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsNewWith180InZone01 - Same as mgrsNewStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+<dt>mgrsOldWith180InZone01 - Same as mgrsOldStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Valid conversion modes for UTM are:</dt>
+<dd><p class="first">utmDefault - Default. No options.
+utmNorthSouth - Uses north/south latitude indicators instead of</p>
+<blockquote class="last">
+<div>zone numbers. Non-standard. Default is recommended.</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>numOfDigits - The number of digits to output for each of the</dt>
+<dd>numerical portions in the string. The default value for
+numOfDigits varies depending on conversionType.</dd>
+<dt>rounding - If true, then numeric portions of the string are</dt>
+<dd>rounded to the nearest whole magnitude as specified by
+numOfDigits. Otherwise, numeric portions of the string are
+truncated. The rounding parameter applies only to conversion
+types MGRS, USNG and GeoRef. The default value is true.</dd>
+<dt>addSpaces - If true, then spaces are added between components of</dt>
+<dd>the string. The addSpaces parameter applies only to conversion
+types MGRS, USNG and UTM. The default value for MGRS is false,
+while the default value for both USNG and UTM is true.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.trim_extend">
+<code class="descname">trim_extend</code><span class="sig-paren">(</span><em>sr</em>, <em>polylines</em>, <em>trimExtendTo</em>, <em>extendHow=0</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.trim_extend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The trim_extend operation is performed on a geometry service
+resource. This operation trims or extends each polyline specified
+in the input array, using the user-specified guide polylines. When
+trimming features, the part to the left of the oriented cutting
+line is preserved in the output, and the other part is discarded.
+An empty polyline is added to the output array if the corresponding
+input polyline is neither cut nor extended.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+</dl>
+<p>polylines - An array of polylines to be trimmed or extended.
+trimExtendTo - A polyline that is used as a guide for trimming or</p>
+<blockquote>
+<div>extending input polylines.</div></blockquote>
+<dl class="last docutils">
+<dt>extendHow - A flag that is used along with the trimExtend</dt>
+<dd><p class="first">operation.
+0 - By default, an extension considers both ends of a path. The</p>
+<blockquote>
+<div>old ends remain, and new points are added to the extended ends.
+The new points have attributes that are extrapolated from
+adjacent existing segments.</div></blockquote>
+<dl class="docutils">
+<dt>1 - If an extension is performed at an end, relocate the end</dt>
+<dd>point to the new position instead of leaving the old point and
+adding a new point at the new position.</dd>
+<dt>2 - If an extension is performed at an end, do not extrapolate</dt>
+<dd>the end-segment&#8217;s attributes for the new point. Instead, make
+its attributes the same as the current end. Incompatible with
+esriNoAttributes.</dd>
+<dt>4 - If an extension is performed at an end, do not extrapolate</dt>
+<dd>the end-segment&#8217;s attributes for the new point. Instead, make
+its attributes empty. Incompatible with esriKeepAttributes.</dd>
+</dl>
+<p class="last">8 - Do not extend the &#8216;from&#8217; end of any path.
+16 - Do not extend the &#8216;to&#8217; end of any path.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.GeometryService.union">
+<code class="descname">union</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.GeometryService.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>The union operation is performed on a geometry service resource.
+This operation constructs the set-theoretic union of the geometries
+in the input array. All inputs must be of the same type.</p>
+<p>Inputs:
+sr - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference json object.</div></blockquote>
+<p>geometries - The array of geometries to be unioned.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-feature">
+<h2>arcgis.tools.Feature<a class="headerlink" href="#arcgis-tools-feature" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.Feature">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">Feature</code><span class="sig-paren">(</span><em>geometry=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a feature</p>
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.as_dict">
+<code class="descname">as_dict</code><a class="headerlink" href="#arcgis.tools.Feature.as_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the feature as a dictionary</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.as_row">
+<code class="descname">as_row</code><a class="headerlink" href="#arcgis.tools.Feature.as_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a feature to a list for insertion into an insert cursor
+Output:</p>
+<blockquote>
+<div>[row items], [field names]
+returns a list of fields and the row object</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.attributes">
+<code class="descname">attributes</code><a class="headerlink" href="#arcgis.tools.Feature.attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the feature attributes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.fields">
+<code class="descname">fields</code><a class="headerlink" href="#arcgis.tools.Feature.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a list of feature fields</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.tools.Feature.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>feature</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Feature.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a featureset from a dict</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="arcgis.tools.Feature.from_json">
+<em class="property">classmethod </em><code class="descname">from_json</code><span class="sig-paren">(</span><em>json_str</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Feature.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a feature from a JSON string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.geometry">
+<code class="descname">geometry</code><a class="headerlink" href="#arcgis.tools.Feature.geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the feature geometry</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.Feature.geometry_type">
+<code class="descname">geometry_type</code><a class="headerlink" href="#arcgis.tools.Feature.geometry_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the feature&#8217;s geometry type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Feature.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Feature.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a value for a given field name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.Feature.set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>field_name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.Feature.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>sets an attribute value for a given field name</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arcgis-tools-featureset">
+<h2>arcgis.tools.FeatureSet<a class="headerlink" href="#arcgis-tools-featureset" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.tools.FeatureSet">
+<em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">FeatureSet</code><span class="sig-paren">(</span><em>features</em>, <em>fields=None</em>, <em>hasZ=False</em>, <em>hasM=False</em>, <em>geometryType=None</em>, <em>spatialReference=None</em>, <em>displayFieldName=None</em>, <em>objectIdFieldName=None</em>, <em>globalIdFieldName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>A FeatureSet is a collection of Features.
+FeatureSets are commonly used as input/output with several Geoprocessing
+Tools, as well as the output of query() methods of feature layers.</p>
+<p>This FeatureSet contains Feature objects, including the values for the
+fields requested by the user. For layers, if you request geometry
+information, the geometry of each feature is also returned in the
+featureSet. For tables, the featureSet does not include geometries.
+If a spatialReference is not specified at the featureSet level, the
+featureSet will assume the spatialReference of its first feature. If
+the spatialReference of the first feature is also not specified, the
+spatial reference will be UnknownCoordinateSystem.</p>
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.displayFieldName">
+<code class="descname">displayFieldName</code><a class="headerlink" href="#arcgis.tools.FeatureSet.displayFieldName" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/sets the displayFieldName</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.features">
+<code class="descname">features</code><a class="headerlink" href="#arcgis.tools.FeatureSet.features" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets the features in the FeatureSet</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.fields">
+<code class="descname">fields</code><a class="headerlink" href="#arcgis.tools.FeatureSet.fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets the fieldsin the FeatureSet</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="arcgis.tools.FeatureSet.from_dict">
+<em class="property">static </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>fsdict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureSet.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a featureset from a dict</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="arcgis.tools.FeatureSet.from_json">
+<em class="property">static </em><code class="descname">from_json</code><span class="sig-paren">(</span><em>json_str</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureSet.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a featureset from a JSON string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.geometryType">
+<code class="descname">geometryType</code><a class="headerlink" href="#arcgis.tools.FeatureSet.geometryType" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/sets the geometry Type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.globalIdFieldName">
+<code class="descname">globalIdFieldName</code><a class="headerlink" href="#arcgis.tools.FeatureSet.globalIdFieldName" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/sets the globalIdFieldName</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.hasM">
+<code class="descname">hasM</code><a class="headerlink" href="#arcgis.tools.FeatureSet.hasM" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/set the M-property</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.hasZ">
+<code class="descname">hasZ</code><a class="headerlink" href="#arcgis.tools.FeatureSet.hasZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/sets the Z-property</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.objectIdFieldName">
+<code class="descname">objectIdFieldName</code><a class="headerlink" href="#arcgis.tools.FeatureSet.objectIdFieldName" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets/sets the object id field</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.tools.FeatureSet.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>saveLocation</em>, <em>outName</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureSet.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves a featureset object to a feature class
+Input:</p>
+<blockquote>
+<div><p>saveLocation - output location of the data
+outName - name of the table the data will be saved to</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Types:</dt>
+<dd><p class="first"><a href="#id1"><span class="problematic" id="id2">*</span></a>.csv - CSV file returned
+<a href="#id3"><span class="problematic" id="id4">*</span></a>.json - text file with json
+* If no extension, a shapefile if the path is a</p>
+<blockquote class="last">
+<div>folder, a featureclass if the path is a GDB</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.spatialReference">
+<code class="descname">spatialReference</code><a class="headerlink" href="#arcgis.tools.FeatureSet.spatialReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>gets the featureset&#8217;s spatial reference</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.to_json">
+<code class="descname">to_json</code><a class="headerlink" href="#arcgis.tools.FeatureSet.to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts the object to JSON</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.tools.FeatureSet.value">
+<code class="descname">value</code><a class="headerlink" href="#arcgis.tools.FeatureSet.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns object as dictionary</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.geom.html" class="btn btn-neutral float-right" title="arcgis.geom module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.viz.html" class="btn btn-neutral" title="arcgis.viz module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Esri.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
