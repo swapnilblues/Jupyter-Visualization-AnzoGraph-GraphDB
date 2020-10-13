@@ -1,3 +1,3 @@
-### Jupyter Notebooks for AnzoGraph Database
+## Jupyter Notebooks for AnzoGraph Database
 
-## Company: Cambridge Semantics Inc.
+### Company: Cambridge Semantics Inc.
