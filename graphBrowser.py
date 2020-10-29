@@ -176,9 +176,8 @@ SELECT
 labelDict = {}
 
 
-def createGraph(origin):
+def createGraph(query,rootNode):
     #     print('Inside')
-    query = createAirportQuery(origin)
     flights = run_query('127.0.0.1:7070', query)
 
     x = flights.decode("utf-8")
@@ -231,7 +230,7 @@ def createGraph(origin):
         elements.append({'data': {'id': node,
                                   'label': labelDict.get(node.lower(), node),
                                   'expanded': False,
-                                  'source': origin
+                                  'source': rootNode
                                   }
                          })
     for ele in graph:
@@ -250,20 +249,23 @@ def getEdgeLabel(origin):
     return 'From Airport: ' + origin
 
 
-def getNeighbours(origin):
-    query = '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix fl: <https://ontologies.semanticarts.com/flights/>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-select ?s ?p ?obj ?obj_type ?obj_label from <airline_flight_network>
-        where {
-            ?s ?p ?obj .
-			optional {  ?obj a ?obj_type . }
-    		optional {	?obj rdfs:label ?obj_label .  }
-      VALUES ?s { 	''' + origin + '''} 
-  filter(ISIRI(?obj_type))   
-  }
-#	order by ?s 
-    limit 10'''
+def createGetNeighboringAirportQuery(origin):
+    return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    prefix fl: <https://ontologies.semanticarts.com/flights/>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    select ?s ?p ?obj ?obj_type ?obj_label from <airline_flight_network>
+            where {
+                ?s ?p ?obj .
+			    optional {  ?obj a ?obj_type . }
+    		    optional {	?obj rdfs:label ?obj_label .  }
+            VALUES ?s { 	''' + origin + '''} 
+    filter(ISIRI(?obj_type))   
+    }
+    #	order by ?s 
+    limit 10
+    '''
+
+def getNeighbours(query):
     df = create_dataframe('127.0.0.1:7070', query)
     return df
 
