@@ -176,7 +176,7 @@ SELECT
 labelDict = {}
 
 
-def createGraph(query,rootNode):
+def createGraph(query, rootNode):
     #     print('Inside')
     flights = run_query('127.0.0.1:7070', query)
 
@@ -248,8 +248,9 @@ def createGraph(query,rootNode):
 def getEdgeLabel(origin):
     return 'From Airport: ' + origin
 
+
 # Change function name and graph name (pass as parameter)
-def createGetNeighborsQuery(origin,graphName):
+def createGetNeighborsQuery(origin, graphName):
     return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix fl: <https://ontologies.semanticarts.com/flights/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -265,6 +266,7 @@ select ?s ?p ?obj ?obj_type ?obj_label ?p_label from ''' + graphName + '''
 #	order by ?s 
     limit 10
     '''
+
 
 def getNeighbours(query):
     df = create_dataframe('127.0.0.1:7070', query)
@@ -342,54 +344,115 @@ import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
 from demos import dash_reusable_components as drc
 
+
 def getAppLayout(elements):
     return html.Div([
 
-    html.Div(className='a',children = [
-    dcc.Dropdown(
-        id='dropdown-update-layout',
-        value='circle',
-        clearable=False,
-        options=[
-            {'label': name.capitalize(), 'value': name}
-            for name in ['grid', 'random', 'circle', 'cose', 'concentric']
-        ]
-    )]),
-    drc.NamedRadioItems(
-                    name='Select',
-                    id='radio-option',
-                    options=drc.DropdownOptionsList(
-                        'Show Neighbors'
-                    ),
-                    value='Show Neighbors'
-                ),
+        html.Div(className='a', children=[
+            dcc.Dropdown(
+                id='dropdown-update-layout',
+                value='circle',
+                clearable=False,
+                options=[
+                    {'label': name.capitalize(), 'value': name}
+                    for name in ['grid', 'random', 'circle', 'cose', 'concentric']
+                ]
+            )]),
+        drc.NamedRadioItems(
+            name='Select',
+            id='radio-option',
+            options=drc.DropdownOptionsList(
+                'Show Neighbors'
+            ),
+            value='Show Neighbors'
+        ),
 
-    html.Div(className='b',children = [
-    cyto.Cytoscape(
-        id='cytoscape-update-layout',
-        layout={'name': 'circle'},
-        style={'width': '100%', 'height': '70vh'},
-        elements=elements,
-        stylesheet = [
-            {
-            'selector': 'node',
-            'style': {
-                'content': 'data(label)',
-                'background-color': '#58FAF4',
-                }
-            },
-            {
-            'selector': 'edge',
-            'style': {
-                'content': 'data(labelLabel)',
-                'curve-style': 'bezier',
-                'target-arrow-color': 'black',
-                'target-arrow-shape': 'triangle',
-                'line-color': 'black'
-                }
-            }
-        ]
-    )]),
-    html.P(id='cytoscape-tapNodeData-output'),
-    html.P(id='cytoscape-tapEdgeData-output')
-])
+        html.Div(className='b', children=[
+            cyto.Cytoscape(
+                id='cytoscape-update-layout',
+                layout={'name': 'circle'},
+                style={'width': '100%', 'height': '70vh'},
+                elements=elements,
+                stylesheet=[
+                    {
+                        'selector': 'node',
+                        'style': {
+                            'content': 'data(label)',
+                            'background-color': '#58FAF4',
+                        }
+                    },
+                    {
+                        'selector': 'edge',
+                        'style': {
+                            'content': 'data(labelLabel)',
+                            'curve-style': 'bezier',
+                            'target-arrow-color': 'black',
+                            'target-arrow-shape': 'triangle',
+                            'line-color': 'black'
+                        }
+                    }
+                ]
+            )]),
+        html.P(id='cytoscape-tapNodeData-output'),
+        html.P(id='cytoscape-tapEdgeData-output')
+    ])
+
+
+###################CALLBACKS###################
+
+def displayTapNodeData(data):
+    if data:
+        return "Node selected: " + data['id']
+
+
+def displayTapEdgeData(data):
+    if data:
+        return "Connection between " + data['source'].upper() + " and " + data[
+            'target'].upper() + " with edge value: " + data['label']
+
+
+def update_layout(layout):
+    return {
+        'name': layout,
+        'animate': True
+    }
+
+
+def generate_elements(data, e, options, graphName):
+    if not data:
+        return e
+
+    nodeURI = data['id']
+    if options == "Show Neighbors":
+
+        if data['expanded'] == True:
+            return e
+
+        if data and e:
+
+            # changing extended to True for the node
+            for element in e:
+                if data['id'] == element.get('data').get('id'):
+                    element['data']['expanded'] = True
+                    break
+
+            # Demo: get neighboring airport creation statement for airlines data
+            neighborQuery = createGetNeighborsQuery(nodeURI, graphName)
+            df = getNeighbours(neighborQuery)
+            nodes = generateNodes(df, nodeURI)
+            edges = generateEdges(df)
+
+            for node in nodes:
+                if node not in e:
+                    e.append(node)
+
+            for edge in edges:
+                if edge not in e:
+                    e.append(edge)
+
+        return e
+    elif options == "Hide Neighbors":
+
+        if data['expanded'] == False:
+            return e
+        return removeNodes(e, nodeURI)

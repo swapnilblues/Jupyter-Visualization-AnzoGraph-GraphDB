@@ -1,0 +1,5 @@
+.*
+!.gitignore
+Delete*
+__pycache__/
+
