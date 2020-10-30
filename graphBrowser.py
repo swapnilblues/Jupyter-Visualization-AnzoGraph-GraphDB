@@ -248,20 +248,21 @@ def createGraph(query,rootNode):
 def getEdgeLabel(origin):
     return 'From Airport: ' + origin
 
-
+# Change function name and graph name (pass as parameter)
 def createGetNeighboringAirportQuery(origin):
     return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    prefix fl: <https://ontologies.semanticarts.com/flights/>
-    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    select ?s ?p ?obj ?obj_type ?obj_label from <airline_flight_network>
-            where {
-                ?s ?p ?obj .
-			    optional {  ?obj a ?obj_type . }
-    		    optional {	?obj rdfs:label ?obj_label .  }
-            VALUES ?s { 	''' + origin + '''} 
-    filter(ISIRI(?obj_type))   
-    }
-    #	order by ?s 
+prefix fl: <https://ontologies.semanticarts.com/flights/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s ?p ?obj ?obj_type ?obj_label ?p_label from <airline_flight_network>
+        where {
+            ?s ?p ?obj .
+			optional {  ?obj a ?obj_type . }
+    		optional {	?obj rdfs:label ?obj_label .  }
+            optional {	?p rdfs:label ?p_label . }
+      VALUES ?s { 	''' + origin + '''} 
+  filter(ISIRI(?obj_type))   
+  }
+#	order by ?s 
     limit 10
     '''
 
@@ -281,7 +282,7 @@ def generateNodes(df, sourceURI):
 
     # insert label of node into dict
     for i in df.index:
-        if df['obj_label'][i]:
+        if df['obj_label'][i] and type(df['obj_label'][i]) == str:
             labelDict[df['obj'][i].lower()] = df['obj_label'][i]
 
     for i in df.index:
@@ -302,6 +303,9 @@ def generateEdges(df):
     newEdges = []
 
     # insert label of edge into dict
+    for i in df.index:
+        if df['p_label'][i] and type(df['p_label'][i]) == str:
+            labelDict[df['p'][i].lower()] = df['p_label'][i]
 
     for i in df.index:
 
