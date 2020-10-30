@@ -334,3 +334,62 @@ def removeNodes(element, nodeURI):
     return copyElement
 
 
+import json
+
+import dash_cytoscape as cyto
+import dash_html_components as html
+import dash_core_components as dcc
+from dash.dependencies import Input, Output, State
+from demos import dash_reusable_components as drc
+
+def getAppLayout(elements):
+    return html.Div([
+
+    html.Div(className='a',children = [
+    dcc.Dropdown(
+        id='dropdown-update-layout',
+        value='circle',
+        clearable=False,
+        options=[
+            {'label': name.capitalize(), 'value': name}
+            for name in ['grid', 'random', 'circle', 'cose', 'concentric']
+        ]
+    )]),
+    drc.NamedRadioItems(
+                    name='Select',
+                    id='radio-option',
+                    options=drc.DropdownOptionsList(
+                        'Show Neighbors'
+                    ),
+                    value='Show Neighbors'
+                ),
+
+    html.Div(className='b',children = [
+    cyto.Cytoscape(
+        id='cytoscape-update-layout',
+        layout={'name': 'circle'},
+        style={'width': '100%', 'height': '70vh'},
+        elements=elements,
+        stylesheet = [
+            {
+            'selector': 'node',
+            'style': {
+                'content': 'data(label)',
+                'background-color': '#58FAF4',
+                }
+            },
+            {
+            'selector': 'edge',
+            'style': {
+                'content': 'data(labelLabel)',
+                'curve-style': 'bezier',
+                'target-arrow-color': 'black',
+                'target-arrow-shape': 'triangle',
+                'line-color': 'black'
+                }
+            }
+        ]
+    )]),
+    html.P(id='cytoscape-tapNodeData-output'),
+    html.P(id='cytoscape-tapEdgeData-output')
+])
