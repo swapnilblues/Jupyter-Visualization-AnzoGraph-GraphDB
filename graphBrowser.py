@@ -249,11 +249,11 @@ def getEdgeLabel(origin):
     return 'From Airport: ' + origin
 
 # Change function name and graph name (pass as parameter)
-def createGetNeighboringAirportQuery(origin):
+def createGetNeighborsQuery(origin,graphName):
     return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix fl: <https://ontologies.semanticarts.com/flights/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-select ?s ?p ?obj ?obj_type ?obj_label ?p_label from <airline_flight_network>
+select ?s ?p ?obj ?obj_type ?obj_label ?p_label from ''' + graphName + '''
         where {
             ?s ?p ?obj .
 			optional {  ?obj a ?obj_type . }
