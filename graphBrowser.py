@@ -4,10 +4,8 @@
 
 from http.client import HTTPConnection
 from urllib.parse import urlencode
-from arcgis.mapping import create_symbol
 import pandas as pd
 import numpy as np
-import json
 from datetime import datetime, date, time
 
 
@@ -68,7 +66,7 @@ def run_query(sparql_endpoint, sparql_query, fmt=None):
 # ------------------------------------------------------
 #
 def create_dataframe(sparql_endpoint, sparql_query):
-    # run query
+    # run qu0pery
     result = run_query(sparql_endpoint, sparql_query)  # may throw exception
     # result is in SPARQL results format refer: https://www.w3.org/TR/sparql11-results-json/
     cols = result.get('head', {}).get('vars', [])
@@ -144,7 +142,7 @@ def typed_value(typeuri, val):
     return 'object', val
 
 
-# %%
+################## JupyterDash and CytoScape Functions ##################
 
 def createAirportQuery(origin):
     return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -173,7 +171,53 @@ SELECT
 '''
 
 
+def createNodeTypes(iRIs):
+    return '''
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    prefix fl: <https://ontologies.semanticarts.com/flights/>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    select ?s ?type from <airline_flight_network>
+    where {
+  	    ?s a ?type .
+        VALUES ?s { 	 
+    				+ ''' + iRIs + '''
+        }
+    }
+'''
+
+
 labelDict = {}
+nodeTypes = []
+nodeColors = {}
+
+
+def createTypesOfNodesQuery(graphName):
+    return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        prefix fl: <https://ontologies.semanticarts.com/flights/>
+        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        select distinct ?type from ''' + graphName + ''' 
+        where {
+  	        ?s a ?type .
+        }  
+        limit 30 
+    '''
+
+
+def getTypesOfNodes(graphName):
+    query = createTypesOfNodesQuery(graphName)
+    df = create_dataframe('127.0.0.1:7070', query)
+    for nodeType in df['type']:
+        nodeTypes.append(nodeType)
+    return nodeTypes
+
+
+def assignColorsToNode(colors):
+    if len(colors) != len(nodeTypes):
+        return False
+
+    for i in range(0, len(colors)):
+        nodeColors[nodeTypes[i]] = colors[i]
+    return True
 
 
 def createGraph(query, rootNode):
@@ -297,7 +341,7 @@ def generateNodes(df, sourceURI):
                    }
         if newNode not in newNodes:
             newNodes.append(newNode)
-    #         print("0",newNode)
+            # print("0", newNode)
     return newNodes
 
 
@@ -329,11 +373,30 @@ def removeNodes(element, nodeURI):
     copyElement = []
 
     for e in element:
-        #         print("1.0",e)
         if e['data']['source'] != nodeURI:
             e['data']['expanded'] = False
             copyElement.append(e)
     return copyElement
+
+
+def createAssignNodeTypes(iris):
+    return '''
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix fl: <https://ontologies.semanticarts.com/flights/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s ?type from <airline_flight_network>
+where {
+  	?s a ?type .
+    VALUES ?s { ''' + iris + '''
+  }
+}
+'''
+
+
+def getNodeTypes(iris):
+    query = createAssignNodeTypes(iris)
+    df = create_dataframe('127.0.0.1:7070', query)
+    return df
 
 
 import json
@@ -344,6 +407,8 @@ import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
 from demos import dash_reusable_components as drc
 
+
+##################Graph Browser Layout##################
 
 def getAppLayout(elements):
     return html.Div([
