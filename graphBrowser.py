@@ -268,13 +268,25 @@ def createGraph(query, rootNode):
             edges.add(p)
 
     nodes = nodes - edges
+    nodeUri = ''
+
+    for node in nodes:
+        nodeUri += node + ' '
+
+    # nodeTypeQuery = createAssignNodeTypes(nodeUri)
+    nodeType = getNodeTypes(nodeUri)
+    print("NodeTypes ", nodeType)
+
+
+
 
     elements = []
     for node in nodes:
         elements.append({'data': {'id': node,
                                   'label': labelDict.get(node.lower(), node),
                                   'expanded': False,
-                                  'source': rootNode
+                                  'source': rootNode,
+                                  'color': nodeColors[nodeType[node]]
                                   }
                          })
     for ele in graph:
@@ -396,7 +408,10 @@ where {
 def getNodeTypes(iris):
     query = createAssignNodeTypes(iris)
     df = create_dataframe('127.0.0.1:7070', query)
-    return df
+    nodeTypes = {}
+    for i in range(0, len(df)):
+        nodeTypes[df['s'][i]] = df['type'][i]
+    return nodeTypes
 
 
 import json
