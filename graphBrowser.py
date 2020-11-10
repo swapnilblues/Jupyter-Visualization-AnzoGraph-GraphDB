@@ -252,7 +252,6 @@ def createGraph(query, rootNode):
             s = arr[0]
             o = arr[2][1:len(arr[2]) - 1]
             labelDict[s.lower()] = o
-    # print(labelDict)
 
     for ele in triples:
         arr = ele.split(' ')
@@ -273,9 +272,8 @@ def createGraph(query, rootNode):
     for node in nodes:
         nodeUri += node + ' '
 
-    # nodeTypeQuery = createAssignNodeTypes(nodeUri)
     nodeType = getNodeTypes(nodeUri)
-    print("NodeTypes ", nodeType)
+
 
 
 
@@ -343,12 +341,21 @@ def generateNodes(df, sourceURI):
         if df['obj_label'][i] and type(df['obj_label'][i]) == str:
             labelDict[df['obj'][i].lower()] = df['obj_label'][i]
 
+    nodeUri = ''
+
+    for i in df.index:
+        nodeUri += df['obj'][i] + ' '
+
+    nodeType = getNodeTypes(nodeUri)
+    # print("NodeTypes2",nodeType)
+
     for i in df.index:
 
         newNode = {'data': {'id': df['obj'][i],
                             'label': labelDict.get(df['obj'][i].lower(), df['obj'][i]),
                             'expanded': False,
-                            'source': sourceURI
+                            'source': sourceURI,
+                            'color': nodeColors[nodeType[df['obj'][i]]]
                             }
                    }
         if newNode not in newNodes:
@@ -458,7 +465,7 @@ def getAppLayout(elements):
                         'selector': 'node',
                         'style': {
                             'content': 'data(label)',
-                            'background-color': '#58FAF4',
+                            'background-color': 'data(color)',
                         }
                     },
                     {
