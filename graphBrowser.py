@@ -208,15 +208,19 @@ def getTypesOfNodes(graphName):
     df = create_dataframe('127.0.0.1:7070', query)
     for nodeType in df['type']:
         nodeTypes.append(nodeType)
-    return nodeTypes
+    return sorted(nodeTypes)
 
 
-def assignColorsToNode(colors):
-    if len(colors) != len(nodeTypes):
-        return False
+def assignColorsToNode(colorCode):
+    # if len(colors) != len(nodeTypes):
+    #     return False
+    #
+    # for i in range(0, len(colors)):
+    #     nodeColors[nodeTypes[i]] = colors[i]
 
-    for i in range(0, len(colors)):
-        nodeColors[nodeTypes[i]] = colors[i]
+    for ele in colorCode:
+        nodeColors[ele] = colorCode[ele]
+    
     return True
 
 
