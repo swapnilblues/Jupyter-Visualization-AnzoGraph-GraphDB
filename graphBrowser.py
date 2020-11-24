@@ -220,7 +220,7 @@ def assignColorsToNode(colorCode):
 
     for ele in colorCode:
         nodeColors[ele] = colorCode[ele]
-    
+
     return True
 
 
@@ -288,7 +288,8 @@ def createGraph(query, rootNode):
                                   'label': labelDict.get(node.lower(), node),
                                   'expanded': False,
                                   'source': rootNode,
-                                  'color': nodeColors[nodeType[node]]
+                                  'color': nodeColors[nodeType[node]],
+                                  'type': 'Node'
                                   }
                          })
     for ele in graph:
@@ -297,7 +298,8 @@ def createGraph(query, rootNode):
                                   'label': ele['P'],
                                   'labelLabel': labelDict.get(ele['P'].lower(), ele['P']),
                                   'sourceLabel': labelDict.get(ele['S'].lower(), ele['S']),
-                                  'targetLabel': labelDict.get(ele['O'].lower(), ele['O'])
+                                  'targetLabel': labelDict.get(ele['O'].lower(), ele['O']),
+                                  'type': 'Edge'
                                   }
                          })
     return elements
@@ -359,7 +361,9 @@ def generateNodes(df, sourceURI):
                             'label': labelDict.get(df['obj'][i].lower(), df['obj'][i]),
                             'expanded': False,
                             'source': sourceURI,
-                            'color': nodeColors[nodeType[df['obj'][i]]]
+                            'target': None,
+                            'color': nodeColors[nodeType[df['obj'][i]]],
+                            'type': 'Node'
                             }
                    }
         if newNode not in newNodes:
@@ -383,7 +387,8 @@ def generateEdges(df):
                             'label': df['p'][i],
                             'labelLabel': labelDict.get(df['p'][i].lower(), df['p'][i]),
                             'sourceLabel': labelDict.get(df['s'][i].lower(), df['s'][i]),
-                            'targetLabel': labelDict.get(df['obj'][i].lower(), df['obj'][i])
+                            'targetLabel': labelDict.get(df['obj'][i].lower(), df['obj'][i]),
+                            'type': 'Edge'
                             }
                    }
         if newEdge not in newEdges:
@@ -396,7 +401,7 @@ def removeNodes(element, nodeURI):
     copyElement = []
 
     for e in element:
-        if e['data']['source'] != nodeURI:
+        if e['data']['source'] == nodeURI:
             e['data']['expanded'] = False
             copyElement.append(e)
     return copyElement
@@ -453,16 +458,20 @@ def getAppLayout(elements):
             name='Select',
             id='radio-option',
             options=drc.DropdownOptionsList(
-                'Show Neighbors'
+                'Show Neighbors',
+                'Hide Neighbors'
             ),
             value='Show Neighbors'
         ),
+
+        html.Button("GO", id='go'),
+        # html.Button("Remove Selected Node", id='remove-button'),
 
         html.Div(className='b', children=[
             cyto.Cytoscape(
                 id='cytoscape-update-layout',
                 layout={'name': 'circle'},
-                style={'width': '100%', 'height': '70vh'},
+                style={'width': '100%', 'height': '65vh'},
                 elements=elements,
                 stylesheet=[
                     {
@@ -510,7 +519,7 @@ def update_layout(layout):
 
 
 def generate_elements(data, e, options, graphName):
-    if not data:
+    if not data or not e:
         return e
 
     nodeURI = data['id']
@@ -543,7 +552,30 @@ def generate_elements(data, e, options, graphName):
 
         return e
     elif options == "Hide Neighbors":
+        print("Here hide neighbors")
+        # if data['expanded'] == False:
+        #     return e
 
-        if data['expanded'] == False:
-            return e
-        return removeNodes(e, nodeURI)
+        # # changing extended to False for the node
+        # for element in e:
+        #     if data['id'] == element.get('data').get('id'):
+        #         element['data']['expanded'] = False
+        #         break
+        return removeNodes1(e, nodeURI)
+
+    else:
+        return e
+
+def removeNodes1(element, nodeURI):
+    copyElement = []
+    print("Here")
+    for e in element:
+        if e['data']['type'] == 'Node':
+            if e['data']['id'] == nodeURI:
+                e['data']['expanded'] = False
+                continue
+        if e['data']['type'] == 'Edge':
+            if e['data']['source'] == nodeURI or e['data']['target'] == nodeURI:
+                continue
+        copyElement.append(e)
+    return copyElement
