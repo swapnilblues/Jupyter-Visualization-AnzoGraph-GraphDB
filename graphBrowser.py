@@ -472,9 +472,6 @@ def getAppLayout(elements):
             value='Show Neighbors'
         ),
 
-        html.Button("SUBMIT", id='go'),
-        # html.Button("Remove Selected Node", id='remove-button'),
-
         html.Div(className='b', children=[
             cyto.Cytoscape(
                 id='cytoscape-update-layout',
