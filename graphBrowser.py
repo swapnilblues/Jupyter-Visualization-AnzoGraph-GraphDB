@@ -353,7 +353,6 @@ def generateNodes(df, sourceURI):
         nodeUri += df['obj'][i] + ' '
 
     nodeType = getNodeTypes(nodeUri)
-    # print("NodeTypes2",nodeType)
 
     for i in df.index:
 
@@ -397,14 +396,14 @@ def generateEdges(df):
     return newEdges
 
 
-def removeNodes(element, nodeURI):
-    copyElement = []
-
-    for e in element:
-        if e['data']['source'] == nodeURI:
-            e['data']['expanded'] = False
-            copyElement.append(e)
-    return copyElement
+# def removeNodes(element, nodeURI):
+#     copyElement = []
+#
+#     for e in element:
+#         if e['data']['source'] == nodeURI:
+#             e['data']['expanded'] = False
+#             copyElement.append(e)
+#     return copyElement
 
 
 def createAssignNodeTypes(iris):
@@ -441,6 +440,15 @@ from demos import dash_reusable_components as drc
 
 ##################Graph Browser Layout##################
 
+styles = {
+    'json-output': {
+        'overflow-y': 'scroll',
+        'height': 'calc(50% - 25px)',
+        'border': 'thin lightgrey solid'
+    },
+    'tab': {'height': 'calc(98vh - 115px)'}
+}
+
 def getAppLayout(elements):
     return html.Div([
 
@@ -459,19 +467,19 @@ def getAppLayout(elements):
             id='radio-option',
             options=drc.DropdownOptionsList(
                 'Show Neighbors',
-                'Hide Neighbors'
+                'Hide Node'
             ),
             value='Show Neighbors'
         ),
 
-        html.Button("GO", id='go'),
+        html.Button("SUBMIT", id='go'),
         # html.Button("Remove Selected Node", id='remove-button'),
 
         html.Div(className='b', children=[
             cyto.Cytoscape(
                 id='cytoscape-update-layout',
                 layout={'name': 'circle'},
-                style={'width': '100%', 'height': '65vh'},
+                style={'width': '100%', 'height': '60vh'},
                 elements=elements,
                 stylesheet=[
                     {
@@ -494,15 +502,46 @@ def getAppLayout(elements):
                 ]
             )]),
         html.P(id='cytoscape-tapNodeData-output'),
-        html.P(id='cytoscape-tapEdgeData-output')
+        html.P(id='cytoscape-tapEdgeData-output'),
+        html.Div(style=styles['tab'], children=[
+            html.P('Node Data JSON:'),
+            html.Pre(
+                id='selected-node-data-json-output',
+                style=styles['json-output']
+            )
+        ])
     ])
 
 
 ###################CALLBACKS###################
-
+import json
 def displayTapNodeData(data):
     if data:
-        return "Node selected: " + data['id']
+        out = {
+            "Node selected": data['id'],
+            'a1': 'abbabababababababababbabababababab',
+            'a2': 'abbabababababababababbabababababab',
+            'a3': 'abbabababababababababbabababababab',
+            'a4': 'abbabababababababababbabababababab',
+            'a5': 'abbabababababababababbabababababab',
+            'a6': 'abbabababababababababbabababababab',
+            'a7': 'abbabababababababababbabababababab',
+            'a8': 'abbabababababababababbabababababab',
+            'a9': 'abbabababababababababbabababababab',
+            'a10': 'b',
+            'a11': 'b',
+            'a12': 'b',
+            'a13': 'b',
+            'a14': 'b',
+            'a15': 'b',
+            'a16': 'b',
+            'a17': 'b',
+            'a18': 'b',
+
+
+
+        }
+        return json.dumps(out, indent=4)
 
 
 def displayTapEdgeData(data):
@@ -551,24 +590,14 @@ def generate_elements(data, e, options, graphName):
                     e.append(edge)
 
         return e
-    elif options == "Hide Neighbors":
-        print("Here hide neighbors")
-        # if data['expanded'] == False:
-        #     return e
-
-        # # changing extended to False for the node
-        # for element in e:
-        #     if data['id'] == element.get('data').get('id'):
-        #         element['data']['expanded'] = False
-        #         break
-        return removeNodes1(e, nodeURI)
+    elif options == "Hide Node":
+        return removeNodes(e, nodeURI)
 
     else:
         return e
 
-def removeNodes1(element, nodeURI):
+def removeNodes(element, nodeURI):
     copyElement = []
-    print("Here")
     for e in element:
         if e['data']['type'] == 'Node':
             if e['data']['id'] == nodeURI:
