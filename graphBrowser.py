@@ -224,7 +224,7 @@ def assignColorsToNode(colorCode):
     return True
 
 
-def createGraph(query, rootNode):
+def createGraph(query, rootNode, graphName):
     #     print('Inside')
     flights = run_query('127.0.0.1:7070', query)
 
@@ -276,7 +276,7 @@ def createGraph(query, rootNode):
     for node in nodes:
         nodeUri += node + ' '
 
-    nodeType = getNodeTypes(nodeUri)
+    nodeType = getNodeTypes(nodeUri, graphName)
 
 
 
@@ -338,7 +338,7 @@ def getNeighbours(query):
 import math
 
 
-def generateNodes(df, sourceURI):
+def generateNodes(df, sourceURI, graphName):
     # verify to check whether new nodes can be repetitve and accordingly create a set of nodes and then a list of newNodes
     newNodes = []
 
@@ -352,7 +352,7 @@ def generateNodes(df, sourceURI):
     for i in df.index:
         nodeUri += df['obj'][i] + ' '
 
-    nodeType = getNodeTypes(nodeUri)
+    nodeType = getNodeTypes(nodeUri, graphName)
 
     for i in df.index:
 
@@ -406,12 +406,12 @@ def generateEdges(df):
 #     return copyElement
 
 
-def createAssignNodeTypes(iris):
+def createAssignNodeTypes(iris, graphName):
     return '''
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix fl: <https://ontologies.semanticarts.com/flights/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-select ?s ?type from <airline_flight_network>
+select ?s ?type from ''' + graphName + ''' 
 where {
   	?s a ?type .
     VALUES ?s { ''' + iris + '''
@@ -420,8 +420,8 @@ where {
 '''
 
 
-def getNodeTypes(iris):
-    query = createAssignNodeTypes(iris)
+def getNodeTypes(iris, graphName):
+    query = createAssignNodeTypes(iris, graphName)
     df = create_dataframe('127.0.0.1:7070', query)
     nodeTypes = {}
     for i in range(0, len(df)):
@@ -575,7 +575,7 @@ def generate_elements(data, e, options, graphName):
             # Demo: get neighboring airport creation statement for airlines data
             neighborQuery = createGetNeighborsQuery(nodeURI, graphName)
             df = getNeighbours(neighborQuery)
-            nodes = generateNodes(df, nodeURI)
+            nodes = generateNodes(df, nodeURI, graphName)
             edges = generateEdges(df)
 
             for node in nodes:
