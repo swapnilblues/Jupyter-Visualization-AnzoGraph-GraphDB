@@ -335,8 +335,6 @@ def getNeighbours(query):
 
 # def generateNodes(df):
 
-import math
-
 
 def generateNodes(df, sourceURI, graphName):
     # verify to check whether new nodes can be repetitve and accordingly create a set of nodes and then a list of newNodes
@@ -420,8 +418,8 @@ where {
 '''
 
 
-def getNodeTypes(iris, graphName):
-    query = createAssignNodeTypes(iris, graphName)
+def getNodeTypes(uris, graphName):
+    query = createAssignNodeTypes(uris, graphName)
     df = create_dataframe('127.0.0.1:7070', query)
     nodeTypes = {}
     for i in range(0, len(df)):
@@ -429,7 +427,22 @@ def getNodeTypes(iris, graphName):
     return nodeTypes
 
 
-import json
+def getNodeInfo(uri, graphName):
+    query = '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            prefix fl: <https://ontologies.semanticarts.com/flights/>
+            prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            select 
+            ?s ?p ?o
+            from ''' + graphName + ''' 
+            where {
+                ?s ?p ?o  .
+                FILTER (ISLITERAL(?o))
+                FILTER (?s = ''' + uri + ''' ) 
+                    }
+            limit 30'''
+    df = create_dataframe('127.0.0.1:7070', query)
+    return df
+
 
 import dash_cytoscape as cyto
 import dash_html_components as html
@@ -512,32 +525,12 @@ def getAppLayout(elements):
 
 ###################CALLBACKS###################
 import json
-def displayTapNodeData(data):
+def displayTapNodeData(data, graphName):
     if data:
-        out = {
-            "Node selected": data['id'],
-            'a1': 'abbabababababababababbabababababab',
-            'a2': 'abbabababababababababbabababababab',
-            'a3': 'abbabababababababababbabababababab',
-            'a4': 'abbabababababababababbabababababab',
-            'a5': 'abbabababababababababbabababababab',
-            'a6': 'abbabababababababababbabababababab',
-            'a7': 'abbabababababababababbabababababab',
-            'a8': 'abbabababababababababbabababababab',
-            'a9': 'abbabababababababababbabababababab',
-            'a10': 'b',
-            'a11': 'b',
-            'a12': 'b',
-            'a13': 'b',
-            'a14': 'b',
-            'a15': 'b',
-            'a16': 'b',
-            'a17': 'b',
-            'a18': 'b',
-
-
-
-        }
+        df = getNodeInfo(data['id'], graphName)
+        out = {}
+        for i in range(0,len(df)):
+            out[df['p'][i]] = df['o'][i]
         return json.dumps(out, indent=4)
 
 
