@@ -462,7 +462,7 @@ styles = {
     'tab': {'height': 'calc(98vh - 115px)'}
 }
 
-def getAppLayout(elements):
+def getAppLayout(elements, nodeWidth, nodeHeight):
     return html.Div([
 
         html.Div(className='a', children=[
@@ -497,6 +497,8 @@ def getAppLayout(elements):
                         'style': {
                             'content': 'data(label)',
                             'background-color': 'data(color)',
+                            'width': nodeWidth,
+                            'height': nodeHeight
                         }
                     },
                     {
