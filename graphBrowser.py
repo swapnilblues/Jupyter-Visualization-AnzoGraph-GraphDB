@@ -462,7 +462,14 @@ styles = {
     'tab': {'height': 'calc(98vh - 115px)'}
 }
 
-def getAppLayout(elements, nodeWidth, nodeHeight):
+def getAppLayout(elements, nodeWidth, nodeHeight, putLabelInsideNode):
+
+    textHalignValue = ''
+    textValignValue = ''
+    if putLabelInsideNode:
+        textHalignValue = 'center'
+        textValignValue = 'center'
+
     return html.Div([
 
         html.Div(className='a', children=[
@@ -498,7 +505,9 @@ def getAppLayout(elements, nodeWidth, nodeHeight):
                             'content': 'data(label)',
                             'background-color': 'data(color)',
                             'width': nodeWidth,
-                            'height': nodeHeight
+                            'height': nodeHeight,
+                            'text-halign': textHalignValue,
+                            'text-valign': textValignValue
                         }
                     },
                     {
