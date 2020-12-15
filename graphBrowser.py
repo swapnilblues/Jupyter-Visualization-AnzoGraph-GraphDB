@@ -7,6 +7,7 @@ from urllib.parse import urlencode
 import pandas as pd
 import numpy as np
 from datetime import datetime, date, time
+import re
 
 
 # ------------------------------------------------------
@@ -187,20 +188,35 @@ def createNodeTypes(iRIs):
 
 
 labelDict = {}
+prefixDict = {}
 nodeTypes = []
 nodeColors = {}
 
+def createPrefixDict(query):
+    lines = query.split('\n')
+    for line in lines:
+        line = line.strip()
+        if re.match('prefix', line, re.I):
+            newLine = line[7:]
+            tempkV = newLine.split(': ', 1)
+
+            if tempkV[0] != '':
+                prefixDict[tempkV[1].lower()] = tempkV[0]
 
 def createTypesOfNodesQuery(graphName):
-    return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        prefix fl: <https://ontologies.semanticarts.com/flights/>
-        prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        select distinct ?type from ''' + graphName + ''' 
-        where {
-  	        ?s a ?type .
-        }  
+    query =  '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    prefix fl: <https://ontologies.semanticarts.com/flights/>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    select distinct ?type from ''' + graphName + ''' 
+            where {
+  	            ?s a ?type .
+            }  
         limit 30 
     '''
+
+    createPrefixDict(query)
+
+    return query
 
 
 def getTypesOfNodes(graphName):
@@ -226,6 +242,9 @@ def assignColorsToNode(colorCode):
 
 def createGraph(query, rootNode, graphName):
     #     print('Inside')
+
+    createPrefixDict(query)
+
     flights = run_query('127.0.0.1:7070', query)
 
     x = flights.decode("utf-8")
@@ -285,7 +304,7 @@ def createGraph(query, rootNode, graphName):
     elements = []
     for node in nodes:
         elements.append({'data': {'id': node,
-                                  'label': labelDict.get(node.lower(), node),
+                                  'label': labelDict.get(node.lower(), prefixDict.get(node.lower(), node)),
                                   'expanded': False,
                                   'source': rootNode,
                                   'color': nodeColors[nodeType[node]],
@@ -296,9 +315,9 @@ def createGraph(query, rootNode, graphName):
         elements.append({'data': {'source': ele['S'],
                                   'target': ele['O'],
                                   'label': ele['P'],
-                                  'labelLabel': labelDict.get(ele['P'].lower(), ele['P']),
-                                  'sourceLabel': labelDict.get(ele['S'].lower(), ele['S']),
-                                  'targetLabel': labelDict.get(ele['O'].lower(), ele['O']),
+                                  'labelLabel': labelDict.get(ele['P'].lower(), prefixDict.get(ele['P'].lower(), ele['P'])),
+                                  'sourceLabel': labelDict.get(ele['S'].lower(), prefixDict.get(ele['S'].lower(), ele['S'])),
+                                  'targetLabel': labelDict.get(ele['O'].lower(), prefixDict.get(ele['O'].lower(), ele['O'])),
                                   'type': 'Edge'
                                   }
                          })
@@ -311,7 +330,7 @@ def getEdgeLabel(origin):
 
 # Change function name and graph name (pass as parameter)
 def createGetNeighborsQuery(origin, graphName):
-    return '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    query =  '''PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix fl: <https://ontologies.semanticarts.com/flights/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 select ?s ?p ?obj ?obj_type ?obj_label ?p_label from ''' + graphName + '''
@@ -327,6 +346,8 @@ select ?s ?p ?obj ?obj_type ?obj_label ?p_label from ''' + graphName + '''
     limit 10
     '''
 
+    createPrefixDict(query)
+    return query
 
 def getNeighbours(query):
     df = create_dataframe('127.0.0.1:7070', query)
@@ -355,7 +376,7 @@ def generateNodes(df, sourceURI, graphName):
     for i in df.index:
 
         newNode = {'data': {'id': df['obj'][i],
-                            'label': labelDict.get(df['obj'][i].lower(), df['obj'][i]),
+                            'label': labelDict.get(df['obj'][i].lower(), prefixDict.get(df['obj'][i].lower(), df['obj'][i])),
                             'expanded': False,
                             'source': sourceURI,
                             'target': None,
@@ -382,9 +403,9 @@ def generateEdges(df):
         newEdge = {'data': {'source': df['s'][i],
                             'target': df['obj'][i],
                             'label': df['p'][i],
-                            'labelLabel': labelDict.get(df['p'][i].lower(), df['p'][i]),
-                            'sourceLabel': labelDict.get(df['s'][i].lower(), df['s'][i]),
-                            'targetLabel': labelDict.get(df['obj'][i].lower(), df['obj'][i]),
+                            'labelLabel': labelDict.get(df['p'][i].lower(), prefixDict.get(df['p'][i].lower(), df['p'][i])),
+                            'sourceLabel': labelDict.get(df['s'][i].lower(), prefixDict.get(df['s'][i].lower(), df['s'][i])),
+                            'targetLabel': labelDict.get(df['obj'][i].lower(), prefixDict.get(df['obj'][i].lower(), df['obj'][i])),
                             'type': 'Edge'
                             }
                    }
